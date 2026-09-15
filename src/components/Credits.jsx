@@ -24,9 +24,14 @@ export default function Credits({ collections }) {
     const tous = Object.entries(collections || {}).flatMap(([cle, liste]) =>
       (liste || []).map((item) => ({ ...item, categorie: LIBELLES[cle] || cle }))
     );
+    // Le credit depend de la presence d'une attribution, pas du statut :
+    // les visuels passes en duotone gardent licence et auteur, et doivent
+    // donc apparaitre ici comme les autres.
+    const estAttribue = (i) =>
+      i.license && i.license !== 'N/A' && i.author && i.author !== 'N/A';
     return {
-      attribues: tous.filter((i) => i.status === 'ok' && i.license && i.license !== 'N/A'),
-      enAttente: tous.filter((i) => !(i.status === 'ok' && i.license && i.license !== 'N/A')),
+      attribues: tous.filter(estAttribue),
+      enAttente: tous.filter((i) => !estAttribue(i)),
     };
   }, [collections]);
 

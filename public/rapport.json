@@ -1,2065 +1,1668 @@
 {
-  "compteurs": {
-    "artistes": "75/75 à compléter manuellement",
-    "footballeurs": "75/75 à compléter manuellement",
-    "figures_publiques": "33/33 à compléter manuellement",
-    "nourriture": "20/20 à compléter manuellement",
-    "produits": "24/24 à compléter manuellement"
+  "execution": "2026-09-15T11-03-42",
+  "traites": 227,
+  "resultats": {
+    "ok": 125,
+    "sans_source": 75,
+    "trop_petite": 18,
+    "marque": 8,
+    "attribution_incomplete": 1
   },
+  "ecriture": "effectuee",
+  "compteurs": {
+    "artists": "28/75 avec attribution complete",
+    "footballers": "52/75 avec attribution complete",
+    "publicFigures": "13/33 avec attribution complete",
+    "foods": "17/20 avec attribution complete",
+    "products": "15/24 avec attribution complete"
+  },
+  "valides": [
+    {
+      "id": "art_1",
+      "name": "Didi B",
+      "type": "artiste",
+      "image": "/images/artistes/art_1.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Aristidek5maya"
+    },
+    {
+      "id": "art_3",
+      "name": "Josey",
+      "type": "artiste",
+      "image": "/images/artistes/art_3.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Aman ADO"
+    },
+    {
+      "id": "art_4",
+      "name": "Roseline Layo",
+      "type": "artiste",
+      "image": "/images/artistes/art_4.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Jean Yves ESSIGAN"
+    },
+    {
+      "id": "art_5",
+      "name": "KS Bloom",
+      "type": "artiste",
+      "image": "/images/artistes/art_5.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "BorisAhonon"
+    },
+    {
+      "id": "art_6",
+      "name": "Serge Beynaud",
+      "type": "artiste",
+      "image": "/images/artistes/art_6.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Yroland"
+    },
+    {
+      "id": "art_8",
+      "name": "Magic System",
+      "type": "artiste",
+      "image": "/images/artistes/art_8.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Aristidek5maya"
+    },
+    {
+      "id": "art_9",
+      "name": "DJ Arafat",
+      "type": "artiste",
+      "image": "/images/artistes/art_9.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Jacquitoz"
+    },
+    {
+      "id": "art_10",
+      "name": "Meiway",
+      "type": "artiste",
+      "image": "/images/artistes/art_10.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0",
+      "author": "Ptityorobo"
+    },
+    {
+      "id": "art_11",
+      "name": "Alpha Blondy",
+      "type": "artiste",
+      "image": "/images/artistes/art_11.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0",
+      "author": "Thesupermat"
+    },
+    {
+      "id": "art_12",
+      "name": "Tiken Jah Fakoly",
+      "type": "artiste",
+      "image": "/images/artistes/art_12.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 2.0 fr",
+      "author": "Rama"
+    },
+    {
+      "id": "art_13",
+      "name": "Himra",
+      "type": "artiste",
+      "image": "/images/artistes/art_13.jpg",
+      "source": "wikidata_commons",
+      "license": "CC0",
+      "author": "Jean Yves ESSIGAN"
+    },
+    {
+      "id": "art_14",
+      "name": "Suspect 95",
+      "type": "artiste",
+      "image": "/images/artistes/art_14.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Aman ADO"
+    },
+    {
+      "id": "art_17",
+      "name": "Yodé & Siro",
+      "type": "artiste",
+      "image": "/images/artistes/art_17.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 4.0",
+      "author": "Aristidek5maya"
+    },
+    {
+      "id": "art_19",
+      "name": "Kerozen DJ",
+      "type": "artiste",
+      "image": "/images/artistes/art_19.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "FabieG67"
+    },
+    {
+      "id": "art_20",
+      "name": "Morijah",
+      "type": "artiste",
+      "image": "/images/artistes/art_20.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Willy Djeys"
+    },
+    {
+      "id": "art_21",
+      "name": "Fior de Bior",
+      "type": "artiste",
+      "image": "/images/artistes/art_21.jpg",
+      "source": "wikidata_commons",
+      "license": "CC0",
+      "author": "BorisAhonon"
+    },
+    {
+      "id": "art_22",
+      "name": "Lil Jay Bingerack",
+      "type": "artiste",
+      "image": "/images/artistes/art_22.jpg",
+      "source": "wikidata_commons",
+      "license": "CC0",
+      "author": "Aman ADO"
+    },
+    {
+      "id": "art_24",
+      "name": "Safarel Obiang",
+      "type": "artiste",
+      "image": "/images/artistes/art_24.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Aristidek5maya"
+    },
+    {
+      "id": "art_35",
+      "name": "Ismaël Isaac",
+      "type": "artiste",
+      "image": "/images/artistes/art_35.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 4.0",
+      "author": "Aristidek5maya"
+    },
+    {
+      "id": "art_37",
+      "name": "Monique Séka",
+      "type": "artiste",
+      "image": "/images/artistes/art_37.jpg",
+      "source": "wikidata_commons",
+      "license": "CC0",
+      "author": "Ivcom"
+    },
+    {
+      "id": "art_38",
+      "name": "Aïcha Koné",
+      "type": "artiste",
+      "image": "/images/artistes/art_38.jpg",
+      "source": "wikidata_commons",
+      "license": "CC0",
+      "author": "Aman ADO"
+    },
+    {
+      "id": "art_39",
+      "name": "Nayanka Bell",
+      "type": "artiste",
+      "image": "/images/artistes/art_39.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 4.0",
+      "author": "Aristidek5maya"
+    },
+    {
+      "id": "art_40",
+      "name": "Bailly Spinto",
+      "type": "artiste",
+      "image": "/images/artistes/art_40.jpg",
+      "source": "wikidata_commons",
+      "license": "CC0",
+      "author": "Aristidek5maya"
+    },
+    {
+      "id": "art_41",
+      "name": "Ernesto Djédjé",
+      "type": "artiste",
+      "image": "/images/artistes/art_41.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 4.0",
+      "author": "Manouka"
+    },
+    {
+      "id": "art_45",
+      "name": "Affou Keïta",
+      "type": "artiste",
+      "image": "/images/artistes/art_45.jpg",
+      "source": "wikidata_commons",
+      "license": "CC0",
+      "author": "Alpha.sanogo02"
+    },
+    {
+      "id": "art_55",
+      "name": "DJ Lewis",
+      "type": "artiste",
+      "image": "/images/artistes/art_55.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Tolla Konan"
+    },
+    {
+      "id": "art_61",
+      "name": "Yabongo Lova",
+      "type": "artiste",
+      "image": "/images/artistes/art_61.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Aristidek5maya"
+    },
+    {
+      "id": "art_74",
+      "name": "Didier Bilé",
+      "type": "artiste",
+      "image": "/images/artistes/art_74.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 4.0",
+      "author": "Aristidek5maya"
+    },
+    {
+      "id": "foot_1",
+      "name": "Didier Drogba",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_1.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Y.Leclercq©"
+    },
+    {
+      "id": "foot_2",
+      "name": "Yaya Touré",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_2.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 3.0",
+      "author": "Puma"
+    },
+    {
+      "id": "foot_3",
+      "name": "Kolo Touré",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_3.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0 at",
+      "author": "Ailura"
+    },
+    {
+      "id": "foot_5",
+      "name": "Franck Kessié",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_5.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Bryan Berlin"
+    },
+    {
+      "id": "foot_6",
+      "name": "Simon Adingra",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_6.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Bryan Berlin"
+    },
+    {
+      "id": "foot_8",
+      "name": "Seko Fofana",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_8.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Bryan Berlin"
+    },
+    {
+      "id": "foot_9",
+      "name": "Jean Michaël Seri",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_9.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Bryan Berlin"
+    },
+    {
+      "id": "foot_10",
+      "name": "Emmanuel Eboué",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_10.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0",
+      "author": "Ultraslansi"
+    },
+    {
+      "id": "foot_11",
+      "name": "Salomon Kalou",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_11.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "-- Steindy ( talk ) 15:40, 29 August 2019 (UTC)"
+    },
+    {
+      "id": "foot_12",
+      "name": "Gervinho",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_12.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 3.0",
+      "author": "Danilo Borges/ copa2014.gov.br Licença Creative Commons Atribuição 3.0 Brasil"
+    },
+    {
+      "id": "foot_13",
+      "name": "Wilfried Zaha",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_13.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Bryan Berlin"
+    },
+    {
+      "id": "foot_14",
+      "name": "Max-Alain Gradel",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_14.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0 at",
+      "author": "Ailura"
+    },
+    {
+      "id": "foot_15",
+      "name": "Serge Aurier",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_15.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Steffen Prößdorf"
+    },
+    {
+      "id": "foot_16",
+      "name": "Eric Bailly",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_16.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 2.0",
+      "author": "Beşiktaş JK"
+    },
+    {
+      "id": "foot_17",
+      "name": "Ibrahim Sangaré",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_17.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Bryan Berlin"
+    },
+    {
+      "id": "foot_18",
+      "name": "Odilon Kossounou",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_18.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Bryan Berlin"
+    },
+    {
+      "id": "foot_19",
+      "name": "Evan Ndicka",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_19.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Bryan Berlin"
+    },
+    {
+      "id": "foot_20",
+      "name": "Yahia Fofana",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_20.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Bryan Berlin"
+    },
+    {
+      "id": "foot_21",
+      "name": "Oumar Diakité",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_21.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Werner100359"
+    },
+    {
+      "id": "foot_23",
+      "name": "Wilfried Singo",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_23.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Bryan Berlin"
+    },
+    {
+      "id": "foot_24",
+      "name": "Karim Konaté",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_24.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Werner100359"
+    },
+    {
+      "id": "foot_26",
+      "name": "Jérémie Boga",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_26.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "S. Plaine"
+    },
+    {
+      "id": "foot_27",
+      "name": "Ghislain Konan",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_27.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Bryan Berlin"
+    },
+    {
+      "id": "foot_28",
+      "name": "Jean-Philippe Krasso",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_28.jpg",
+      "source": "wikidata_commons",
+      "license": "CC0",
+      "author": "Supporterhéninois"
+    },
+    {
+      "id": "foot_29",
+      "name": "Lazare Amani",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_29.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 4.0",
+      "author": "Anneprudence"
+    },
+    {
+      "id": "foot_30",
+      "name": "Maxwel Cornet",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_30.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Egghead06"
+    },
+    {
+      "id": "foot_31",
+      "name": "Jean-Evrard Kouassi",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_31.jpg",
+      "source": "wikidata_commons",
+      "license": "CC0",
+      "author": "IDontHaveSkype"
+    },
+    {
+      "id": "foot_32",
+      "name": "Amad Diallo",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_32.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Bryan Berlin"
+    },
+    {
+      "id": "foot_34",
+      "name": "Seydou Doumbia",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_34.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0",
+      "author": "Soccer.ru"
+    },
+    {
+      "id": "foot_36",
+      "name": "Wilfried Bony",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_36.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0 at",
+      "author": "Ailura"
+    },
+    {
+      "id": "foot_37",
+      "name": "Cheick Tioté",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_37.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0 at",
+      "author": "Ailura"
+    },
+    {
+      "id": "foot_38",
+      "name": "Didier Zokora (Maestro)",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_38.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0",
+      "author": "Ultraslansi"
+    },
+    {
+      "id": "foot_39",
+      "name": "Arthur Boka",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_39.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 3.0",
+      "author": "Danilo Borges/ copa2014.gov.br Licença Creative Commons Atribuição 3.0 Brasil"
+    },
+    {
+      "id": "foot_43",
+      "name": "Kader Keïta (Popito)",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_43.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 2.0",
+      "author": "Doha Stadium Plus Qatar"
+    },
+    {
+      "id": "foot_44",
+      "name": "Boubacar Barry (Copa)",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_44.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0 at",
+      "author": "Ailura"
+    },
+    {
+      "id": "foot_46",
+      "name": "Jean-Jacques Tizié",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_46.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 4.0",
+      "author": "Aristidek5maya"
+    },
+    {
+      "id": "foot_47",
+      "name": "Cyrille Domoraud",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_47.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 4.0",
+      "author": "Aristidek5maya"
+    },
+    {
+      "id": "foot_49",
+      "name": "Joel Tiéhi",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_49.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 4.0",
+      "author": "Aristidek5maya"
+    },
+    {
+      "id": "foot_50",
+      "name": "Laurent Pokou",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_50.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 2.0",
+      "author": "sro_flickr"
+    },
+    {
+      "id": "foot_53",
+      "name": "Abdoulaye Traoré (Ben Badi)",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_53.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Aristidek5maya"
+    },
+    {
+      "id": "foot_54",
+      "name": "Gadji Celi",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_54.jpg",
+      "source": "wikidata_commons",
+      "license": "CC0",
+      "author": "Aman ADO"
+    },
+    {
+      "id": "foot_57",
+      "name": "Didier Otokoré",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_57.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 4.0",
+      "author": "Aristidek5maya"
+    },
+    {
+      "id": "foot_62",
+      "name": "Blaise Kouassi",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_62.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 4.0",
+      "author": "Aristidek5maya"
+    },
+    {
+      "id": "foot_63",
+      "name": "Kanga Akalé",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_63.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 2.0",
+      "author": "Doha Stadium Plus Qatar"
+    },
+    {
+      "id": "foot_65",
+      "name": "Constant Djakpa",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_65.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0",
+      "author": "Ina96"
+    },
+    {
+      "id": "foot_66",
+      "name": "Sol Bamba",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_66.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0 at",
+      "author": "Ailura"
+    },
+    {
+      "id": "foot_68",
+      "name": "Sayouba Mandé",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_68.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Kjetil Eggen"
+    },
+    {
+      "id": "foot_69",
+      "name": "Badra Ali Sangaré",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_69.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Happiraphael"
+    },
+    {
+      "id": "foot_71",
+      "name": "Giovanni Sio",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_71.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "S. Plaine"
+    },
+    {
+      "id": "foot_72",
+      "name": "Brice Dja Djédjé",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_72.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0",
+      "author": "Yannick Bouvard"
+    },
+    {
+      "id": "foot_73",
+      "name": "Serey Dié",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_73.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0",
+      "author": "Ludovic Péron"
+    },
+    {
+      "id": "foot_74",
+      "name": "Ousmane Diomandé",
+      "type": "footballeur",
+      "image": "/images/footballeurs/foot_74.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Bryan Berlin"
+    },
+    {
+      "id": "pub_4",
+      "name": "Willy Dumbo",
+      "type": "public",
+      "image": "/images/publicfigures/pub_4.jpg",
+      "source": "wikidata_commons",
+      "license": "CC0",
+      "author": "Blessingedi76"
+    },
+    {
+      "id": "pub_5",
+      "name": "Observateur Ébène",
+      "type": "public",
+      "image": "/images/publicfigures/pub_5.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Dadrik"
+    },
+    {
+      "id": "pub_7",
+      "name": "Boukary",
+      "type": "public",
+      "image": "/images/publicfigures/pub_7.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Aboubacarkhoraa"
+    },
+    {
+      "id": "pub_11",
+      "name": "Emma Lohoues",
+      "type": "public",
+      "image": "/images/publicfigures/pub_11.jpg",
+      "source": "wikidata_commons",
+      "license": "CC0",
+      "author": "Modalya"
+    },
+    {
+      "id": "pub_14",
+      "name": "Molare",
+      "type": "public",
+      "image": "/images/publicfigures/pub_14.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "BeraDigle"
+    },
+    {
+      "id": "pub_15",
+      "name": "Konnie Touré",
+      "type": "public",
+      "image": "/images/publicfigures/pub_15.jpg",
+      "source": "wikidata_commons",
+      "license": "CC0",
+      "author": "AZIMIE"
+    },
+    {
+      "id": "pub_20",
+      "name": "Kadhy Touré",
+      "type": "public",
+      "image": "/images/publicfigures/pub_20.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Yasield"
+    },
+    {
+      "id": "pub_24",
+      "name": "Akissi Delta",
+      "type": "public",
+      "image": "/images/publicfigures/pub_24.jpg",
+      "source": "wikidata_commons",
+      "license": "CC0",
+      "author": "Blessingedi76"
+    },
+    {
+      "id": "pub_25",
+      "name": "Michel Bohiri",
+      "type": "public",
+      "image": "/images/publicfigures/pub_25.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Ornellaagre"
+    },
+    {
+      "id": "pub_26",
+      "name": "Amélie Wabehi",
+      "type": "public",
+      "image": "/images/publicfigures/pub_26.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Murielledamey"
+    },
+    {
+      "id": "pub_28",
+      "name": "Nastou Traoré",
+      "type": "public",
+      "image": "/images/publicfigures/pub_28.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Tchindoroxane"
+    },
+    {
+      "id": "pub_29",
+      "name": "Adrienne Koutouan",
+      "type": "public",
+      "image": "/images/publicfigures/pub_29.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 4.0",
+      "author": "Aristidek5maya"
+    },
+    {
+      "id": "pub_33",
+      "name": "Cheick Yvhane",
+      "type": "public",
+      "image": "/images/publicfigures/pub_33.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "GNENEMA"
+    },
+    {
+      "id": "food_1",
+      "name": "Garba (Attiéké Thon)",
+      "type": "nourriture",
+      "image": "/images/nourriture/food_1.jpg",
+      "source": "openverse",
+      "license": "CC BY",
+      "author": "anurag agnihotri"
+    },
+    {
+      "id": "food_2",
+      "name": "Kedjenou de Poulet",
+      "type": "nourriture",
+      "image": "/images/nourriture/food_2.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0",
+      "author": "Serein"
+    },
+    {
+      "id": "food_3",
+      "name": "Attiéké Poisson Grillé",
+      "type": "nourriture",
+      "image": "/images/nourriture/food_3.jpg",
+      "source": "openverse",
+      "license": "CC BY",
+      "author": "daoudadecoulibaly"
+    },
+    {
+      "id": "food_6",
+      "name": "Foutou Banane Sauce Graine",
+      "type": "nourriture",
+      "image": "/images/nourriture/food_6.jpg",
+      "source": "openverse",
+      "license": "CC CC0",
+      "author": "AskX"
+    },
+    {
+      "id": "food_7",
+      "name": "Foutou Igname Sauce Claire",
+      "type": "nourriture",
+      "image": "/images/nourriture/food_7.jpg",
+      "source": "openverse",
+      "license": "CC BY-SA",
+      "author": "Jacquitoz"
+    },
+    {
+      "id": "food_8",
+      "name": "Riz Gras au Poulet",
+      "type": "nourriture",
+      "image": "/images/nourriture/food_8.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "DromoTetteh"
+    },
+    {
+      "id": "food_9",
+      "name": "Alloco (Banane plantain frite)",
+      "type": "nourriture",
+      "image": "/images/nourriture/food_9.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 2.0",
+      "author": "Krista"
+    },
+    {
+      "id": "food_10",
+      "name": "Claclo (Beignets de plantain)",
+      "type": "nourriture",
+      "image": "/images/nourriture/food_10.jpg",
+      "source": "openverse",
+      "license": "CC BY-SA",
+      "author": "Eltia Aimée"
+    },
+    {
+      "id": "food_12",
+      "name": "Sauce Kopè (Gombo frais)",
+      "type": "nourriture",
+      "image": "/images/nourriture/food_12.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Creativity special"
+    },
+    {
+      "id": "food_13",
+      "name": "Sauce Gouagouassou",
+      "type": "nourriture",
+      "image": "/images/nourriture/food_13.jpg",
+      "source": "openverse",
+      "license": "CC BY",
+      "author": "KONE IF"
+    },
+    {
+      "id": "food_14",
+      "name": "Choukouya de Mouton",
+      "type": "nourriture",
+      "image": "/images/nourriture/food_14.jpg",
+      "source": "openverse",
+      "license": "CC BY-SA",
+      "author": "Cyriac Gbogou"
+    },
+    {
+      "id": "food_15",
+      "name": "Baka (Bouillie de mil/riz)",
+      "type": "nourriture",
+      "image": "/images/nourriture/food_15.jpg",
+      "source": "openverse",
+      "license": "CC BY-SA",
+      "author": "Marcin Morawiecki"
+    },
+    {
+      "id": "food_16",
+      "name": "Gbofloto (Beignets ivoiriens)",
+      "type": "nourriture",
+      "image": "/images/nourriture/food_16.jpg",
+      "source": "openverse",
+      "license": "CC BY-SA",
+      "author": "Val59"
+    },
+    {
+      "id": "food_17",
+      "name": "Pain Chien (Pain brochettes)",
+      "type": "nourriture",
+      "image": "/images/nourriture/food_17.jpg",
+      "source": "openverse",
+      "license": "CC BY-SA",
+      "author": "Cyriac Gbogou"
+    },
+    {
+      "id": "food_18",
+      "name": "Kabato (Pâte de maïs)",
+      "type": "nourriture",
+      "image": "/images/nourriture/food_18.jpg",
+      "source": "openverse",
+      "license": "CC BY-SA",
+      "author": "user:alberth2"
+    },
+    {
+      "id": "food_19",
+      "name": "Attiéké Huile de Palme (Rouge)",
+      "type": "nourriture",
+      "image": "/images/nourriture/food_19.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Cca Raheem"
+    },
+    {
+      "id": "food_20",
+      "name": "Kedjenou de Lapin",
+      "type": "nourriture",
+      "image": "/images/nourriture/food_20.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0",
+      "author": "Serein"
+    },
+    {
+      "id": "prod_1",
+      "name": "Garba (1 part de base thon + attiéké)",
+      "type": "produit",
+      "image": "/images/produits/prod_1.jpg",
+      "source": "openverse",
+      "license": "CC BY",
+      "author": "anurag agnihotri"
+    },
+    {
+      "id": "prod_2",
+      "name": "Attiéké (1 boule standard au marché)",
+      "type": "produit",
+      "image": "/images/produits/prod_2.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Cca Raheem"
+    },
+    {
+      "id": "prod_3",
+      "name": "Baguette de Pain standard",
+      "type": "produit",
+      "image": "/images/produits/prod_3.jpg",
+      "source": "openverse",
+      "license": "CC CC0",
+      "author": "Margarine Denise"
+    },
+    {
+      "id": "prod_6",
+      "name": "Riz Local cassé (1 kg)",
+      "type": "produit",
+      "image": "/images/produits/prod_6.jpg",
+      "source": "openverse",
+      "license": "CC BY-SA",
+      "author": "Red Carpet Report on Mingle Media TV from Culver City, USA"
+    },
+    {
+      "id": "prod_7",
+      "name": "Recharge de Bouteille de Gaz (B6 - 6kg)",
+      "type": "produit",
+      "image": "/images/produits/prod_7.jpg",
+      "source": "openverse",
+      "license": "CC BY",
+      "author": "ComputerHotline"
+    },
+    {
+      "id": "prod_8",
+      "name": "Ticket de Gbaka (Adjamé - Cocody)",
+      "type": "produit",
+      "image": "/images/produits/prod_8.jpg",
+      "source": "openverse",
+      "license": "CC BY-SA",
+      "author": "Abdallahbigboy"
+    },
+    {
+      "id": "prod_11",
+      "name": "Sachet d'eau de table glacée (L'unité)",
+      "type": "produit",
+      "image": "/images/produits/prod_11.jpg",
+      "source": "openverse",
+      "license": "CC BY",
+      "author": "dalbera"
+    },
+    {
+      "id": "prod_15",
+      "name": "Sucre Roux local (1 kg)",
+      "type": "produit",
+      "image": "/images/produits/prod_15.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0",
+      "author": "Lauri Andler (Phantom)"
+    },
+    {
+      "id": "prod_16",
+      "name": "Savon local Kabakrou (L'unité)",
+      "type": "produit",
+      "image": "/images/produits/prod_16.jpg",
+      "source": "wikidata_commons",
+      "license": "CC0",
+      "author": "DimiTalen"
+    },
+    {
+      "id": "prod_17",
+      "name": "Paquet de Café Ivoire (250g)",
+      "type": "produit",
+      "image": "/images/produits/prod_17.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 2.0",
+      "author": "Julius Schorzman"
+    },
+    {
+      "id": "prod_19",
+      "name": "Tablette de Chocolat de Côte d'Ivoire",
+      "type": "produit",
+      "image": "/images/produits/prod_19.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY 2.0",
+      "author": "formulatehealth"
+    },
+    {
+      "id": "prod_20",
+      "name": "Tas de bananes douces (4-5 fruits)",
+      "type": "produit",
+      "image": "/images/produits/prod_20.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0",
+      "author": "Wilfredor"
+    },
+    {
+      "id": "prod_21",
+      "name": "Petit verre de Koutoukou local",
+      "type": "produit",
+      "image": "/images/produits/prod_21.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Adelphe KONAN"
+    },
+    {
+      "id": "prod_22",
+      "name": "Casque audio bluetooth entrée de gamme",
+      "type": "produit",
+      "image": "/images/produits/prod_22.jpg",
+      "source": "openverse",
+      "license": "CC BY-SA",
+      "author": "Johnspencer"
+    },
+    {
+      "id": "prod_23",
+      "name": "Console de jeu PlayStation 5 Slim 825Go",
+      "type": "produit",
+      "image": "/images/produits/prod_23.jpg",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Soberian (this retouched file) Osh33m (original photograph)"
+    }
+  ],
   "a_verifier_manuellement": {
-    "artistes": [
-      {
-        "id": "art_1",
-        "name": "Didi B",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
+    "artists": [
       {
         "id": "art_2",
         "name": "Ariel Sheney",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_3",
-        "name": "Josey",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_4",
-        "name": "Roseline Layo",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_5",
-        "name": "KS Bloom",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_6",
-        "name": "Serge Beynaud",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_7",
         "name": "Debordo Leekunfa",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_8",
-        "name": "Magic System",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_9",
-        "name": "DJ Arafat",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_10",
-        "name": "Meiway",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_11",
-        "name": "Alpha Blondy",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_12",
-        "name": "Tiken Jah Fakoly",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_13",
-        "name": "Himra",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_14",
-        "name": "Suspect 95",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "source trop petite (450x600)"
       },
       {
         "id": "art_15",
         "name": "Mix Premier",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_16",
         "name": "Espoir 2000",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_17",
-        "name": "Yodé & Siro",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_18",
         "name": "Petit Denis",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_19",
-        "name": "Kerozen DJ",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_20",
-        "name": "Morijah",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_21",
-        "name": "Fior de Bior",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_22",
-        "name": "Lil Jay Bingerack",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_23",
         "name": "Elow'n",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_24",
-        "name": "Safarel Obiang",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "source trop petite (700x400)"
       },
       {
         "id": "art_25",
         "name": "Vitale",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 10 examines)"
       },
       {
         "id": "art_26",
         "name": "Bamba Amy Sarah",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_27",
         "name": "Claire Bahi",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "source trop petite (453x457)"
       },
       {
         "id": "art_28",
         "name": "MC One",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 4 examines)"
       },
       {
         "id": "art_29",
         "name": "Soum Bill",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_30",
         "name": "Les Patrons",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 8 examines)"
       },
       {
         "id": "art_31",
         "name": "Fitini",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 2 examines)"
       },
       {
         "id": "art_32",
         "name": "Molière",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 10 examines)"
       },
       {
         "id": "art_33",
         "name": "Bilé Didier",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_34",
         "name": "Les Garagistes",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_35",
-        "name": "Ismaël Isaac",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_36",
         "name": "Tour de Garde",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_37",
-        "name": "Monique Séka",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_38",
-        "name": "Aïcha Koné",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_39",
-        "name": "Nayanka Bell",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_40",
-        "name": "Bailly Spinto",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_41",
-        "name": "Ernesto Djédjé",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 6 examines)"
       },
       {
         "id": "art_42",
         "name": "François Lougah",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_43",
         "name": "Reine Pélagie",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_44",
         "name": "Joelle C",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_45",
-        "name": "Affou Keïta",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 10 examines)"
       },
       {
         "id": "art_46",
         "name": "Guy Christ Israel",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_47",
         "name": "Nestor David",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 4 examines)"
       },
       {
         "id": "art_48",
         "name": "Richard Krémé",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 3 examines)"
       },
       {
         "id": "art_49",
         "name": "Schekina",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 2 examines)"
       },
       {
         "id": "art_50",
         "name": "Eden",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 10 examines)"
       },
       {
         "id": "art_51",
         "name": "Onel Mala",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_52",
         "name": "Bebi Philip",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_53",
         "name": "Shado Chris",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_54",
         "name": "Francky Dicaprio",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_55",
-        "name": "DJ Lewis",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "source trop petite (199x232)"
       },
       {
         "id": "art_56",
         "name": "DJ Jacob",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_57",
         "name": "Erickson le Zoulou",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_58",
         "name": "Révolution",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 10 examines)"
       },
       {
         "id": "art_59",
         "name": "VDA (Voix des Anges)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 11 examines)"
       },
       {
         "id": "art_60",
         "name": "Les Leaders",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_61",
-        "name": "Yabongo Lova",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 3 examines)"
       },
       {
         "id": "art_62",
         "name": "Tripa Gninnin",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_63",
         "name": "Oprah",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 10 examines)"
       },
       {
         "id": "art_64",
         "name": "Douk Saga",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 2 examines)"
       },
       {
         "id": "art_65",
         "name": "Jovial",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 10 examines)"
       },
       {
         "id": "art_66",
         "name": "Black K",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 10 examines)"
       },
       {
         "id": "art_67",
         "name": "Rocky Gold",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_68",
         "name": "Teeyah",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_69",
         "name": "Boni (Magic System)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 11 examines)"
       },
       {
         "id": "art_70",
         "name": "Manadja (Magic System)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 2 examines)"
       },
       {
         "id": "art_71",
         "name": "Goudé (Magic System)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 11 examines)"
       },
       {
         "id": "art_72",
         "name": "Asalfo (Magic System)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 2 examines)"
       },
       {
         "id": "art_73",
         "name": "Josey Priscille",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "art_74",
-        "name": "Didier Bilé",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "art_75",
         "name": "Les Mercenaires",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 9 examines)"
       }
     ],
-    "footballeurs": [
-      {
-        "id": "foot_1",
-        "name": "Didier Drogba",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_2",
-        "name": "Yaya Touré",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_3",
-        "name": "Kolo Touré",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
+    "footballers": [
       {
         "id": "foot_4",
         "name": "Nicolas Pépé",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_5",
-        "name": "Franck Kessié",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_6",
-        "name": "Simon Adingra",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 2 examines)"
       },
       {
         "id": "foot_7",
         "name": "Sébastien Haller",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_8",
-        "name": "Seko Fofana",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_9",
-        "name": "Jean Michaël Seri",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_10",
-        "name": "Emmanuel Eboué",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_11",
-        "name": "Salomon Kalou",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_12",
-        "name": "Gervinho",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_13",
-        "name": "Wilfried Zaha",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_14",
-        "name": "Max-Alain Gradel",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_15",
-        "name": "Serge Aurier",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_16",
-        "name": "Eric Bailly",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_17",
-        "name": "Ibrahim Sangaré",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_18",
-        "name": "Odilon Kossounou",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_19",
-        "name": "Evan Ndicka",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_20",
-        "name": "Yahia Fofana",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_21",
-        "name": "Oumar Diakité",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "foot_22",
         "name": "Christian Kouamé",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_23",
-        "name": "Wilfried Singo",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_24",
-        "name": "Karim Konaté",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "source trop petite (340x473)"
       },
       {
         "id": "foot_25",
         "name": "Willy Boly",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_26",
-        "name": "Jérémie Boga",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_27",
-        "name": "Ghislain Konan",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_28",
-        "name": "Jean-Philippe Krasso",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_29",
-        "name": "Lazare Amani",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_30",
-        "name": "Maxwel Cornet",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_31",
-        "name": "Jean-Evrard Kouassi",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_32",
-        "name": "Amad Diallo",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "foot_33",
         "name": "David Datro Fofana",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_34",
-        "name": "Seydou Doumbia",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "foot_35",
         "name": "Lacina Traoré",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_36",
-        "name": "Wilfried Bony",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_37",
-        "name": "Cheick Tioté",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_38",
-        "name": "Didier Zokora (Maestro)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_39",
-        "name": "Arthur Boka",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "source trop petite (276x431)"
       },
       {
         "id": "foot_40",
         "name": "Siaka Tiéné (Chico)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "source trop petite (200x430)"
       },
       {
         "id": "foot_41",
         "name": "Bakari Koné (Baky)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "source trop petite (326x392)"
       },
       {
         "id": "foot_42",
         "name": "Aruna Dindane",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_43",
-        "name": "Kader Keïta (Popito)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_44",
-        "name": "Boubacar Barry (Copa)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "source trop petite (204x556)"
       },
       {
         "id": "foot_45",
         "name": "Romaric N'Dri",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_46",
-        "name": "Jean-Jacques Tizié",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_47",
-        "name": "Cyrille Domoraud",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "source trop petite (196x269)"
       },
       {
         "id": "foot_48",
         "name": "Bonaventure Kalou",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_49",
-        "name": "Joel Tiéhi",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_50",
-        "name": "Laurent Pokou",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "source trop petite (210x304)"
       },
       {
         "id": "foot_51",
         "name": "Alain Gouaméné",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "foot_52",
         "name": "Youssouf Fofana",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_53",
-        "name": "Abdoulaye Traoré (Ben Badi)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_54",
-        "name": "Gadji Celi",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 5 examines)"
       },
       {
         "id": "foot_55",
         "name": "Donald-Olivier Sié",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "foot_56",
         "name": "Serge Maguy",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_57",
-        "name": "Didier Otokoré",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "foot_58",
         "name": "Lassina Diabaté",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "foot_59",
         "name": "Olivier Tebily",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "source trop petite (178x213)"
       },
       {
         "id": "foot_60",
         "name": "Ibrahim Bakayoko",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "foot_61",
         "name": "Gilles Yapi Yapo",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_62",
-        "name": "Blaise Kouassi",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_63",
-        "name": "Kanga Akalé",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "source trop petite (330x618)"
       },
       {
         "id": "foot_64",
         "name": "Marco Né",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_65",
-        "name": "Constant Djakpa",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_66",
-        "name": "Sol Bamba",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "source trop petite (451x487)"
       },
       {
         "id": "foot_67",
         "name": "Benjamin Angoua",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_68",
-        "name": "Sayouba Mandé",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_69",
-        "name": "Badra Ali Sangaré",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "source trop petite (251x373)"
       },
       {
         "id": "foot_70",
         "name": "Ismaël Diomandé",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_71",
-        "name": "Giovanni Sio",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_72",
-        "name": "Brice Dja Djédjé",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_73",
-        "name": "Serey Dié",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
-      },
-      {
-        "id": "foot_74",
-        "name": "Ousmane Diomandé",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "source trop petite (343x477)"
       },
       {
         "id": "foot_75",
         "name": "Lamine Camara (CI)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/footballeur.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 5 examines)"
       }
     ],
-    "figures_publiques": [
+    "publicFigures": [
       {
         "id": "pub_1",
         "name": "Gohou Michel",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "pub_2",
         "name": "Digbeu Cravate",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "pub_3",
         "name": "Yvidero",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "pub_4",
-        "name": "Willy Dumbo",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "pub_5",
-        "name": "Observateur Ébène",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "pub_6",
         "name": "Le Magnific",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "pub_7",
-        "name": "Boukary",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 7 examines)"
       },
       {
         "id": "pub_8",
         "name": "Ramatoulaye",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 10 examines)"
       },
       {
         "id": "pub_9",
         "name": "Eunice Zunon",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "pub_10",
         "name": "L'Excès",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "pub_11",
-        "name": "Emma Lohoues",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 5 examines)"
       },
       {
         "id": "pub_12",
         "name": "Carmen Sama",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 3 examines)"
       },
       {
         "id": "pub_13",
         "name": "Eudoxie Yao",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "pub_14",
-        "name": "Molare",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "pub_15",
-        "name": "Konnie Touré",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "pub_16",
         "name": "Caroline Dasylva",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "pub_17",
         "name": "Jean-Michel Onin",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "pub_18",
         "name": "Didier Bléou",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "pub_19",
         "name": "Yves de M'Bella",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "pub_20",
-        "name": "Kadhy Touré",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "pub_21",
         "name": "Marie-Paule Adjé",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "pub_22",
         "name": "Stéphane Zabavy",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "pub_23",
         "name": "Guy Kalou",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "pub_24",
-        "name": "Akissi Delta",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "pub_25",
-        "name": "Michel Bohiri",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "pub_26",
-        "name": "Amélie Wabehi",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "pub_27",
         "name": "Gbazé Thérèse",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "pub_28",
-        "name": "Nastou Traoré",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "pub_29",
-        "name": "Adrienne Koutouan",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "pub_30",
         "name": "Emmanuelle Keïta",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "pub_31",
         "name": "Général Camille Makosso",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 1 examines)"
       },
       {
         "id": "pub_32",
         "name": "Lolo Beauté",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
-      },
-      {
-        "id": "pub_33",
-        "name": "Cheick Yvhane",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/artiste.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 2 examines)"
       }
     ],
-    "nourriture": [
-      {
-        "id": "food_1",
-        "name": "Garba (Attiéké Thon)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
-      },
-      {
-        "id": "food_2",
-        "name": "Kedjenou de Poulet",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
-      },
-      {
-        "id": "food_3",
-        "name": "Attiéké Poisson Grillé",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
-      },
+    "foods": [
       {
         "id": "food_4",
         "name": "Placali Sauce Graine",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
+        "raison": "source trop petite (480x600)"
       },
       {
         "id": "food_5",
         "name": "Placali Sauce Kpala",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
-      },
-      {
-        "id": "food_6",
-        "name": "Foutou Banane Sauce Graine",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
-      },
-      {
-        "id": "food_7",
-        "name": "Foutou Igname Sauce Claire",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
-      },
-      {
-        "id": "food_8",
-        "name": "Riz Gras au Poulet",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
-      },
-      {
-        "id": "food_9",
-        "name": "Alloco (Banane plantain frite)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
-      },
-      {
-        "id": "food_10",
-        "name": "Claclo (Beignets de plantain)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
+        "raison": "source trop petite (480x600)"
       },
       {
         "id": "food_11",
         "name": "Sauce Djoumgblé (Gombo sec)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
-      },
-      {
-        "id": "food_12",
-        "name": "Sauce Kopè (Gombo frais)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
-      },
-      {
-        "id": "food_13",
-        "name": "Sauce Gouagouassou",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
-      },
-      {
-        "id": "food_14",
-        "name": "Choukouya de Mouton",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
-      },
-      {
-        "id": "food_15",
-        "name": "Baka (Bouillie de mil/riz)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
-      },
-      {
-        "id": "food_16",
-        "name": "Gbofloto (Beignets ivoiriens)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
-      },
-      {
-        "id": "food_17",
-        "name": "Pain Chien (Pain brochettes)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
-      },
-      {
-        "id": "food_18",
-        "name": "Kabato (Pâte de maïs)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
-      },
-      {
-        "id": "food_19",
-        "name": "Attiéké Huile de Palme (Rouge)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
-      },
-      {
-        "id": "food_20",
-        "name": "Kedjenou de Lapin",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/nourriture.svg"
+        "raison": "aucune entite valide (aucun candidat valide sur 3 examines)"
       }
     ],
-    "produits": [
-      {
-        "id": "prod_1",
-        "name": "Garba (1 part de base thon + attiéké)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
-      },
-      {
-        "id": "prod_2",
-        "name": "Attiéké (1 boule standard au marché)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
-      },
-      {
-        "id": "prod_3",
-        "name": "Baguette de Pain standard",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
-      },
+    "products": [
       {
         "id": "prod_4",
         "name": "Cube Maggi (L'unité)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
+        "raison": "marque deposee, exclue volontairement (BRANDS_TO_SKIP)"
       },
       {
         "id": "prod_5",
         "name": "Bouteille d'Huile Dinor (1 Litre)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
-      },
-      {
-        "id": "prod_6",
-        "name": "Riz Local cassé (1 kg)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
-      },
-      {
-        "id": "prod_7",
-        "name": "Recharge de Bouteille de Gaz (B6 - 6kg)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
-      },
-      {
-        "id": "prod_8",
-        "name": "Ticket de Gbaka (Adjamé - Cocody)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
+        "raison": "marque deposee, exclue volontairement (BRANDS_TO_SKIP)"
       },
       {
         "id": "prod_9",
         "name": "Bouteille d'eau Kirène (1.5L)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
+        "raison": "marque deposee, exclue volontairement (BRANDS_TO_SKIP)"
       },
       {
         "id": "prod_10",
         "name": "Bière Beaufort Lager (Bouteille 65cl)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
-      },
-      {
-        "id": "prod_11",
-        "name": "Sachet d'eau de table glacée (L'unité)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
+        "raison": "marque deposee, exclue volontairement (BRANDS_TO_SKIP)"
       },
       {
         "id": "prod_12",
         "name": "Petite boîte de Lait concentré Peak",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
+        "raison": "marque deposee, exclue volontairement (BRANDS_TO_SKIP)"
       },
       {
         "id": "prod_13",
         "name": "Boîte de Sardine Pénélope",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
+        "raison": "marque deposee, exclue volontairement (BRANDS_TO_SKIP)"
       },
       {
         "id": "prod_14",
         "name": "Paquet de Pâtes alimentaires (500g)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
-      },
-      {
-        "id": "prod_15",
-        "name": "Sucre Roux local (1 kg)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
-      },
-      {
-        "id": "prod_16",
-        "name": "Savon local Kabakrou (L'unité)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
-      },
-      {
-        "id": "prod_17",
-        "name": "Paquet de Café Ivoire (250g)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
+        "raison": "attribution incomplete : auteur"
       },
       {
         "id": "prod_18",
         "name": "Ticket de Bus Sotra standard",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
-      },
-      {
-        "id": "prod_19",
-        "name": "Tablette de Chocolat de Côte d'Ivoire",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
-      },
-      {
-        "id": "prod_20",
-        "name": "Tas de bananes douces (4-5 fruits)",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
-      },
-      {
-        "id": "prod_21",
-        "name": "Petit verre de Koutoukou local",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
-      },
-      {
-        "id": "prod_22",
-        "name": "Casque audio bluetooth entrée de gamme",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
-      },
-      {
-        "id": "prod_23",
-        "name": "Console de jeu PlayStation 5 Slim 825Go",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
+        "raison": "marque deposee, exclue volontairement (BRANDS_TO_SKIP)"
       },
       {
         "id": "prod_24",
         "name": "Téléphone intelligent Tecno Spark standard",
-        "status": "a_verifier_manuellement",
-        "source": "N/A",
-        "license": "N/A",
-        "author": "N/A",
-        "image": "/images/placeholders/produit.svg"
+        "raison": "marque deposee, exclue volontairement (BRANDS_TO_SKIP)"
       }
     ]
-  },
-  "valides": []
+  }
 }
