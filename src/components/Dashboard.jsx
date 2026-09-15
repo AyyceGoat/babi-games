@@ -1,185 +1,144 @@
-import React, { useEffect, useState } from 'react';
-import { Sword, ListStart, HelpCircle, Trophy, Flame } from 'lucide-react';
-import heroBanner from '../assets/hero_banner.png';
+import React, { useEffect, useMemo, useState } from 'react';
+import { Sword, ListStart, CircleDollarSign, Trophy, Flame, ArrowRight } from 'lucide-react';
+import { readNumber } from '../lib/storage.js';
+import ItemImage from './ItemImage.jsx';
 
-export default function Dashboard({ setActivePage }) {
-  const [stats, setStats] = useState({
-    versusCount: 0,
-    tierListCount: 0,
-    justePrixBestScore: 0,
-    justePrixGames: 0
-  });
+const JEUX = [
+  {
+    id: 'versus',
+    titre: 'Versus',
+    teinte: 'orange',
+    icone: Sword,
+    texte: 'Deux visages, un choix. Tu élimines jusqu’au dernier debout.',
+  },
+  {
+    id: 'tierlist',
+    titre: 'Tier List',
+    teinte: 'vert',
+    icone: ListStart,
+    texte: 'Range la culture ivoirienne du rang S au rang F. Assume tes choix.',
+  },
+  {
+    id: 'justeprix',
+    titre: 'Juste Prix',
+    teinte: 'ocre',
+    icone: CircleDollarSign,
+    texte: 'Devine le prix réel des produits du quotidien, en francs CFA.',
+  },
+];
+
+export default function Dashboard({ onNavigate, collections }) {
+  const [stats, setStats] = useState(null);
 
   useEffect(() => {
-    // Load stats from localStorage
-    const savedVersus = localStorage.getItem('stats_versus_played') || '0';
-    const savedTiers = localStorage.getItem('stats_tierlists_saved') || '0';
-    const savedJusteScore = localStorage.getItem('stats_justeprix_best') || '0';
-    const savedJusteCount = localStorage.getItem('stats_justeprix_played') || '0';
-
     setStats({
-      versusCount: parseInt(savedVersus, 10),
-      tierListCount: parseInt(savedTiers, 10),
-      justePrixBestScore: parseInt(savedJusteScore, 10),
-      justePrixGames: parseInt(savedJusteCount, 10)
+      versus: readNumber('stats_versus_played'),
+      tierlists: readNumber('stats_tierlists_saved'),
+      parties: readNumber('stats_justeprix_played'),
+      record: readNumber('stats_justeprix_best'),
     });
   }, []);
 
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
-      {/* Hero Section */}
-      <div className="glass-panel" style={{
-        padding: '3rem 2rem',
-        textAlign: 'center',
-        background: `linear-gradient(180deg, rgba(6, 7, 9, 0.75) 0%, rgba(6, 7, 9, 0.95) 100%), url(${heroBanner})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        border: '1px solid var(--border-light)',
-        position: 'relative',
-        overflow: 'hidden'
-      }}>
-        {/* Decorative circle glow */}
-        <div style={{
-          position: 'absolute',
-          top: '-50px',
-          left: '-50px',
-          width: '200px',
-          height: '200px',
-          background: 'var(--color-orange)',
-          filter: 'blur(100px)',
-          opacity: 0.2,
-          pointerEvents: 'none'
-        }} />
-        <div style={{
-          position: 'absolute',
-          bottom: '-50px',
-          right: '-50px',
-          width: '200px',
-          height: '200px',
-          background: 'var(--color-green)',
-          filter: 'blur(100px)',
-          opacity: 0.2,
-          pointerEvents: 'none'
-        }} />
+  const debutant = stats && stats.versus + stats.tierlists + stats.parties === 0;
 
-        <div style={{ position: 'relative', zIndex: 1 }}>
-          <span style={{
-            fontSize: '0.85rem',
-            background: 'rgba(255, 140, 0, 0.12)',
-            color: 'var(--color-orange)',
-            padding: '6px 16px',
-            borderRadius: '50px',
-            fontWeight: 700,
-            letterSpacing: '1.5px',
-            textTransform: 'uppercase',
-            display: 'inline-block',
-            marginBottom: '1rem',
-            border: '1px solid rgba(255, 140, 0, 0.2)'
-          }}>
-            Plateforme de Jeux 100% 1ère Classe (225)
-          </span>
-          <h1 style={{ fontSize: '2.8rem', fontWeight: 800, marginBottom: '1rem', lineHeight: '1.2' }}>
-            Tu connais ton <span className="gradient-text-ci">Pays</span> ?
+  // Quelques visages reels en bandeau : plus parlant qu'un aplat vide.
+  const vedettes = useMemo(() => {
+    const tous = [
+      ...(collections?.artists || []),
+      ...(collections?.footballers || []),
+      ...(collections?.publicFigures || []),
+    ].filter((i) => i.status === 'ok');
+    return tous.slice(0, 8);
+  }, [collections]);
+
+  return (
+    <div className="ecran ecran-accueil">
+      <section className="hero">
+        <div className="hero-texte">
+          <p className="sur-titre">Plateforme de mini-jeux 100 % ivoiriens</p>
+          <h1 className="hero-titre">
+            Tu connais <span className="accent-trace">ton pays</span> ?
           </h1>
-          <p style={{
-            fontSize: '1.1rem',
-            color: 'var(--text-secondary)',
-            maxWidth: '650px',
-            margin: '0 auto 2rem',
-            lineHeight: '1.6'
-          }}>
-            Amuse-toi avec les meilleurs mini-jeux inspirés de la culture ivoirienne. Vote pour tes artistes, classe tes plats favoris et estime le vrai prix des articles à Abidjan !
+          <p className="hero-sous-titre">
+            Vote pour tes artistes, classe tes plats, estime les prix d’Abidjan.
+            Trois jeux, une seule question : est-ce que tu connais vraiment le 225 ?
           </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <button onClick={() => setActivePage('versus')} className="btn btn-primary">
-              <Flame size={18} /> Lancer un Versus
+          <div className="actions">
+            <button type="button" className="btn btn-primary btn-large" onClick={() => onNavigate('versus')}>
+              <Flame size={18} aria-hidden="true" /> Lancer un Versus
             </button>
-            <button onClick={() => setActivePage('justeprix')} className="btn btn-secondary">
+            <button type="button" className="btn btn-secondary btn-large" onClick={() => onNavigate('justeprix')}>
               Jouer au Juste Prix
             </button>
           </div>
         </div>
-      </div>
 
-      {/* Grid de Jeux */}
-      <div>
-        <h2 style={{ fontSize: '1.75rem', fontWeight: 700, marginBottom: '1.5rem' }}>Sélectionne ton défi :</h2>
-        <div className="game-grid">
-          {/* Versus Card */}
-          <div className="game-card glass-panel" onClick={() => setActivePage('versus')}>
-            <div className="game-card-icon">
-              <Sword size={24} />
-            </div>
-            {/* Visual gradient placeholder as background */}
-            <div className="game-card-bg" style={{
-              background: 'linear-gradient(225deg, #FF8C00 0%, #111 60%)'
-            }} />
-            <div style={{ position: 'relative', zIndex: 2 }}>
-              <h3 className="game-card-title">Versus</h3>
-              <p className="game-card-desc">
-                Deux célébrités s'affrontent. Fais ton choix à chaque tour jusqu'à couronner le grand vainqueur. Arbre de tournoi 100% aléatoire.
-              </p>
-            </div>
+        {vedettes.length > 0 && (
+          <div className="hero-bandeau" aria-hidden="true">
+            {vedettes.map((item) => (
+              <div key={item.id} className="hero-vignette">
+                <ItemImage item={item} eager />
+              </div>
+            ))}
           </div>
+        )}
+      </section>
 
-          {/* Tier List Card */}
-          <div className="game-card glass-panel" onClick={() => setActivePage('tierlist')}>
-            <div className="game-card-icon">
-              <ListStart size={24} />
-            </div>
-            <div className="game-card-bg" style={{
-              background: 'linear-gradient(225deg, #00A86B 0%, #111 60%)'
-            }} />
-            <div style={{ position: 'relative', zIndex: 2 }}>
-              <h3 className="game-card-title">Tier List</h3>
-              <p className="game-card-desc">
-                Classe par glisser-déposer les aliments, artistes et humoristes ivoiriens dans les rangs S, A, B, C, D ou F. Sauvegarde et partage ton œuvre !
-              </p>
-            </div>
-          </div>
-
-          {/* Juste Prix Card */}
-          <div className="game-card glass-panel" onClick={() => setActivePage('justeprix')}>
-            <div className="game-card-icon">
-              <HelpCircle size={24} />
-            </div>
-            <div className="game-card-bg" style={{
-              background: 'linear-gradient(225deg, #FFD700 0%, #111 60%)'
-            }} />
-            <div style={{ position: 'relative', zIndex: 2 }}>
-              <h3 className="game-card-title">Le Juste Prix</h3>
-              <p className="game-card-desc">
-                Estime le coût exact en Francs CFA (XOF) des produits locaux (Garba, Gaz, bus, tech). Calcule ton écart et décroche le score parfait !
-              </p>
-            </div>
-          </div>
+      <section>
+        <h2 className="titre-section">Choisis ton défi</h2>
+        <div className="grille-jeux">
+          {JEUX.map(({ id, titre, teinte, icone: Icone, texte }) => (
+            <button
+              key={id}
+              type="button"
+              className={`carte-jeu teinte-${teinte}`}
+              onClick={() => onNavigate(id)}
+            >
+              <span className="carte-jeu-icone"><Icone size={26} aria-hidden="true" /></span>
+              <span className="carte-jeu-titre">{titre}</span>
+              <span className="carte-jeu-texte">{texte}</span>
+              <span className="carte-jeu-cta">Jouer <ArrowRight size={16} aria-hidden="true" /></span>
+            </button>
+          ))}
         </div>
-      </div>
+      </section>
 
-      {/* Stats Section */}
-      <div className="glass-panel" style={{ padding: '2rem', border: '1px solid var(--border-light)' }}>
-        <h3 style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <Trophy size={20} style={{ color: 'var(--color-gold)' }} /> Tes Statistiques locales
-        </h3>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '1.5rem' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-            <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Tournois Versus terminés</span>
-            <span style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--color-orange)' }}>{stats.versusCount}</span>
+      <section className="bloc-stats">
+        <h2 className="titre-section">
+          <Trophy size={20} aria-hidden="true" /> Tes statistiques
+        </h2>
+
+        {debutant ? (
+          // Etat vide accueillant : l'ancienne version affichait quatre
+          // zeros a tout nouveau visiteur (DIAGNOSTIC.md D.3).
+          <div className="stats-vide">
+            <p className="stats-vide-titre">Rien encore. C’est le moment de commencer.</p>
+            <p className="stats-vide-texte">
+              Tes scores restent sur cet appareil, rien n’est envoyé nulle part.
+              Lance un premier tournoi, ça prend deux minutes.
+            </p>
+            <button type="button" className="btn btn-primary" onClick={() => onNavigate('versus')}>
+              <Flame size={18} aria-hidden="true" /> Commencer
+            </button>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-            <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Tier Lists sauvegardées</span>
-            <span style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--color-green)' }}>{stats.tierListCount}</span>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-            <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Parties du Juste Prix</span>
-            <span style={{ fontSize: '1.8rem', fontWeight: 800, color: 'var(--color-gold)' }}>{stats.justePrixGames}</span>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-            <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Meilleur score Juste Prix</span>
-            <span style={{ fontSize: '1.8rem', fontWeight: 800, color: 'white' }}>{stats.justePrixBestScore} pts</span>
-          </div>
-        </div>
-      </div>
+        ) : (
+          <dl className="grille-stats">
+            <Stat label="Tournois terminés" valeur={stats?.versus ?? 0} teinte="orange" />
+            <Stat label="Tier lists enregistrées" valeur={stats?.tierlists ?? 0} teinte="vert" />
+            <Stat label="Parties du Juste Prix" valeur={stats?.parties ?? 0} teinte="indigo" />
+            <Stat label="Meilleur score" valeur={stats?.record ?? 0} teinte="ocre" suffixe=" pts" />
+          </dl>
+        )}
+      </section>
+    </div>
+  );
+}
+
+function Stat({ label, valeur, teinte, suffixe = '' }) {
+  return (
+    <div className={`stat teinte-${teinte}`}>
+      <dt>{label}</dt>
+      <dd>{valeur}{suffixe}</dd>
     </div>
   );
 }

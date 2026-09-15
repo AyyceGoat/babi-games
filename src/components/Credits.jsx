@@ -1,192 +1,117 @@
-import React, { useState } from 'react';
-import { Shield, Search, ExternalLink, Award } from 'lucide-react';
+import React, { useMemo, useState } from 'react';
+import { Shield, Search, ExternalLink } from 'lucide-react';
 
-export default function Credits({ artists, footballers, publicFigures, foods, products }) {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filterType, setFilterType] = useState('all');
+const LIBELLES = {
+  artists: 'Artiste',
+  footballers: 'Footballeur',
+  publicFigures: 'Personnalité',
+  foods: 'Nourriture',
+  products: 'Produit',
+};
 
-  // Combine all items into a single credits list
-  const allItems = [
-    ...artists.map(x => ({ ...x, type: 'Artiste' })),
-    ...footballers.map(x => ({ ...x, type: 'Footballeur' })),
-    ...publicFigures.map(x => ({ ...x, type: 'Personnalité' })),
-    ...foods.map(x => ({ ...x, type: 'Nourriture' })),
-    ...products.map(x => ({ ...x, type: 'Produit' }))
-  ];
+/**
+ * Page d'attribution.
+ *
+ * DIAGNOSTIC.md D.3 : cette page affichait 227 lignes portant toutes
+ * "N/A", faute de metadonnees. Elle n'affiche desormais que les items
+ * reellement attribues, et indique franchement combien restent a sourcer.
+ */
+export default function Credits({ collections }) {
+  const [recherche, setRecherche] = useState('');
+  const [filtre, setFiltre] = useState('tous');
 
-  // Filter items based on search and type
-  const filteredItems = allItems.filter(item => {
-    const matchesSearch = item.name.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesType = filterType === 'all' || item.type === filterType;
-    return matchesSearch && matchesType;
-  });
+  const { attribues, enAttente } = useMemo(() => {
+    const tous = Object.entries(collections || {}).flatMap(([cle, liste]) =>
+      (liste || []).map((item) => ({ ...item, categorie: LIBELLES[cle] || cle }))
+    );
+    return {
+      attribues: tous.filter((i) => i.status === 'ok' && i.license && i.license !== 'N/A'),
+      enAttente: tous.filter((i) => !(i.status === 'ok' && i.license && i.license !== 'N/A')),
+    };
+  }, [collections]);
+
+  // useMemo : l'ancienne version reparcourait les 227 items a chaque frappe.
+  const visibles = useMemo(() => {
+    const q = recherche.trim().toLowerCase();
+    return attribues.filter(
+      (i) =>
+        (filtre === 'tous' || i.categorie === filtre) &&
+        (!q || i.name.toLowerCase().includes(q) || (i.author || '').toLowerCase().includes(q))
+    );
+  }, [attribues, recherche, filtre]);
 
   return (
-    <div className="container" style={{ paddingBottom: '4rem' }}>
-      {/* Header */}
-      <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-        <h1 className="gradient-text" style={{ fontSize: '2.5rem', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
-          <Shield size={36} style={{ color: 'var(--color-green)' }} /> Crédits & Droits d'Auteur
+    <div className="ecran ecran-credits">
+      <header className="ecran-entete">
+        <p className="sur-titre">Conformité</p>
+        <h1 className="titre-ecran">
+          <Shield size={28} aria-hidden="true" /> Crédits et droits d’auteur
         </h1>
-        <p style={{ color: 'var(--text-dim)', maxWidth: '600px', margin: '0 auto' }}>
-          Attributions légales et licences d'utilisation des ressources visuelles de la plateforme, conformément aux exigences Creative Commons et Wikidata.
+        <p className="sous-titre">
+          Chaque visuel publié ici provient de Wikimedia Commons ou d’Openverse,
+          sous licence Creative Commons, et porte son auteur et sa licence.
+        </p>
+      </header>
+
+      <div className="credits-resume">
+        <p>
+          <strong>{attribues.length}</strong> visuels avec attribution complète.
+          {enAttente.length > 0 && (
+            <> <strong>{enAttente.length}</strong> éléments sont encore sans image :
+            aucune source libre vérifiable n’a été trouvée, ils restent volontairement vides.</>
+          )}
         </p>
       </div>
 
-      {/* Controls */}
-      <div className="card" style={{ marginBottom: '1.5rem', padding: '1.25rem' }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', alignItems: 'center', justifyContent: 'space-between' }}>
-          {/* Search bar */}
-          <div style={{ position: 'relative', flex: '1', minWidth: '250px' }}>
-            <Search size={18} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-dim)' }} />
-            <input
-              type="text"
-              placeholder="Rechercher une personnalité ou un objet..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              style={{
-                width: '100%',
-                padding: '10px 12px 10px 40px',
-                background: 'rgba(255,255,255,0.05)',
-                border: '1px solid rgba(255,255,255,0.1)',
-                borderRadius: 'var(--radius-md)',
-                color: 'white'
-              }}
-            />
-          </div>
-
-          {/* Filter Type */}
-          <div style={{ display: 'flex', gap: '0.5rem' }}>
-            {['all', 'Artiste', 'Footballeur', 'Personnalité', 'Nourriture', 'Produit'].map(type => (
-              <button
-                key={type}
-                onClick={() => setFilterType(type)}
-                className={`btn ${filterType === type ? 'btn-primary' : 'btn-secondary'}`}
-                style={{ padding: '6px 12px', fontSize: '0.85rem' }}
-              >
-                {type === 'all' ? 'Tous' : type}
-              </button>
-            ))}
-          </div>
+      <div className="credits-controles">
+        <div className="champ-recherche">
+          <Search size={16} aria-hidden="true" />
+          <input
+            type="search"
+            value={recherche}
+            onChange={(e) => setRecherche(e.target.value)}
+            placeholder="Rechercher un nom ou un auteur"
+            aria-label="Rechercher dans les crédits"
+          />
+        </div>
+        <div className="pastilles">
+          {['tous', ...new Set(attribues.map((i) => i.categorie))].map((c) => (
+            <button
+              key={c}
+              type="button"
+              className={`pastille${filtre === c ? ' is-active' : ''}`}
+              onClick={() => setFiltre(c)}
+              aria-pressed={filtre === c}
+            >
+              {c === 'tous' ? 'Tous' : c}
+            </button>
+          ))}
         </div>
       </div>
 
-      {/* Table */}
-      <div className="card" style={{ overflowX: 'auto', padding: 0 }}>
-        <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', minWidth: '700px' }}>
-          <thead>
-            <tr style={{ borderBottom: '1px solid rgba(255,255,255,0.1)', background: 'rgba(255,255,255,0.02)' }}>
-              <th style={{ padding: '1rem' }}>Visuel</th>
-              <th style={{ padding: '1rem' }}>Nom</th>
-              <th style={{ padding: '1rem' }}>Type</th>
-              <th style={{ padding: '1rem' }}>Source</th>
-              <th style={{ padding: '1rem' }}>Licence</th>
-              <th style={{ padding: '1rem' }}>Auteur / Crédit</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredItems.length > 0 ? (
-              filteredItems.map((item, idx) => (
-                <tr
-                  key={item.id + '_' + idx}
-                  style={{
-                    borderBottom: '1px solid rgba(255,255,255,0.05)',
-                    transition: 'background 0.2s'
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.background = 'transparent'; }}
-                >
-                  {/* Thumbnail */}
-                  <td style={{ padding: '0.75rem 1rem' }}>
-                    <div style={{ width: '50px', height: '50px', borderRadius: 'var(--radius-sm)', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                        onError={(e) => {
-                          e.target.onerror = null;
-                          e.target.src = '/images/placeholders/artiste.svg';
-                        }}
-                      />
-                    </div>
-                  </td>
-
-                  {/* Name */}
-                  <td style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>{item.name}</td>
-
-                  {/* Type */}
-                  <td style={{ padding: '0.75rem 1rem' }}>
-                    <span style={{
-                      padding: '3px 8px',
-                      borderRadius: '12px',
-                      fontSize: '0.75rem',
-                      fontWeight: 600,
-                      background: item.type === 'Artiste' ? 'rgba(249,115,22,0.15)' :
-                                  item.type === 'Footballeur' ? 'rgba(34,197,94,0.15)' :
-                                  item.type === 'Personnalité' ? 'rgba(59,130,246,0.15)' :
-                                  item.type === 'Nourriture' ? 'rgba(236,72,153,0.15)' :
-                                  'rgba(234,179,8,0.15)',
-                      color: item.type === 'Artiste' ? 'var(--color-orange)' :
-                             item.type === 'Footballeur' ? 'var(--color-green)' :
-                             item.type === 'Personnalité' ? '#3b82f6' :
-                             item.type === 'Nourriture' ? '#ec4899' :
-                             '#eab308'
-                    }}>
-                      {item.type}
-                    </span>
-                  </td>
-
-                  {/* Source */}
-                  <td style={{ padding: '0.75rem 1rem' }}>
-                    {item.source === 'wikidata_commons' ? (
-                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.25rem', color: '#60a5fa', fontSize: '0.9rem' }}>
-                        Wikimedia Commons <ExternalLink size={12} />
-                      </span>
-                    ) : item.source === 'openverse' ? (
-                      <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.25rem', color: '#a78bfa', fontSize: '0.9rem' }}>
-                        Openverse <ExternalLink size={12} />
-                      </span>
-                    ) : item.source === 'Upload' || item.source === 'Manuel' || (item.source && item.source !== 'N/A' && item.source !== 'none') ? (
-                      <span style={{ color: 'var(--color-green)', fontSize: '0.9rem' }}>
-                        {item.source}
-                      </span>
-                    ) : (
-                      <span style={{ color: 'var(--text-dim)', fontStyle: 'italic', fontSize: '0.9rem' }}>
-                        Non attribuée
-                      </span>
-                    )}
-                  </td>
-
-                  {/* License */}
-                  <td style={{ padding: '0.75rem 1rem' }}>
-                    <span style={{
-                      fontFamily: 'monospace',
-                      fontSize: '0.85rem',
-                      padding: '2px 6px',
-                      background: 'rgba(255,255,255,0.08)',
-                      borderRadius: '4px'
-                    }}>
-                      {item.license || 'N/A'}
-                    </span>
-                  </td>
-
-                  {/* Author */}
-                  <td style={{ padding: '0.75rem 1rem', fontSize: '0.9rem', color: 'var(--text-dim)', maxWidth: '200px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} title={item.author || 'Inconnu'}>
-                    {item.author || 'Inconnu'}
-                  </td>
-                </tr>
-              ))
-            ) : (
-              <tr>
-                <td colSpan="6" style={{ padding: '3rem', textAlign: 'center', color: 'var(--text-dim)' }}>
-                  <Award size={48} style={{ opacity: 0.2, marginBottom: '0.5rem' }} />
-                  <p>Aucun crédit trouvé pour votre recherche.</p>
-                </td>
-              </tr>
-            )}
-          </tbody>
-        </table>
-      </div>
+      {visibles.length === 0 ? (
+        <p className="etat-vide">Aucun crédit ne correspond à cette recherche.</p>
+      ) : (
+        <ul className="credits-liste">
+          {visibles.map((item) => (
+            <li key={item.id} className="credit-ligne">
+              <div className="credit-nom">
+                <span>{item.name}</span>
+                <span className="badge">{item.categorie}</span>
+              </div>
+              <div className="credit-meta">
+                <span><abbr title="Auteur de la photographie">Auteur</abbr> : {item.author}</span>
+                <span>Licence : {item.license}</span>
+                {item.attribution?.page && (
+                  <a href={item.attribution.page} target="_blank" rel="noopener noreferrer">
+                    Fichier source <ExternalLink size={13} aria-hidden="true" />
+                  </a>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

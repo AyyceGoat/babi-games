@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Dashboard from './components/Dashboard';
 import Versus from './components/Versus';
@@ -6,209 +6,151 @@ import TierList from './components/TierList';
 import JustePrix from './components/JustePrix';
 import Admin from './components/Admin';
 import Credits from './components/Credits';
+import { safeSet, safeRemove, readList } from './lib/storage.js';
 
-// Load our local, automated-seeded database JSON
 import dbData from './data/db.json';
 
-export default function App() {
-  const [activePage, setActivePage] = useState('dashboard');
+/** Incrementer a CHAQUE modification de db.json, sinon les visiteurs
+ *  existants restent sur leur cache perime (DIAGNOSTIC.md F.4, point 4). */
+const DATA_VERSION = 'v5';
 
-  // Core database states loaded from dbData or localStorage cache
-  const [artists, setArtists] = useState([]);
-  const [footballers, setFootballers] = useState([]);
-  const [publicFigures, setPublicFigures] = useState([]);
-  const [foods, setFoods] = useState([]);
-  const [products, setProducts] = useState([]);
+const STORAGE_KEYS = {
+  artists: 'civ_data_artists',
+  footballers: 'civ_data_footballers',
+  publicFigures: 'civ_data_publicfigures',
+  foods: 'civ_data_foods',
+  products: 'civ_data_products',
+};
 
-  // Load data on initialization
+const STAT_KEYS = [
+  'stats_versus_played',
+  'stats_tierlists_saved',
+  'stats_justeprix_best',
+  'stats_justeprix_played',
+  'saved_tierlists',
+];
+
+/** Controle de forme : un cache d'un ancien schema ne doit pas passer. */
+const looksLikeItem = (i) =>
+  i && typeof i === 'object' && typeof i.id === 'string' && typeof i.name === 'string';
+
+export default function App({ activePage = 'dashboard', onNavigate = () => {} }) {
+  const [collections, setCollections] = useState(() => ({
+    artists: [],
+    footballers: [],
+    publicFigures: [],
+    foods: [],
+    products: [],
+  }));
+  const [hydrated, setHydrated] = useState(false);
+
+  /* Chargement initial ------------------------------------------------- */
   useEffect(() => {
-    const localArtists = localStorage.getItem('civ_data_artists');
-    const localFootballers = localStorage.getItem('civ_data_footballers');
-    const localPublic = localStorage.getItem('civ_data_publicfigures');
-    const localFoods = localStorage.getItem('civ_data_foods');
-    const localProducts = localStorage.getItem('civ_data_products');
-    const dataVersion = localStorage.getItem('civ_data_version');
+    const cachedVersion = readVersion();
+    const forceReset = cachedVersion !== DATA_VERSION;
+    const next = {};
 
-    // Bump cache version to v4 to trigger update to new Wikidata-seeded db.json
-    const shouldForceReset = dataVersion !== 'v4';
+    for (const [key, storageKey] of Object.entries(STORAGE_KEYS)) {
+      const cached = forceReset ? null : readList(storageKey, looksLikeItem);
+      next[key] = cached ?? (dbData[key] || []);
+    }
 
-    // Helper to safely parse local JSON and check if it is populated
-    const getCachedList = (rawJSON) => {
-      if (!rawJSON) return null;
-      try {
-        const parsed = JSON.parse(rawJSON);
-        return Array.isArray(parsed) && parsed.length > 0 ? parsed : null;
-      } catch {
-        return null;
+    setCollections(next);
+    if (forceReset) {
+      for (const [key, storageKey] of Object.entries(STORAGE_KEYS)) {
+        safeSet(storageKey, JSON.stringify(next[key]));
       }
-    };
-
-    const cachedArtists = getCachedList(localArtists);
-    if (cachedArtists && !shouldForceReset) {
-      setArtists(cachedArtists);
-    } else {
-      setArtists(dbData.artists || []);
-      localStorage.setItem('civ_data_artists', JSON.stringify(dbData.artists || []));
+      safeSet('civ_data_version', DATA_VERSION);
     }
-
-    const cachedFootballers = getCachedList(localFootballers);
-    if (cachedFootballers && !shouldForceReset) {
-      setFootballers(cachedFootballers);
-    } else {
-      setFootballers(dbData.footballers || []);
-      localStorage.setItem('civ_data_footballers', JSON.stringify(dbData.footballers || []));
-    }
-
-    const cachedPublic = getCachedList(localPublic);
-    if (cachedPublic && !shouldForceReset) {
-      setPublicFigures(cachedPublic);
-    } else {
-      setPublicFigures(dbData.publicFigures || []);
-      localStorage.setItem('civ_data_publicfigures', JSON.stringify(dbData.publicFigures || []));
-    }
-
-    const cachedFoods = getCachedList(localFoods);
-    if (cachedFoods && !shouldForceReset) {
-      setFoods(cachedFoods);
-    } else {
-      setFoods(dbData.foods || []);
-      localStorage.setItem('civ_data_foods', JSON.stringify(dbData.foods || []));
-    }
-
-    const cachedProducts = getCachedList(localProducts);
-    if (cachedProducts && !shouldForceReset) {
-      setProducts(cachedProducts);
-    } else {
-      setProducts(dbData.products || []);
-      localStorage.setItem('civ_data_products', JSON.stringify(dbData.products || []));
-    }
-
-    if (shouldForceReset) {
-      localStorage.setItem('civ_data_version', 'v4');
-    }
+    setHydrated(true);
   }, []);
 
-  // Sync state modifications to localStorage
+  /* Synchronisation ----------------------------------------------------
+     Le garde `if (list.length > 0)` a ete retire : il empechait de
+     persister une collection videe, si bien qu'une suppression totale
+     depuis l'ecran Admin semblait fonctionner puis se reannulait au
+     rechargement (DIAGNOSTIC.md F.4, point 1).
+     Toutes les ecritures passent par safeSet : plus d'ecran blanc en cas
+     de quota depasse, un message explicite s'affiche a la place.        */
   useEffect(() => {
-    if (artists.length > 0) localStorage.setItem('civ_data_artists', JSON.stringify(artists));
-  }, [artists]);
-
-  useEffect(() => {
-    if (footballers.length > 0) localStorage.setItem('civ_data_footballers', JSON.stringify(footballers));
-  }, [footballers]);
-
-  useEffect(() => {
-    if (publicFigures.length > 0) localStorage.setItem('civ_data_publicfigures', JSON.stringify(publicFigures));
-  }, [publicFigures]);
-
-  useEffect(() => {
-    if (foods.length > 0) localStorage.setItem('civ_data_foods', JSON.stringify(foods));
-  }, [foods]);
-
-  useEffect(() => {
-    if (products.length > 0) localStorage.setItem('civ_data_products', JSON.stringify(products));
-  }, [products]);
-
-  // Reset helper passed to admin
-  const resetToDefault = () => {
-    setArtists(dbData.artists || []);
-    setFootballers(dbData.footballers || []);
-    setPublicFigures(dbData.publicFigures || []);
-    setFoods(dbData.foods || []);
-    setProducts(dbData.products || []);
-
-    localStorage.setItem('civ_data_artists', JSON.stringify(dbData.artists || []));
-    localStorage.setItem('civ_data_footballers', JSON.stringify(dbData.footballers || []));
-    localStorage.setItem('civ_data_publicfigures', JSON.stringify(dbData.publicFigures || []));
-    localStorage.setItem('civ_data_foods', JSON.stringify(dbData.foods || []));
-    localStorage.setItem('civ_data_products', JSON.stringify(dbData.products || []));
-  };
-
-  // Switch views
-  const renderActivePage = () => {
-    switch (activePage) {
-      case 'dashboard':
-        return <Dashboard setActivePage={setActivePage} />;
-      case 'versus':
-        return (
-          <Versus
-            artists={artists}
-            footballers={footballers}
-            publicFigures={publicFigures}
-          />
-        );
-      case 'tierlist':
-        return (
-          <TierList
-            artists={artists}
-            footballers={footballers}
-            publicFigures={publicFigures}
-            foods={foods}
-          />
-        );
-      case 'justeprix':
-        return <JustePrix products={products} />;
-      case 'admin':
-        return (
-          <Admin
-            artists={artists}
-            setArtists={setArtists}
-            footballers={footballers}
-            setFootballers={setFootballers}
-            publicFigures={publicFigures}
-            setPublicFigures={setPublicFigures}
-            foods={foods}
-            setFoods={setFoods}
-            products={products}
-            setProducts={setProducts}
-            resetToDefault={resetToDefault}
-          />
-        );
-      case 'credits':
-        return (
-          <Credits
-            artists={artists}
-            footballers={footballers}
-            publicFigures={publicFigures}
-            foods={foods}
-            products={products}
-          />
-        );
-      default:
-        return <Dashboard setActivePage={setActivePage} />;
+    if (!hydrated) return;
+    for (const [key, storageKey] of Object.entries(STORAGE_KEYS)) {
+      safeSet(storageKey, JSON.stringify(collections[key]));
     }
+  }, [collections, hydrated]);
+
+  const setCollection = useCallback((name, updater) => {
+    setCollections((prev) => ({
+      ...prev,
+      [name]: typeof updater === 'function' ? updater(prev[name]) : updater,
+    }));
+  }, []);
+
+  /** Restauration complete : purge aussi les statistiques, que l'ancienne
+   *  version laissait en place malgre le libelle "restauration complete". */
+  const resetToDefault = useCallback(() => {
+    const fresh = {};
+    for (const key of Object.keys(STORAGE_KEYS)) fresh[key] = dbData[key] || [];
+    setCollections(fresh);
+    for (const statKey of STAT_KEYS) safeRemove(statKey);
+    safeSet('civ_data_version', DATA_VERSION);
+  }, []);
+
+  const pages = {
+    dashboard: () => <Dashboard onNavigate={onNavigate} collections={collections} />,
+    versus: () => (
+      <Versus
+        artists={collections.artists}
+        footballers={collections.footballers}
+        publicFigures={collections.publicFigures}
+      />
+    ),
+    tierlist: () => (
+      <TierList
+        artists={collections.artists}
+        footballers={collections.footballers}
+        publicFigures={collections.publicFigures}
+        foods={collections.foods}
+      />
+    ),
+    justeprix: () => <JustePrix products={collections.products} />,
+    admin: () => (
+      <Admin
+        collections={collections}
+        setCollection={setCollection}
+        resetToDefault={resetToDefault}
+      />
+    ),
+    credits: () => <Credits collections={collections} />,
   };
 
   return (
     <div className="app-container">
-      {/* Top sticky Navbar */}
-      <Navbar activePage={activePage} setActivePage={setActivePage} />
-
-      {/* Main gaming stage container */}
-      <main className="main-content">
-        {renderActivePage()}
+      <Navbar activePage={activePage} onNavigate={onNavigate} />
+      <main className="main-content" id="contenu">
+        {(pages[activePage] || pages.dashboard)()}
       </main>
-
-      {/* Modern footer */}
-      <footer style={{
-        marginTop: 'auto',
-        padding: '2rem 1.5rem',
-        textAlign: 'center',
-        borderTop: '1px solid var(--border-light)',
-        fontSize: '0.85rem',
-        color: 'var(--text-dim)',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '0.5rem',
-        alignItems: 'center'
-      }}>
-        <div>
-          Fait avec 🧡 🤍 💚 pour la Côte d'Ivoire & la culture Babi
-        </div>
-        <div style={{ fontSize: '0.75rem', opacity: 0.7 }}>
-          &copy; {new Date().getFullYear()} Babi Games Platform. Tous droits réservés.
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
+  );
+}
+
+function readVersion() {
+  try {
+    return localStorage.getItem('civ_data_version');
+  } catch {
+    return null;
+  }
+}
+
+function SiteFooter() {
+  return (
+    <footer className="site-footer">
+      <p className="site-footer-line">Fait avec cœur pour la Côte d'Ivoire et la culture Babi</p>
+      <p className="site-footer-legal">
+        &copy; {new Date().getFullYear()} Babi Games. Visuels sous licence Creative Commons,
+        attributions détaillées sur la page Crédits.
+      </p>
+    </footer>
   );
 }

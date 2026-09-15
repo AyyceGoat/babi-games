@@ -1,323 +1,292 @@
-import React, { useState, useEffect } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { ListStart, Save, RotateCcw, HelpCircle, CheckCircle } from 'lucide-react';
+import ItemImage from './ItemImage.jsx';
+import { shuffle } from '../lib/random.js';
+import { safeSet, safeGet, readNumber } from '../lib/storage.js';
+import { useToast } from './Toast.jsx';
 
-const TIER_ROWS = [
-  { id: 'S', name: 'S', color: '#ff7f7f' },
-  { id: 'A', name: 'A', color: '#ffbf7f' },
-  { id: 'B', name: 'B', color: '#ffdf7f' },
-  { id: 'C', name: 'C', color: '#ffff7f' },
-  { id: 'D', name: 'D', color: '#bfff7f' },
-  { id: 'F', name: 'F', color: '#7fff7f' },
+const RANGS = [
+  { id: 'S', teinte: 'rang-s' },
+  { id: 'A', teinte: 'rang-a' },
+  { id: 'B', teinte: 'rang-b' },
+  { id: 'C', teinte: 'rang-c' },
+  { id: 'D', teinte: 'rang-d' },
+  { id: 'F', teinte: 'rang-f' },
 ];
 
+const CATEGORIES = [
+  { id: 'foods', label: 'Nourriture' },
+  { id: 'artists', label: 'Artistes' },
+  { id: 'footballers', label: 'Footballeurs' },
+  { id: 'public', label: 'Personnalités' },
+];
+
+const rangsVides = () => ({ S: [], A: [], B: [], C: [], D: [], F: [] });
+const SEUIL_GLISSER = 8; // px au-dela desquels un appui devient un glisser
+
 export default function TierList({ artists, footballers, publicFigures, foods }) {
-  const [category, setCategory] = useState('foods'); // 'foods' | 'artists' | 'footballers' | 'public'
+  const toast = useToast();
+  const [categorie, setCategorie] = useState('foods');
+  const [rangs, setRangs] = useState(rangsVides);
+  const [reserve, setReserve] = useState([]);
+  const [selection, setSelection] = useState(null);
+  const [enregistre, setEnregistre] = useState(false);
 
-  const [ranks, setRanks] = useState({ S: [], A: [], B: [], C: [], D: [], F: [] }); // Ranked items mapping
-  const [pool, setPool] = useState([]); // Items left in the pool
-  const [selectedItem, setSelectedItem] = useState(null); // Click fallback for mobile
+  // Glisser-deposer par evenements pointeur : fonctionne au doigt comme
+  // a la souris. L'API HTML5 Drag & Drop precedente ne recevait aucun
+  // evenement sur mobile (DIAGNOSTIC.md D.4).
+  const [drag, setDrag] = useState(null); // {item, source, x, y, actif}
+  const dragRef = useRef(null);
+  const [zoneSurvolee, setZoneSurvolee] = useState(null);
 
-  const [showSuccess, setShowSuccess] = useState(false);
-  const [imageErrors, setImageErrors] = useState({});
+  const sourceDonnees = useCallback(() => {
+    if (categorie === 'artists') return sample16(artists);
+    if (categorie === 'footballers') return sample16(footballers);
+    if (categorie === 'public') return sample16(publicFigures);
+    return shuffle(foods);
+  }, [categorie, artists, footballers, publicFigures, foods]);
 
-  const handleImageError = (id) => {
-    setImageErrors(prev => ({ ...prev, [id]: true }));
-  };
+  const reinitialiser = useCallback(() => {
+    setReserve(sourceDonnees());
+    setRangs(rangsVides());
+    setSelection(null);
+  }, [sourceDonnees]);
 
-  // Initialize pool based on category
   useEffect(() => {
-    resetTierList();
-  }, [category, artists, footballers, publicFigures, foods]);
+    reinitialiser();
+  }, [reinitialiser]);
 
-  const resetTierList = () => {
-    let sourceData = [];
-    switch (category) {
-      case 'foods':
-        sourceData = [...foods];
-        break;
-      case 'artists':
-        // Take a random 16 artists to avoid cluttering
-        sourceData = [...artists].sort(() => 0.5 - Math.random()).slice(0, 16);
-        break;
-      case 'footballers':
-        // Take a random 16 players
-        sourceData = [...footballers].sort(() => 0.5 - Math.random()).slice(0, 16);
-        break;
-      case 'public':
-        // Take a random 16 public figures
-        sourceData = [...publicFigures].sort(() => 0.5 - Math.random()).slice(0, 16);
-        break;
-      default:
-        sourceData = [...foods];
-    }
-    
-    setPool(sourceData);
-    setRanks({ S: [], A: [], B: [], C: [], D: [], F: [] });
-    setSelectedItem(null);
-    setImageErrors({});
+  /* --- Deplacement d'un item ------------------------------------------ */
+
+  const deplacer = useCallback((item, source, cible) => {
+    if (!item || source === cible) return;
+    if (source === 'reserve') setReserve((p) => p.filter((i) => i.id !== item.id));
+    else setRangs((p) => ({ ...p, [source]: p[source].filter((i) => i.id !== item.id) }));
+
+    if (cible === 'reserve') setReserve((p) => [...p, item]);
+    else setRangs((p) => ({ ...p, [cible]: [...p[cible], item] }));
+
+    setSelection(null);
+  }, []);
+
+  /* --- Pointeur -------------------------------------------------------- */
+
+  const onPointerDown = (e, item, source) => {
+    if (e.button === 1 || e.button === 2) return;
+    const info = { item, source, x: e.clientX, y: e.clientY, actif: false };
+    dragRef.current = info;
+    setDrag(info);
   };
 
-  // Drag and Drop Logic
-  const handleDragStart = (e, item, sourceZone) => {
-    e.dataTransfer.setData('text/plain', JSON.stringify({ item, sourceZone }));
-  };
+  useEffect(() => {
+    if (!drag) return;
 
-  const handleDragOver = (e) => {
-    e.preventDefault();
-  };
+    const bouge = (e) => {
+      const d = dragRef.current;
+      if (!d) return;
+      const dx = e.clientX - d.x;
+      const dy = e.clientY - d.y;
+      if (!d.actif && Math.hypot(dx, dy) < SEUIL_GLISSER) return;
 
-  const handleDrop = (e, targetZone) => {
-    e.preventDefault();
-    try {
-      const dataStr = e.dataTransfer.getData('text/plain');
-      if (!dataStr) return;
-      const { item, sourceZone } = JSON.parse(dataStr);
+      d.actif = true;
+      d.x = e.clientX;
+      d.y = e.clientY;
+      setDrag({ ...d });
 
-      moveItem(item, sourceZone, targetZone);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  const moveItem = (item, sourceZone, targetZone) => {
-    if (sourceZone === targetZone) return;
-
-    // Remove from source
-    if (sourceZone === 'pool') {
-      setPool(prev => prev.filter(i => i.id !== item.id));
-    } else {
-      setRanks(prev => ({
-        ...prev,
-        [sourceZone]: prev[sourceZone].filter(i => i.id !== item.id)
-      }));
-    }
-
-    // Add to target
-    if (targetZone === 'pool') {
-      setPool(prev => [...prev, item]);
-    } else {
-      setRanks(prev => ({
-        ...prev,
-        [targetZone]: [...prev[targetZone], item]
-      }));
-    }
-
-    setSelectedItem(null); // Clear selection
-  };
-
-  // Touch/Click selection logic (for mobile / pointer devices)
-  const handleItemClick = (item, sourceZone) => {
-    if (selectedItem && selectedItem.item.id === item.id) {
-      // Deselect if clicking the same item
-      setSelectedItem(null);
-    } else {
-      setSelectedItem({ item, sourceZone });
-    }
-  };
-
-  const handleZoneClick = (targetZone) => {
-    if (!selectedItem) return;
-    moveItem(selectedItem.item, selectedItem.sourceZone, targetZone);
-  };
-
-  const saveTierList = () => {
-    const listData = {
-      category,
-      ranks,
-      savedAt: new Date().toISOString()
+      const sous = document.elementFromPoint(e.clientX, e.clientY);
+      setZoneSurvolee(sous?.closest('[data-zone]')?.dataset.zone ?? null);
+      e.preventDefault();
     };
-    
-    // Save to localStorage
-    const saved = JSON.parse(localStorage.getItem('saved_tierlists') || '[]');
-    saved.push(listData);
-    localStorage.setItem('saved_tierlists', JSON.stringify(saved));
 
-    // Stats counter
-    const currentCount = parseInt(localStorage.getItem('stats_tierlists_saved') || '0', 10);
-    localStorage.setItem('stats_tierlists_saved', (currentCount + 1).toString());
+    const lache = (e) => {
+      const d = dragRef.current;
+      dragRef.current = null;
+      setDrag(null);
+      setZoneSurvolee(null);
+      if (!d) return;
 
-    setShowSuccess(true);
-    setTimeout(() => setShowSuccess(false), 3000);
+      if (d.actif) {
+        const sous = document.elementFromPoint(e.clientX, e.clientY);
+        const cible = sous?.closest('[data-zone]')?.dataset.zone;
+        if (cible) deplacer(d.item, d.source, cible);
+      } else {
+        // Simple appui : selection / deselection.
+        setSelection((prev) =>
+          prev && prev.item.id === d.item.id ? null : { item: d.item, source: d.source }
+        );
+      }
+    };
+
+    window.addEventListener('pointermove', bouge, { passive: false });
+    window.addEventListener('pointerup', lache);
+    window.addEventListener('pointercancel', lache);
+    return () => {
+      window.removeEventListener('pointermove', bouge);
+      window.removeEventListener('pointerup', lache);
+      window.removeEventListener('pointercancel', lache);
+    };
+  }, [drag, deplacer]);
+
+  /* Clic sur une zone : deplace l'element selectionne.
+     `selection` est lu ici, et les appuis sur un item n'atteignent plus
+     cette zone (ils sont traites par pointerup, pas par onClick), ce qui
+     supprime le conflit de propagation decrit dans DIAGNOSTIC.md D.4. */
+  const clicZone = (cible) => {
+    if (!selection) return;
+    deplacer(selection.item, selection.source, cible);
   };
 
-  // Rendering fallback gradient for items without photo
-  const getGradientStyle = (name) => {
-    let hash = 0;
-    for (let i = 0; i < name.length; i++) {
-      hash = name.charCodeAt(i) + ((hash << 5) - hash);
+  /* --- Enregistrement --------------------------------------------------- */
+
+  const enregistrer = () => {
+    const classes = Object.values(rangs).reduce((n, l) => n + l.length, 0);
+    if (classes === 0) {
+      toast("Classe au moins un element avant d'enregistrer.", 'info');
+      return;
     }
-    const color1 = `hsl(${Math.abs(hash % 360)}, 60%, 40%)`;
-    const color2 = `hsl(${Math.abs((hash + 80) % 360)}, 65%, 25%)`;
-    return `linear-gradient(135deg, ${color1}, ${color2})`;
+    let liste = [];
+    try {
+      liste = JSON.parse(safeGet('saved_tierlists') || '[]');
+      if (!Array.isArray(liste)) liste = [];
+    } catch {
+      liste = [];
+    }
+    liste.push({ categorie, rangs, enregistreLe: new Date().toISOString() });
+    // On ne conserve que les 20 dernieres : l'ancienne version empilait
+    // sans limite dans un stockage jamais relu.
+    const res = safeSet('saved_tierlists', JSON.stringify(liste.slice(-20)));
+    if (!res.ok) return;
+
+    safeSet('stats_tierlists_saved', String(readNumber('stats_tierlists_saved') + 1));
+    setEnregistre(true);
+    window.setTimeout(() => setEnregistre(false), 2600);
   };
 
-  const renderTierItem = (item, sourceZone) => {
-    const isSelected = selectedItem && selectedItem.item.id === item.id;
-    const hasError = imageErrors[item.id];
-    const isImageAvailable = item.image && item.image.trim() !== '' && !hasError;
-
-    return (
-      <div
-        key={item.id}
-        draggable
-        onDragStart={(e) => handleDragStart(e, item, sourceZone)}
-        onClick={() => handleItemClick(item, sourceZone)}
-        className="tier-item"
-        style={{
-          border: isSelected ? '3px solid var(--color-orange)' : '1px solid var(--border-light)',
-          boxShadow: isSelected ? '0 0 15px rgba(255,140,0,0.5)' : 'none'
-        }}
-      >
-        {isImageAvailable ? (
-          <img 
-            src={item.image} 
-            alt={item.name} 
-            loading="lazy"
-            onError={() => handleImageError(item.id)}
-          />
-        ) : (
-          <div className="tier-item-fallback" style={{ background: getGradientStyle(item.name) }}>
-            {item.name.split(' ').map(n => n[0]).slice(0, 2).join('')}
-          </div>
-        )}
-        <div className="tier-item-label">{item.name}</div>
-      </div>
-    );
-  };
+  const total = reserve.length + Object.values(rangs).reduce((n, l) => n + l.length, 0);
+  const classes = total - reserve.length;
 
   return (
-    <div className="tierlist-container">
-      {/* Title */}
-      <div style={{ textAlign: 'center' }}>
-        <h2 style={{ fontSize: '2rem', fontWeight: 800, marginBottom: '0.5rem' }}>
-          La <span className="gradient-text-ci">Tier List</span> 225
-        </h2>
-        <p style={{ color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto' }}>
-          Classe les éléments de la culture ivoirienne du rang S (Le top du top) au rang F (Médiéocre / Pas dedans).
-        </p>
-      </div>
+    <div className="ecran ecran-tierlist">
+      <header className="ecran-entete">
+        <p className="sur-titre">Classement</p>
+        <h1 className="titre-ecran">La Tier List 225</h1>
+        <p className="sous-titre">Du rang S, le top du top, au rang F, pas dedans du tout.</p>
+      </header>
 
-      {/* Category selector */}
-      <div className="glass-panel" style={{
-        padding: '0.75rem',
-        display: 'flex',
-        gap: '0.5rem',
-        justifyContent: 'center',
-        flexWrap: 'wrap',
-        background: 'rgba(0,0,0,0.15)'
-      }}>
-        {[
-          { id: 'foods', label: 'Nourriture 🇨🇮' },
-          { id: 'artists', label: 'Artistes' },
-          { id: 'footballers', label: 'Footballeurs' },
-          { id: 'public', label: 'Figures Publiques' }
-        ].map((cat) => (
+      <div className="pastilles pastilles-centrees">
+        {CATEGORIES.map((c) => (
           <button
-            key={cat.id}
-            onClick={() => setCategory(cat.id)}
-            className="btn btn-ghost"
-            style={{
-              color: category === cat.id ? 'var(--color-orange)' : 'var(--text-secondary)',
-              background: category === cat.id ? 'rgba(255, 140, 0, 0.08)' : 'transparent',
-              border: category === cat.id ? '1px solid rgba(255, 140, 0, 0.2)' : '1px solid transparent',
-              padding: '0.5rem 1rem'
-            }}
+            key={c.id}
+            type="button"
+            className={`pastille${categorie === c.id ? ' is-active' : ''}`}
+            onClick={() => setCategorie(c.id)}
+            aria-pressed={categorie === c.id}
           >
-            {cat.label}
+            {c.label}
           </button>
         ))}
       </div>
 
-      {/* Mobile user guide */}
-      <div style={{
-        fontSize: '0.8rem',
-        color: 'var(--text-secondary)',
-        display: 'flex',
-        alignItems: 'center',
-        gap: '0.5rem',
-        justifyContent: 'center'
-      }}>
-        <HelpCircle size={14} style={{ color: 'var(--color-orange)' }} />
-        <span>Sur mobile : tape sur un élément puis tape sur une ligne pour le classer.</span>
-      </div>
+      <p className="aide-jeu">
+        <HelpCircle size={15} aria-hidden="true" />
+        Glisse un élément vers un rang, ou tape dessus puis tape sur le rang voulu.
+      </p>
 
-      {/* Tier Board */}
-      <div className="tier-rows-container">
-        {TIER_ROWS.map((row) => (
-          <div key={row.id} className="tier-row">
+      <div className="tier-plateau">
+        {RANGS.map((rang) => (
+          <div key={rang.id} className={`tier-ligne ${rang.teinte}`}>
             <div
-              className="tier-label"
-              style={{ backgroundColor: row.color }}
-              onClick={() => handleZoneClick(row.id)}
+              className="tier-etiquette"
+              data-zone={rang.id}
+              onClick={() => clicZone(rang.id)}
             >
-              {row.name}
+              {rang.id}
             </div>
             <div
-              className="tier-dropzone"
-              onDragOver={handleDragOver}
-              onDrop={(e) => handleDrop(e, row.id)}
-              onClick={() => handleZoneClick(row.id)}
+              className={`tier-zone${zoneSurvolee === rang.id ? ' is-survolee' : ''}`}
+              data-zone={rang.id}
+              onClick={() => clicZone(rang.id)}
             >
-              {ranks[row.id].map((item) => renderTierItem(item, row.id))}
+              {rangs[rang.id].map((item) => (
+                <Vignette
+                  key={item.id}
+                  item={item}
+                  selectionne={selection?.item.id === item.id}
+                  enDeplacement={drag?.actif && drag.item.id === item.id}
+                  onPointerDown={(e) => onPointerDown(e, item, rang.id)}
+                />
+              ))}
             </div>
           </div>
         ))}
       </div>
 
-      {/* Control panel */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
-        <button onClick={resetTierList} className="btn btn-secondary">
-          <RotateCcw size={16} /> Réinitialiser
+      <div className="tier-actions">
+        <button type="button" className="btn btn-secondary" onClick={reinitialiser}>
+          <RotateCcw size={16} aria-hidden="true" /> Réinitialiser
         </button>
-
-        {showSuccess && (
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '0.5rem',
-            color: 'var(--color-green)',
-            fontSize: '0.9rem',
-            fontWeight: '600'
-          }}>
-            <CheckCircle size={18} /> Tier List enregistrée en local !
-          </div>
-        )}
-
-        <div style={{ display: 'flex', gap: '0.75rem' }}>
-          <button onClick={saveTierList} className="btn btn-success">
-            <Save size={16} /> Enregistrer
-          </button>
-        </div>
+        <span className="tier-compteur">{classes} / {total} classés</span>
+        <button type="button" className="btn btn-success" onClick={enregistrer}>
+          <Save size={16} aria-hidden="true" /> Enregistrer
+        </button>
       </div>
 
-      {/* Items Pool */}
-      <div className="tier-pool-container">
-        <h4 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <ListStart size={18} style={{ color: 'var(--color-orange)' }} /> Éléments à classer ({pool.length})
-        </h4>
+      {enregistre && (
+        <p className="message-succes" role="status">
+          <CheckCircle size={18} aria-hidden="true" /> Tier list enregistrée sur cet appareil.
+        </p>
+      )}
+
+      <section className="tier-reserve-bloc">
+        <h2 className="titre-section">
+          <ListStart size={18} aria-hidden="true" /> À classer ({reserve.length})
+        </h2>
         <div
-          className="tier-pool"
-          onDragOver={handleDragOver}
-          onDrop={(e) => handleDrop(e, 'pool')}
-          onClick={() => handleZoneClick('pool')}
+          className={`tier-reserve${zoneSurvolee === 'reserve' ? ' is-survolee' : ''}`}
+          data-zone="reserve"
+          onClick={() => clicZone('reserve')}
         >
-          {pool.length === 0 ? (
-            <div style={{
-              width: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: 'var(--text-dim)',
-              fontSize: '0.9rem',
-              padding: '2rem 0'
-            }}>
-              Tous les éléments ont été classés ! Félicitations.
-            </div>
+          {reserve.length === 0 ? (
+            <p className="etat-vide">Tout est classé. Beau travail.</p>
           ) : (
-            pool.map((item) => renderTierItem(item, 'pool'))
+            reserve.map((item) => (
+              <Vignette
+                key={item.id}
+                item={item}
+                selectionne={selection?.item.id === item.id}
+                enDeplacement={drag?.actif && drag.item.id === item.id}
+                onPointerDown={(e) => onPointerDown(e, item, 'reserve')}
+              />
+            ))
           )}
         </div>
-      </div>
+      </section>
+
+      {/* Fantome qui suit le doigt ou le curseur pendant le glisser */}
+      {drag?.actif && (
+        <div className="drag-fantome" style={{ left: drag.x, top: drag.y }} aria-hidden="true">
+          <ItemImage item={drag.item} />
+        </div>
+      )}
     </div>
   );
 }
+
+function Vignette({ item, selectionne, enDeplacement, onPointerDown }) {
+  return (
+    <div
+      className={`tier-vignette${selectionne ? ' is-selectionnee' : ''}${enDeplacement ? ' is-deplacee' : ''}`}
+      onPointerDown={onPointerDown}
+      role="button"
+      tabIndex={0}
+      aria-pressed={selectionne}
+      aria-label={item.name}
+      title={item.name}
+    >
+      <ItemImage item={item} />
+      <span className="tier-vignette-nom">{item.name}</span>
+    </div>
+  );
+}
+
+const sample16 = (liste) => shuffle(liste).slice(0, 16);
