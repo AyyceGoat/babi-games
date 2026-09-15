@@ -80,6 +80,9 @@
 
   --rayon: 3px;
   --touch-min: 44px;
+  /* Hauteur reelle de la barre de navigation, pour les ecrans qui
+     doivent tenir exactement dans une fenetre (tier list). */
+  --nav-h: 60px;
 
   --transition: 160ms cubic-bezier(0.2, 0, 0.1, 1);
 
@@ -139,12 +142,16 @@ img { max-width: 100%; display: block; }
   width: 100%;
   max-width: 1160px;
   margin-inline: auto;
-  padding: var(--e6) var(--e4) var(--e8);
+  padding: var(--e5) var(--e4) var(--e6);
+}
+
+@media (max-width: 680px) {
+  .main-content { padding: var(--e4) var(--e3) var(--e5); }
 }
 
 .container { width: 100%; max-width: 1160px; margin-inline: auto; padding-inline: var(--e4); }
 
-.ecran { display: flex; flex-direction: column; gap: var(--e6); animation: entree 320ms cubic-bezier(0.2, 0, 0.1, 1); }
+.ecran { display: flex; flex-direction: column; gap: var(--e5); animation: entree 320ms cubic-bezier(0.2, 0, 0.1, 1); }
 
 @keyframes entree {
   from { opacity: 0; transform: translateY(14px); }
@@ -403,6 +410,10 @@ img { max-width: 100%; display: block; }
   width: 100%;
   aspect-ratio: 1;
   overflow: hidden;
+  /* Contexte de conteneur : sans lui l'unite cqw des initiales se
+     resolvait contre la fenetre et les lettres debordaient des
+     petites vignettes de la tier list. */
+  container-type: inline-size;
   background: var(--teinte, var(--indigo));
   display: grid;
   place-items: center;
@@ -443,9 +454,13 @@ img { max-width: 100%; display: block; }
 
 .item-initiales {
   font-family: var(--police-titre);
-  font-size: clamp(1.6rem, 12cqw, 3rem);
+  font-size: clamp(0.62rem, 30cqw, 4rem);
+  line-height: 1;
   color: var(--sur-teinte, #fff);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+  padding: 2px;
+  text-align: center;
+  overflow: hidden;
 }
 
 /* --------------------------------------------------------------- */
@@ -460,7 +475,7 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 
-.hero-texte { padding: var(--e6) var(--e5); display: flex; flex-direction: column; gap: var(--e4); }
+.hero-texte { padding: var(--e5) var(--e4); display: flex; flex-direction: column; gap: var(--e3); }
 
 .hero-titre {
   font-family: var(--police-titre);
@@ -514,8 +529,8 @@ img { max-width: 100%; display: block; }
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--e2);
-  padding: var(--e5);
+  gap: var(--e1);
+  padding: var(--e4);
   text-align: left;
   background: var(--teinte);
   color: var(--sur-teinte);
@@ -542,8 +557,8 @@ img { max-width: 100%; display: block; }
 .carte-jeu-icone {
   display: grid;
   place-items: center;
-  width: 46px;
-  height: 46px;
+  width: 40px;
+  height: 40px;
   background: var(--ivoire);
   color: var(--encre);
   border: var(--trait);
@@ -601,8 +616,8 @@ img { max-width: 100%; display: block; }
 .bloc-choix {
   display: flex;
   flex-direction: column;
-  gap: var(--e5);
-  padding: var(--e5);
+  gap: var(--e4);
+  padding: var(--e4);
   background: var(--ivoire);
   border: var(--trait);
   border-radius: var(--rayon);
@@ -611,7 +626,7 @@ img { max-width: 100%; display: block; }
 .bloc-intro { align-items: center; text-align: center; }
 .icone-intro { color: var(--orange); }
 
-.groupe-choix { border: none; display: flex; flex-direction: column; gap: var(--e3); }
+.groupe-choix { border: none; display: flex; flex-direction: column; gap: var(--e2); }
 .groupe-choix legend {
   font-family: var(--police-titre);
   font-size: var(--t5);
@@ -661,10 +676,11 @@ img { max-width: 100%; display: block; }
 
 .duel-scene {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--e3);
-  align-items: center;
+  grid-template-rows: 1fr auto 1fr;
+  gap: var(--e2);
+  align-items: stretch;
   position: relative;
+  min-height: 0;
 }
 
 .carte-duel {
@@ -685,13 +701,13 @@ img { max-width: 100%; display: block; }
 
 /* Sur telephone, une carte Versus de 380 px ne tenait pas a deux dans
    l'ecran. Les visuels sont bornes pour que le duel soit vu d'un coup. */
-.carte-duel .item-visuel { aspect-ratio: 4 / 3; max-height: 30vh; }
+.carte-duel .item-visuel { aspect-ratio: auto; }
 
 .carte-duel-info {
   display: flex;
   flex-direction: column;
-  gap: var(--e1);
-  padding: var(--e3) var(--e4);
+  gap: 0;
+  padding: var(--e2) var(--e3);
   border-top: var(--trait);
 }
 .carte-duel-cat {
@@ -716,10 +732,11 @@ img { max-width: 100%; display: block; }
 
 .duel-vs {
   justify-self: center;
+  flex: 0 0 auto;
   display: grid;
   place-items: center;
-  width: 58px;
-  height: 58px;
+  width: clamp(40px, 11vw, 58px);
+  height: clamp(40px, 11vw, 58px);
   font-family: var(--police-titre);
   font-size: var(--t5);
   background: var(--ocre);
@@ -731,8 +748,7 @@ img { max-width: 100%; display: block; }
 }
 
 @media (min-width: 760px) {
-  .duel-scene { grid-template-columns: 1fr auto 1fr; gap: var(--e4); }
-  .carte-duel .item-visuel { aspect-ratio: 1; max-height: none; }
+  .duel-scene { grid-template-columns: 1fr auto 1fr; gap: var(--e4); align-items: stretch; }
 }
 
 /* --------------------------------------------------------------- */
@@ -741,7 +757,7 @@ img { max-width: 100%; display: block; }
 
 .celebration {
   position: relative;
-  padding: var(--e7) var(--e5);
+  padding: var(--e5) var(--e4);
   background: var(--ocre);
   background-image: var(--pagne);
   background-size: 48px 48px;
@@ -757,7 +773,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--e3);
+  gap: var(--e2);
   text-align: center;
 }
 
@@ -772,7 +788,7 @@ img { max-width: 100%; display: block; }
 .champion-cat { font-size: var(--t5); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
 
 .champion-portrait {
-  width: min(280px, 72vw);
+  width: min(200px, 44dvh, 60vw);
   border: var(--trait);
   border-radius: var(--rayon);
   box-shadow: var(--ombre-bloc);
@@ -826,31 +842,127 @@ img { max-width: 100%; display: block; }
 /* --------------------------------------------------------------- */
 /* Tier list                                                        */
 /* --------------------------------------------------------------- */
+/* Contrainte : le plateau complet (S a F) plus la reserve doivent
+   tenir dans une fenetre, sans defilement ni zoom, du telephone au
+   grand ecran. Avant, la page faisait 1,38x a 3,23x la hauteur
+   d'ecran et le rang S n'etait jamais visible en meme temps que la
+   reserve : on ne pouvait donc pas glisser de l'une vers l'autre. */
+
+/* Les trois ecrans de JEU se comportent comme une application : ils
+   tiennent dans une fenetre, sans pied de page ni defilement. Le pied de
+   page reste sur les ecrans de lecture (accueil, credits, personnaliser).
+   Avant, le duel du Versus faisait 1,52x la hauteur d'un iPhone : on ne
+   pouvait pas voir les deux adversaires en meme temps. */
+.app-container:has(.ecran-tierlist),
+.app-container:has(.ecran-versus),
+.app-container:has(.ecran-prix) {
+  height: 100dvh;
+  overflow: hidden;
+}
+.app-container:has(.ecran-tierlist) .site-footer,
+.app-container:has(.ecran-versus) .site-footer,
+.app-container:has(.ecran-prix) .site-footer { display: none; }
+
+.main-content:has(.ecran-tierlist),
+.main-content:has(.ecran-versus),
+.main-content:has(.ecran-prix) {
+  height: calc(100dvh - var(--nav-h));
+  padding: var(--e3);
+  overflow: hidden;
+  display: flex;
+}
+
+/* Sur les fenetres basses, on sacrifie le texte d'accompagnement plutot
+   que la surface de jeu. */
+@media (max-height: 820px) {
+  .ecran-tierlist .sur-titre, .ecran-tierlist .sous-titre,
+  .ecran-versus .sur-titre,   .ecran-versus .sous-titre,
+  .ecran-prix .sur-titre,     .ecran-prix .sous-titre { display: none; }
+  .ecran-tierlist .titre-ecran,
+  .ecran-versus .titre-ecran,
+  .ecran-prix .titre-ecran { font-size: var(--t3); }
+}
+
+/* Versus : le duel occupe la place restante, les cartes se partagent
+   l'espace a egalite. */
+.ecran-versus,
+.ecran-prix {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--e3);
+  overflow-y: auto;
+}
+
+.ecran-versus .duel,
+.ecran-versus .celebration,
+.ecran-versus .bloc-choix,
+.ecran-prix .prix-carte,
+.ecran-prix .bloc-choix { flex: 1 1 auto; min-height: 0; }
+
+.ecran-versus .duel { display: flex; flex-direction: column; gap: var(--e2); }
+.ecran-versus .duel-scene { flex: 1 1 auto; min-height: 0; }
+.carte-duel { min-height: 0; }
+.carte-duel .item-visuel { flex: 1 1 auto; min-height: 0; }
+
+.ecran-prix .prix-carte { overflow-y: auto; }
+.ecran-prix .prix-visuel { flex: 0 1 auto; min-height: 0; }
+
+.ecran-tierlist {
+  /* Taille des vignettes, seule variable a regler pour tout ajuster. */
+  --vignette: clamp(38px, 9.5vw, 62px);
+  --etiquette: clamp(34px, 8vw, 56px);
+
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--e2);
+}
+
+.ecran-tierlist .ecran-entete { flex: 0 0 auto; gap: 0; }
+.ecran-tierlist .titre-ecran { font-size: var(--t3); }
+.ecran-tierlist .pastilles { flex: 0 0 auto; }
+
+@media (max-height: 820px) {
+  .ecran-tierlist .aide-jeu { display: none; }
+}
 
 .tier-plateau {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
   border: var(--trait);
   border-radius: var(--rayon);
-  box-shadow: var(--ombre-bloc);
+  box-shadow: var(--ombre-bloc-petite);
   overflow: hidden;
   background: var(--ivoire);
 }
 
-.tier-ligne { display: flex; min-height: 92px; border-bottom: var(--trait); }
+.tier-ligne {
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  border-bottom: var(--trait);
+}
 .tier-ligne:last-child { border-bottom: none; }
 
 .tier-etiquette {
-  flex: 0 0 56px;
+  flex: 0 0 var(--etiquette);
   display: grid;
   place-items: center;
   font-family: var(--police-titre);
-  font-size: var(--t3);
+  font-size: clamp(0.95rem, 3.4vw, 1.5rem);
   color: var(--encre);
   border-right: var(--trait);
   cursor: pointer;
   user-select: none;
 }
 
-/* Rangs : la progression passe par la teinte, pas par un arc-en-ciel. */
 .rang-s .tier-etiquette { background: #E2610E; }
 .rang-a .tier-etiquette { background: #E8862F; }
 .rang-b .tier-etiquette { background: #C89211; }
@@ -860,20 +972,25 @@ img { max-width: 100%; display: block; }
 
 .tier-zone {
   flex: 1;
+  min-width: 0;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  gap: var(--e2);
-  padding: var(--e2);
-  min-height: 92px;
+  gap: 4px;
+  padding: 4px;
+  overflow-y: auto;
   transition: background var(--transition);
 }
-.tier-zone.is-survolee { background: rgba(226, 97, 14, 0.18); }
+.tier-zone.is-survolee { background: rgba(226, 97, 14, 0.2); }
 
+/* La vignette est un carre net : l'etiquette du nom est posee PAR-DESSUS
+   l'image et non en dessous, ce qui economise environ 17 px par rangee. */
 .tier-vignette {
   position: relative;
-  width: 76px;
-  border: var(--trait);
+  width: var(--vignette);
+  height: var(--vignette);
+  flex: 0 0 auto;
+  border: 2px solid var(--encre);
   border-radius: var(--rayon);
   overflow: hidden;
   background: var(--ivoire);
@@ -885,52 +1002,82 @@ img { max-width: 100%; display: block; }
 .tier-vignette:hover { transform: translateY(-2px); box-shadow: var(--ombre-bloc-petite); }
 .tier-vignette.is-selectionnee { box-shadow: 0 0 0 3px var(--indigo); transform: translateY(-3px); }
 .tier-vignette.is-deplacee { opacity: 0.3; }
+.tier-vignette .item-visuel { height: 100%; }
 
 .tier-vignette-nom {
-  display: block;
-  padding: 2px 3px;
-  font-size: 11px; /* etait 8,8 px : illisible */
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1px 2px;
+  font-size: clamp(8px, 2vw, 11px);
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 1.2;
   text-align: center;
-  background: var(--encre);
+  background: rgba(23, 18, 12, 0.85);
   color: var(--ivoire);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
+/* Sur les toutes petites vignettes le nom devient illisible : on le
+   retire de l'affichage, il reste porte par aria-label et title. */
+@media (max-width: 420px) {
+  .tier-vignette-nom { display: none; }
+}
+
+.tier-reserve-bloc {
+  flex: 0 0 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--e1);
+}
+.tier-reserve-bloc .titre-section { font-size: var(--t5); margin-bottom: 0; }
+
 .tier-reserve {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--e2);
-  min-height: 108px;
-  padding: var(--e3);
+  align-content: flex-start;
+  gap: 4px;
+  padding: 4px;
+  max-height: clamp(72px, 22dvh, 170px);
+  overflow-y: auto;
   border: 2px dashed var(--encre);
   border-radius: var(--rayon);
   transition: background var(--transition);
 }
-.tier-reserve.is-survolee { background: rgba(226, 97, 14, 0.18); }
+.tier-reserve.is-survolee { background: rgba(226, 97, 14, 0.2); }
 
-.tier-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--e3); }
-.tier-compteur { font-family: var(--police-chiffre); font-weight: 700; }
+.tier-actions {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--e2);
+}
+.tier-actions .btn { padding: var(--e2) var(--e3); font-size: var(--t6); min-height: 40px; }
+.tier-compteur { font-family: var(--police-chiffre); font-weight: 700; font-size: var(--t6); }
 
 .message-succes {
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   gap: var(--e2);
-  padding: var(--e3) var(--e4);
+  padding: var(--e2) var(--e3);
   background: var(--vert);
   color: var(--sur-vert);
   border: var(--trait);
   border-radius: var(--rayon);
   font-weight: 600;
+  font-size: var(--t6);
 }
 
 .drag-fantome {
   position: fixed;
-  width: 76px;
-  margin: -38px 0 0 -38px;
+  width: var(--vignette, 62px);
+  height: var(--vignette, 62px);
+  margin: calc(var(--vignette, 62px) / -2) 0 0 calc(var(--vignette, 62px) / -2);
   pointer-events: none;
   z-index: 200;
   border: var(--trait);
@@ -939,11 +1086,7 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
   transform: rotate(-4deg) scale(1.08);
 }
-
-@media (min-width: 620px) {
-  .tier-etiquette { flex-basis: 72px; }
-  .tier-vignette { width: 86px; }
-}
+.drag-fantome .item-visuel { height: 100%; }
 
 /* --------------------------------------------------------------- */
 /* Juste Prix                                                       */
@@ -954,8 +1097,8 @@ img { max-width: 100%; display: block; }
 .prix-carte {
   display: flex;
   flex-direction: column;
-  gap: var(--e4);
-  padding: var(--e5);
+  gap: var(--e3);
+  padding: var(--e4);
   background: var(--ivoire);
   border: var(--trait);
   border-radius: var(--rayon);
@@ -969,7 +1112,7 @@ img { max-width: 100%; display: block; }
   border: var(--trait);
   border-radius: var(--rayon);
   overflow: hidden;
-  max-height: 34vh;
+  max-height: 30dvh;
 }
 .prix-visuel .item-visuel { aspect-ratio: 4 / 3; }
 
@@ -1015,7 +1158,8 @@ img { max-width: 100%; display: block; }
 .verdict.is-bon { background: var(--vert); color: var(--sur-vert); }
 .verdict.is-loin { background: var(--ocre); color: var(--sur-ocre); }
 
-.prix-detail { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--e3); }
+.prix-detail { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--e2); }
+@media (max-width: 520px) { .prix-detail { grid-template-columns: repeat(2, 1fr); } }
 .prix-detail dt { font-size: var(--t6); color: var(--texte-secondaire); font-weight: 600; }
 .prix-detail dd { font-family: var(--police-chiffre); font-size: var(--t4); font-weight: 700; }
 .prix-detail .points { color: var(--vert); }
@@ -1212,7 +1356,7 @@ img { max-width: 100%; display: block; }
 
 .site-footer {
   margin-top: auto;
-  padding: var(--e6) var(--e4);
+  padding: var(--e4) var(--e4);
   text-align: center;
   background: var(--encre);
   color: var(--ivoire);
@@ -1220,7 +1364,7 @@ img { max-width: 100%; display: block; }
   flex-direction: column;
   gap: var(--e2);
 }
-.site-footer-line { font-family: var(--police-titre); font-size: var(--t4); }
+.site-footer-line { font-family: var(--police-titre); font-size: var(--t5); }
 .site-footer-legal { font-size: var(--t6); opacity: 0.8; }
 
 /* --------------------------------------------------------------- */
@@ -1229,7 +1373,7 @@ img { max-width: 100%; display: block; }
 
 .brand-name { letter-spacing: -0.01em; }
 
-.ecran-accueil { gap: var(--e7); }
+.ecran-accueil { gap: var(--e5); }
 .ecran-versus,
 .ecran-tierlist,
 .ecran-admin,
