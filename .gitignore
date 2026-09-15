@@ -1,0 +1,30 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+dist-ssr
+*.local
+
+# Sauvegardes locales (LOT 0) - ne jamais versionner
+backup_*/
+backup_*
+db.backup.json
+rapport.backup.json
+*.backup.json
+
+# Journaux du seeder
+scripts/logs/
+*.log
+logs
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
