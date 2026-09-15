@@ -53,11 +53,23 @@ export default function ItemImage({ item, className = '', sizes, eager = false }
   return (
     <div className={classes} data-teinte={teinte}>
       {aUneImage ? (
+        /* draggable={false} est indispensable, pas cosmetique.
+           Une balise <img> est nativement deplacable. Sur navigateur de
+           bureau, un appui suivi d'un mouvement declenchait le glisser
+           HTML5 du navigateur, qui emettait aussitot un pointercancel :
+           la sequence de pointeur de la tier list etait interrompue et
+           le curseur passait en "depot interdit". Sequence observee :
+             pointerdown(img) > pointermove > dragstart(img)
+             > pointercancel > drag... > dragend
+           Le tactile n'etait pas touche, les navigateurs ne demarrant pas
+           de glisser natif depuis un doigt - d'ou le defaut visible sur PC
+           seulement, et uniquement sur les vignettes portant une image. */
         <img
           src={item.image}
           alt={item.name}
           loading={eager ? 'eager' : 'lazy'}
           decoding="async"
+          draggable={false}
           sizes={sizes}
           onError={() => setErreur(true)}
         />

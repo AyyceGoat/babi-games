@@ -408,7 +408,16 @@ img { max-width: 100%; display: block; }
   place-items: center;
 }
 
-.item-visuel img { width: 100%; height: 100%; object-fit: cover; }
+.item-visuel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ceinture et bretelles avec draggable={false} : empeche le glisser
+     natif du navigateur de detourner le glisser de la tier list. */
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
 
 /* Photo verifiee et attribuee : elle est montree telle quelle. */
 .item-visuel.is-photo img { filter: saturate(1.04) contrast(1.02); }

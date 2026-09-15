@@ -277,6 +277,9 @@ function Vignette({ item, selectionne, enDeplacement, onPointerDown }) {
     <div
       className={`tier-vignette${selectionne ? ' is-selectionnee' : ''}${enDeplacement ? ' is-deplacee' : ''}`}
       onPointerDown={onPointerDown}
+      /* Dernier filet : si un futur contenu deplacable entre dans la
+         vignette, son glisser natif est refuse ici. */
+      onDragStart={(e) => e.preventDefault()}
       role="button"
       tabIndex={0}
       aria-pressed={selectionne}
