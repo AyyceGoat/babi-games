@@ -4,7 +4,7 @@ import { chromium, devices } from 'playwright';
 const BASE = process.env.URL_TEST || 'http://localhost:5987';
 const PAGES = [
   ['Accueil', '/'], ['Versus', '/versus'], ['Tier List', '/tier-list'],
-  ['Juste Prix', '/juste-prix'], ['Personnaliser', '/admin'], ['Credits', '/credits'],
+  ['Juste Prix', '/juste-prix'], ['Personnaliser', '/personnaliser'], ['Credits', '/credits'],
 ];
 const ECRANS = [
   ['iPhone SE', 375, span => 667], ['iPhone 13', 390, () => 664],

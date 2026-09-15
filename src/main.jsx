@@ -31,7 +31,7 @@ const TITRES = {
   versus: 'Versus | Babi Games',
   tierlist: 'Tier List 225 | Babi Games',
   justeprix: 'Le Juste Prix | Babi Games',
-  admin: 'Administration | Babi Games',
+  admin: 'Personnaliser | Babi Games',
   credits: 'Crédits et licences | Babi Games',
 };
 
@@ -48,6 +48,17 @@ function Ecran() {
   return <App activePage={activePage} onNavigate={(id) => navigate(PAR_ID[id] || '/')} />;
 }
 
+/* Enregistre le service worker : c'est lui qui permet a Chrome de
+   proposer une vraie installation, et non un simple raccourci. */
+if ('serviceWorker' in navigator && import.meta.env.PROD) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {
+      /* Navigation privee ou service worker refuse : l'application
+         fonctionne normalement sans. */
+    });
+  });
+}
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ErrorBoundary>
@@ -57,6 +68,9 @@ createRoot(document.getElementById('root')).render(
             {NAV_ITEMS.map(({ id, path }) => (
               <Route key={id} path={path} element={<Ecran />} />
             ))}
+            {/* Ancien chemin conserve : les liens deja partages continuent
+                de fonctionner apres le changement de nom. */}
+            <Route path="/admin" element={<Navigate to="/personnaliser" replace />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </BrowserRouter>

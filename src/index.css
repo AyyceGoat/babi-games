@@ -83,6 +83,12 @@
   /* Hauteur reelle de la barre de navigation, pour les ecrans qui
      doivent tenir exactement dans une fenetre (tier list). */
   --nav-h: 60px;
+  /* Encoche et barre d'accueil iOS : le viewport-fit=cover etend la page
+     sous elles, il faut les compenser en mode application installee. */
+  --sure-haut: env(safe-area-inset-top, 0px);
+  --sure-bas: env(safe-area-inset-bottom, 0px);
+  --sure-gauche: env(safe-area-inset-left, 0px);
+  --sure-droite: env(safe-area-inset-right, 0px);
 
   --transition: 160ms cubic-bezier(0.2, 0, 0.1, 1);
 
@@ -310,6 +316,9 @@ img { max-width: 100%; display: block; }
   z-index: 50;
   background: var(--ivoire);
   border-bottom: var(--trait);
+  padding-top: var(--sure-haut);
+  padding-left: var(--sure-gauche);
+  padding-right: var(--sure-droite);
 }
 
 .navbar-inner {
@@ -866,8 +875,11 @@ img { max-width: 100%; display: block; }
 .main-content:has(.ecran-tierlist),
 .main-content:has(.ecran-versus),
 .main-content:has(.ecran-prix) {
-  height: calc(100dvh - var(--nav-h));
+  height: calc(100dvh - var(--nav-h) - var(--sure-haut) - var(--sure-bas));
   padding: var(--e3);
+  padding-left: max(var(--e3), var(--sure-gauche));
+  padding-right: max(var(--e3), var(--sure-droite));
+  padding-bottom: max(var(--e3), var(--sure-bas));
   overflow: hidden;
   display: flex;
 }
@@ -1289,7 +1301,7 @@ img { max-width: 100%; display: block; }
 .toast-stack {
   position: fixed;
   left: 50%;
-  bottom: var(--e4);
+  bottom: max(var(--e4), var(--sure-bas));
   transform: translateX(-50%);
   z-index: 300;
   display: flex;
@@ -1357,6 +1369,7 @@ img { max-width: 100%; display: block; }
 .site-footer {
   margin-top: auto;
   padding: var(--e4) var(--e4);
+  padding-bottom: max(var(--e4), var(--sure-bas));
   text-align: center;
   background: var(--encre);
   color: var(--ivoire);

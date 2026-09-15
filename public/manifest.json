@@ -1,0 +1,62 @@
+{
+  "name": "Babi Games — Mini-jeux 100 % ivoiriens",
+  "short_name": "Babi Games",
+  "description": "Versus, Tier List et Juste Prix autour de la culture ivoirienne : artistes, footballeurs, plats et prix d'Abidjan.",
+  "lang": "fr-CI",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "id": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#F6EFE2",
+  "theme_color": "#F6EFE2",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    {
+      "src": "/icones/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icones/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icones/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icones/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Lancer un Versus",
+      "short_name": "Versus",
+      "url": "/versus",
+      "icons": [{ "src": "/icones/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Tier List 225",
+      "short_name": "Tier List",
+      "url": "/tier-list",
+      "icons": [{ "src": "/icones/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Le Juste Prix",
+      "short_name": "Juste Prix",
+      "url": "/juste-prix",
+      "icons": [{ "src": "/icones/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

@@ -2,22 +2,41 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="description" content="Découvrez Babi Games, la plateforme web 100% ivoirienne de mini-jeux. Jouez au Versus, créez votre Tier List culinaire ou artistique et estimez le Juste Prix en CFA !" />
     <meta name="keywords" content="jeux ivoiriens, cote d'ivoire, abidjan, garba, didi b, drogba, versus, juste prix, tier list" />
-    
-    <!-- SEO Title -->
+
     <title>Babi Games | Plateforme Web de Mini-Jeux 100 % Ivoiriens</title>
-    
+
     <meta name="theme-color" content="#F6EFE2" />
 
-    <!-- Partage social : l'application a desormais une URL par ecran -->
+    <!-- Installation sur l'ecran d'accueil -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- iOS ignore le manifeste : sans ces trois balises, le raccourci
+         rouvre dans Safari avec la barre d'adresse au lieu de s'ouvrir
+         en plein ecran comme une application installee. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Babi Games" />
+    <meta name="application-name" content="Babi Games" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/icones/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="/icones/apple-touch-icon-167.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/icones/apple-touch-icon-152.png" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icones/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icones/favicon-16.png" />
+
+    <!-- Partage social : l'application a une URL par ecran -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Babi Games | Mini-jeux 100 % ivoiriens" />
-    <meta property="og:description" content="Versus, Tier List et Juste Prix autour de la culture ivoirienne. Artistes, footballeurs, plats et prix d Abidjan." />
+    <meta property="og:description" content="Versus, Tier List et Juste Prix autour de la culture ivoirienne. Artistes, footballeurs, plats et prix d'Abidjan." />
     <meta property="og:locale" content="fr_CI" />
-    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content="/icones/icon-512.png" />
+    <meta name="twitter:card" content="summary" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

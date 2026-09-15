@@ -6,7 +6,7 @@ export const NAV_ITEMS = [
   { id: 'versus', label: 'Versus', icon: Gamepad2, path: '/versus' },
   { id: 'tierlist', label: 'Tier List', icon: ListPlus, path: '/tier-list' },
   { id: 'justeprix', label: 'Juste Prix', icon: CircleDollarSign, path: '/juste-prix' },
-  { id: 'admin', label: 'Admin', icon: Settings, path: '/admin' },
+  { id: 'admin', label: 'Personnaliser', icon: Settings, path: '/personnaliser' },
   { id: 'credits', label: 'Crédits', icon: Shield, path: '/credits' },
 ];
 

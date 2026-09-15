@@ -140,9 +140,9 @@ export default function Admin({ collections, setCollection, resetToDefault }) {
   };
 
   const restaurer = () => {
-    if (!window.confirm('Cela supprime toutes tes modifications et tes statistiques, puis restaure la base livrée. Continuer ?')) return;
+    if (!window.confirm('Cela supprime tes ajouts et tes statistiques sur cet appareil, puis restaure le contenu livré. Continuer ?')) return;
     resetToDefault();
-    toast('Base restaurée.', 'succes');
+    toast('Contenu d’origine restauré.', 'succes');
   };
 
   const champs = (valeurs, setValeurs, cible) => (
@@ -190,15 +190,20 @@ export default function Admin({ collections, setCollection, resetToDefault }) {
   return (
     <div className="ecran ecran-admin">
       <header className="ecran-entete">
-        <p className="sur-titre">Gestion du contenu</p>
-        <h1 className="titre-ecran">Administration</h1>
+        <p className="sur-titre">Ton contenu</p>
+        <h1 className="titre-ecran">Personnaliser</h1>
+        <p className="sous-titre">
+          Ajoute tes propres artistes, plats ou produits. Tout ce que tu ajoutes
+          reste sur cet appareil, dans ton navigateur : personne d'autre ne le voit,
+          et cela n'apparaît que dans tes propres parties.
+        </p>
       </header>
 
       <div className="avis">
         <ShieldAlert size={18} aria-hidden="true" />
         <p>
-          Tout est stocké dans ce navigateur, sur cet appareil.
-          {occupation != null && ` Environ ${formatBytes(occupation)} utilisés sur ~5 Mo.`}
+          Rien n'est envoyé sur un serveur.
+          {occupation != null && ` Environ ${formatBytes(occupation)} utilisés sur les ~5 Mo disponibles.`}
           {' '}Une image sans source, licence et auteur ne peut pas être enregistrée.
         </p>
       </div>
