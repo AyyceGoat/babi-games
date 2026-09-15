@@ -97,3 +97,114 @@ en premier, mais le vrai plat ivoirien (Q7885395) plus loin dans la liste.
 Idem pour `Molare` : la commune italienne d'abord, le chanteur ivoirien
 (Q3319439) ensuite. Ne tester que le premier candidat aurait rejeté ces deux
 items au lieu de les résoudre correctement.
+
+---
+
+## D-06 — Les 116 anciennes images sont sorties de `public/images/`
+
+**Ambigu :** la consigne dit que `public/images/` est une sauvegarde et que la
+nouvelle collecte fait autorité, sans préciser ce que deviennent les fichiers.
+
+**Décision :** copier l'intégralité dans `backup_images/` (non versionné),
+puis vider `public/images/` avant la collecte.
+
+**Pourquoi :** tout ce qui reste dans `public/` **est déployé sur Netlify**,
+qu'il soit référencé ou non par `db.json`. Laisser 116 images Creative
+Commons sans attribution dans le dossier public revenait à les publier sans
+licence — exactement le risque juridique décrit en § A.4 du diagnostic. Les
+laisser aurait aussi mélangé anciens et nouveaux fichiers sous les mêmes noms.
+
+---
+
+## D-07 — `sharp.strategy.attention` abandonné pour les personnes
+
+**Ambigu :** le LOT 3 impose `fit: 'cover'` + `sharp.strategy.attention`.
+
+**Décision :** conservé pour les plats et les objets, remplacé par un
+recadrage carré haut-centre (décalé de 12 %) pour les personnes.
+
+**Pourquoi :** appliqué tel quel, `attention` a produit des portraits
+**décapités**. Sur les premiers essais, Didi B et Drogba ressortaient cadrés
+sur le logo de leur t-shirt, le visage hors champ : l'algorithme optimise la
+saillance (contraste, saturation), et un logo jaune l'emporte sur un visage.
+J'ai vérifié visuellement avant et après. Suivre la consigne à la lettre
+aurait dégradé l'essentiel du corpus.
+
+---
+
+## D-08 — Le repli Openverse est conservé mais ses résultats sont revus un par un
+
+**Ambigu :** Openverse fournit source, licence et auteur, donc satisfait la
+règle d'attribution, mais sa recherche est purement textuelle et
+invalidable par `P31`.
+
+**Décision :** conservé pour les plats et produits uniquement, et **tous**
+ses résultats passés en revue visuelle.
+
+**Pourquoi :** sans lui, les produits seraient restés à 0 image. Avec lui, on
+obtient 18 visuels — mais la revue a montré qu'il reproduit exactement l'erreur
+d'origine : « riz » a ramené l'acteur **Riz Ahmed**, « garba » la **danse
+indienne**, « Baka » un acteur polonais. La validation automatique ne peut pas
+l'attraper ; seul le regard humain le peut. C'est pourquoi la revue visuelle
+du LOT 4 n'est pas une formalité mais la seule barrière sur ce chemin.
+
+---
+
+## D-09 — Les images « trompeuses » sont écartées, pas seulement les fausses
+
+**Ambigu :** le LOT 4 dit d'écarter ce qui est « manifestement faux, dessiné
+ou illisible ». Un savon de Marseille pour un savon Kabakrou n'entre dans
+aucune de ces trois cases : c'est bien du savon, c'est une photo, elle est nette.
+
+**Décision :** écarter aussi les images qui montrent **un autre produit que
+celui dont on devine le prix** : tasse de café pour un paquet de 250 g,
+poudre de cacao pour une tablette, écouteurs pour un casque, sucre blanc
+pour du sucre roux.
+
+**Pourquoi :** dans un jeu d'estimation de prix, l'image est l'énoncé. Montrer
+un produit différent de celui qui est coté ne rend pas la partie moins jolie,
+il la rend fausse. Conséquence assumée : les produits tombent de 15 à 5 visuels.
+Le jeu reste jouable — les items sans photo s'affichent en bloc coloré.
+
+---
+
+## D-10 — `hero_banner.png` supprimé au lieu d'être optimisé
+
+**Ambigu :** le LOT 7 demande d'optimiser cette image de 846 Ko.
+
+**Décision :** la supprimer, et la remplacer par un bandeau composé de vrais
+portraits déjà présents dans la collection.
+
+**Pourquoi :** même optimisée, c'était un décor générique pour 100 à 200 Ko.
+Le bandeau de visages ivoiriens réels réutilise des vignettes de 500×500 déjà
+chargées, coûte zéro octet supplémentaire, et montre le contenu du site dès la
+première seconde. Gain mesuré : 846 Ko de moins au premier chargement.
+
+---
+
+## D-11 — Le commit du LOT 6 n'a pas été poussé seul
+
+**Ambigu :** la consigne demande un commit et un build vert par lot ; Netlify
+déploie à chaque push.
+
+**Décision :** commiter le LOT 6 en local, puis pousser seulement après le
+LOT 7.
+
+**Pourquoi :** entre les deux lots, le JSX avait déjà ses nouvelles classes
+mais la feuille de style ne les avait pas encore. Le build passait, mais le
+site en ligne se serait affiché sans styles. Aucun commit cassé n'a été créé ;
+seule la mise en ligne d'un état intermédiaire a été évitée.
+
+---
+
+## D-12 — Le crédit suit l'attribution, pas le statut
+
+**Ambigu :** les visuels passés en duotone ont le statut
+`a_verifier_manuellement`, qui servait aussi de filtre à la page Crédits.
+
+**Décision :** la page Crédits liste tout ce qui porte une licence et un
+auteur, quel que soit le statut.
+
+**Pourquoi :** ces 8 images sont bel et bien publiées. Une licence Creative
+Commons exige l'attribution dès la publication, indépendamment de la façon
+dont on choisit de les afficher. Les omettre aurait recréé une infraction.

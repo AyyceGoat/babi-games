@@ -52,7 +52,7 @@
   --encre-douce: #4A4034;
 
   --orange: #E2610E;
-  --orange-clair: #F79W22;
+  --orange-clair: #F7941E;
   --vert: #0B7A4B;
   --indigo: #23356B;
   --ocre: #C89211;
@@ -68,6 +68,9 @@
   --texte: var(--encre);
   --texte-secondaire: #574B3C;
   --texte-tertiaire: #6E6153;
+  /* Orange assombri pour le texte sur ivoire : le #E2610E de plein aplat
+     ne donne que 3,09 de contraste en petit texte. */
+  --orange-texte: #A34308;
 
   /* Traits et ombres : le contour noir porte l'identite. */
   --trait: 2px solid var(--encre);
@@ -155,7 +158,7 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--orange);
+  color: var(--orange-texte);
 }
 
 .titre-ecran {
@@ -687,7 +690,7 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--orange);
+  color: var(--orange-texte);
 }
 .carte-duel-nom { font-family: var(--police-titre); font-size: var(--t3); line-height: 1.1; }
 
@@ -1210,3 +1213,25 @@ img { max-width: 100%; display: block; }
 }
 .site-footer-line { font-family: var(--police-titre); font-size: var(--t4); }
 .site-footer-legal { font-size: var(--t6); opacity: 0.8; }
+
+/* --------------------------------------------------------------- */
+/* Classes restantes, verifiees par script contre le JSX            */
+/* --------------------------------------------------------------- */
+
+.brand-name { letter-spacing: -0.01em; }
+
+.ecran-accueil { gap: var(--e7); }
+.ecran-versus,
+.ecran-tierlist,
+.ecran-admin,
+.ecran-credits { gap: var(--e5); }
+
+.tier-reserve-bloc { display: flex; flex-direction: column; gap: var(--e2); }
+
+.error-boundary-actions { display: flex; gap: var(--e3); flex-wrap: wrap; }
+
+.nav-mobile.is-open { animation: deplie 180ms ease-out; }
+@keyframes deplie {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: none; }
+}

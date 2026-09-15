@@ -1,16 +1,57 @@
-# React + Vite
+# Babi Games
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Plateforme web de mini-jeux 100 % ivoiriens. React + Vite, entièrement côté
+client, sans backend. Les données et les scores vivent dans le navigateur.
 
-Currently, two official plugins are available:
+## Jeux
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Versus** — tournoi à élimination directe sur les artistes, footballeurs
+  et personnalités ivoiriennes.
+- **Tier List 225** — classement du rang S au rang F, au glisser-déposer ou
+  au toucher.
+- **Le Juste Prix** — estimation du prix réel de produits du quotidien, en CFA.
 
-## React Compiler
+## Commandes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev            # serveur de développement
+npm run build          # build de production dans dist/
+npm run preview        # sert le build
+npm run lint           # oxlint
+npm run seed:images    # collecte des visuels (voir plus bas)
+```
 
-## Expanding the Oxlint configuration
+## Collecte des visuels
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+`npm run seed:images` interroge Wikidata puis Wikimedia Commons, valide
+l'entité trouvée, télécharge l'image et produit une vignette carrée 500×500.
+
+Le script est conçu pour ne rien détruire :
+
+- sauvegarde horodatée de `db.json` avant toute écriture, dans `backup_db/` ;
+- écriture atomique, et **fusion** au lieu de remplacement ;
+- un item déjà résolu ne retombe jamais en placeholder ;
+- refus d'écrire si le taux de réussite s'effondre ;
+- journal des licences en ajout seul dans `data/licences.jsonl`, qu'aucune
+  exécution ne peut écraser.
+
+Options utiles : `--only=art_1,food_2`, `--type=nourriture`, `--limit=20`,
+`--fresh` (ignore la reprise), `--force` (passe outre le garde-fou).
+
+`node scripts/test_resolver.js` rejoue le banc d'essai de la résolution.
+
+## Règle sur les images
+
+Aucune image sans **source, licence et auteur** complets ne part en
+production. Les visuels vérifiés s'affichent en photo pleine ; ceux dont le
+cadrage ou la fidélité est discutable passent en duotone assumé. Les
+attributions sont publiées sur la page Crédits.
+
+## Documents
+
+- `DIAGNOSTIC.md` — état des lieux détaillé qui a déclenché la remise en état.
+- `DECISIONS.md` — décisions prises en cours de route et leurs raisons.
+- `REVUE_IMAGES.md` — verdict image par image.
+- `A_SOURCER.md` — ce qui reste à traiter à la main.
+- `RAPPORT_FINAL.md` — bilan de la remise en état.
