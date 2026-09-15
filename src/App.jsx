@@ -38,7 +38,7 @@ export default function App() {
       try {
         const parsed = JSON.parse(rawJSON);
         return Array.isArray(parsed) && parsed.length > 0 ? parsed : null;
-      } catch (e) {
+      } catch {
         return null;
       }
     };

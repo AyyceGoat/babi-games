@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Trophy, ArrowRight, RefreshCw, Flame, User, Users } from 'lucide-react';
 
 // Simple function to get initials for avatar fallback
@@ -24,7 +24,7 @@ export default function Versus({ artists, footballers, publicFigures }) {
   const [tournamentSize, setTournamentSize] = useState(16); // 4 | 8 | 16 | 32
 
   // Tournament tree states
-  const [initialParticipants, setInitialParticipants] = useState([]);
+  // (initialParticipants supprime : calcule mais jamais lu)
   const [currentRoundItems, setCurrentRoundItems] = useState([]);
   const [nextRoundItems, setNextRoundItems] = useState([]);
   const [duelIndex, setDuelIndex] = useState(0); // index of current duel in currentRoundItems (index, index+1)
@@ -57,7 +57,6 @@ export default function Versus({ artists, footballers, publicFigures }) {
     const shuffled = rawData.sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, tournamentSize);
 
-    setInitialParticipants(selected);
     setCurrentRoundItems(selected);
     setNextRoundItems([]);
     setDuelIndex(0);

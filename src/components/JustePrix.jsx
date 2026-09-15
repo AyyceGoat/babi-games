@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { CircleDollarSign, Check, HelpCircle, ArrowRight, RotateCcw, Award } from 'lucide-react';
+import { CircleDollarSign, Check, ArrowRight, RotateCcw, Award } from 'lucide-react';
 
 export default function JustePrix({ products }) {
   // Game states: 'intro' | 'playing' | 'round_result' | 'game_over'

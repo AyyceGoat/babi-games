@@ -78,11 +78,14 @@ export default function Navbar({ activePage, setActivePage }) {
         </div>
 
         {/* Mobile Hamburger Button */}
-        <button 
-          onClick={() => setIsOpen(!isOpen)} 
-          className="btn btn-ghost" 
-          style={{ display: 'block', padding: '0.5rem', border: '1px solid var(--border-light)' }}
-          className="mobile-menu-btn"
+        {/* Un seul attribut className : le doublon precedent ecrasait
+            "btn btn-ghost" et le bouton s'affichait en gris systeme. */}
+        <button
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          className="btn btn-ghost mobile-menu-btn"
+          aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+          aria-expanded={isOpen}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Sword, ListStart, HelpCircle, Trophy, UserCheck, Flame } from 'lucide-react';
+import { Sword, ListStart, HelpCircle, Trophy, Flame } from 'lucide-react';
 import heroBanner from '../assets/hero_banner.png';
 
 export default function Dashboard({ setActivePage }) {

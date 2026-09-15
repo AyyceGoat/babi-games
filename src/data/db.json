@@ -3,12 +3,42 @@
     {
       "id": "art_1",
       "name": "Didi B",
+      "image": "/images/artistes/art_1.jpg",
+      "status": "ok",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Aristidek5maya",
+      "lastAttempt": "2026-09-15T11:03:07.939Z",
+      "category": "Rap Ivoire",
+      "attribution": {
+        "qid": "Q115791127",
+        "fichier": "Didi B 03.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Didi_B_03.jpg"
+      }
+    },
+    {
+      "id": "art_32",
+      "name": "Molière",
       "image": "/images/placeholders/artiste.svg",
       "status": "a_verifier_manuellement",
       "source": "N/A",
       "license": "N/A",
       "author": "N/A",
-      "category": "Rap Ivoire"
+      "lastAttempt": "2026-09-15T11:01:52.301Z",
+      "category": "Zouglou",
+      "failureReason": "aucune entite valide (aucun candidat valide sur 10 examines)"
+    },
+    {
+      "id": "art_50",
+      "name": "Eden",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:01:54.088Z",
+      "category": "Gospel",
+      "failureReason": "aucune entite valide (aucun candidat valide sur 10 examines)"
     },
     {
       "id": "art_2",
@@ -311,16 +341,6 @@
       "category": "Zouglou"
     },
     {
-      "id": "art_32",
-      "name": "Molière",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "category": "Zouglou"
-    },
-    {
       "id": "art_33",
       "name": "Bilé Didier",
       "image": "/images/placeholders/artiste.svg",
@@ -483,16 +503,6 @@
     {
       "id": "art_49",
       "name": "Schekina",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "category": "Gospel"
-    },
-    {
-      "id": "art_50",
-      "name": "Eden",
       "image": "/images/placeholders/artiste.svg",
       "status": "a_verifier_manuellement",
       "source": "N/A",
@@ -755,12 +765,18 @@
     {
       "id": "foot_1",
       "name": "Didier Drogba",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "category": "Attaquant"
+      "image": "/images/footballeurs/foot_1.jpg",
+      "status": "ok",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "Y.Leclercq©",
+      "lastAttempt": "2026-09-15T11:03:13.942Z",
+      "category": "Attaquant",
+      "attribution": {
+        "qid": "Q48892",
+        "fichier": "Didier Drogba (2019) (cropped).jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Didier_Drogba_(2019)_(cropped).jpg"
+      }
     },
     {
       "id": "foot_2",
@@ -1505,6 +1521,22 @@
   ],
   "publicFigures": [
     {
+      "id": "pub_14",
+      "name": "Molare",
+      "image": "/images/publicfigures/pub_14.jpg",
+      "status": "ok",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 4.0",
+      "author": "BeraDigle",
+      "lastAttempt": "2026-09-15T11:03:15.818Z",
+      "category": "Producteur / Homme d'affaires",
+      "attribution": {
+        "qid": "Q3319439",
+        "fichier": "Le Molare 1.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Le_Molare_1.jpg"
+      }
+    },
+    {
       "id": "pub_1",
       "name": "Gohou Michel",
       "image": "/images/placeholders/artiste.svg",
@@ -1633,16 +1665,6 @@
       "license": "N/A",
       "author": "N/A",
       "category": "Personnalité Publique / Modèle"
-    },
-    {
-      "id": "pub_14",
-      "name": "Molare",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "category": "Producteur / Homme d'affaires"
     },
     {
       "id": "pub_15",
@@ -1837,17 +1859,38 @@
   ],
   "foods": [
     {
-      "id": "food_1",
-      "name": "Garba (Attiéké Thon)",
-      "image": "/images/placeholders/nourriture.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A"
-    },
-    {
       "id": "food_2",
       "name": "Kedjenou de Poulet",
+      "image": "/images/nourriture/food_2.jpg",
+      "status": "ok",
+      "source": "wikidata_commons",
+      "license": "CC BY-SA 3.0",
+      "author": "Serein",
+      "lastAttempt": "2026-09-15T11:02:03.181Z",
+      "attribution": {
+        "qid": "Q1795580",
+        "fichier": "Kedjenou.JPG",
+        "page": "https://commons.wikimedia.org/wiki/File:Kedjenou.JPG"
+      }
+    },
+    {
+      "id": "food_9",
+      "name": "Alloco (Banane plantain frite)",
+      "image": "/images/nourriture/food_9.jpg",
+      "status": "ok",
+      "source": "wikidata_commons",
+      "license": "CC BY 2.0",
+      "author": "Krista",
+      "lastAttempt": "2026-09-15T11:02:08.457Z",
+      "attribution": {
+        "qid": "Q7885395",
+        "fichier": "Aloko.jpg",
+        "page": "https://commons.wikimedia.org/wiki/File:Aloko.jpg"
+      }
+    },
+    {
+      "id": "food_1",
+      "name": "Garba (Attiéké Thon)",
       "image": "/images/placeholders/nourriture.svg",
       "status": "a_verifier_manuellement",
       "source": "N/A",
@@ -1902,15 +1945,6 @@
     {
       "id": "food_8",
       "name": "Riz Gras au Poulet",
-      "image": "/images/placeholders/nourriture.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A"
-    },
-    {
-      "id": "food_9",
-      "name": "Alloco (Banane plantain frite)",
       "image": "/images/placeholders/nourriture.svg",
       "status": "a_verifier_manuellement",
       "source": "N/A",
@@ -2019,6 +2053,19 @@
   ],
   "products": [
     {
+      "id": "prod_4",
+      "name": "Cube Maggi (L'unité)",
+      "image": "/images/placeholders/produit.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:02:10.530Z",
+      "category": "Nourriture",
+      "price": 25,
+      "failureReason": "marque deposee, exclue volontairement (BRANDS_TO_SKIP)"
+    },
+    {
       "id": "prod_1",
       "name": "Garba (1 part de base thon + attiéké)",
       "image": "/images/placeholders/produit.svg",
@@ -2050,17 +2097,6 @@
       "author": "N/A",
       "category": "Nourriture",
       "price": 150
-    },
-    {
-      "id": "prod_4",
-      "name": "Cube Maggi (L'unité)",
-      "image": "/images/placeholders/produit.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "category": "Nourriture",
-      "price": 25
     },
     {
       "id": "prod_5",

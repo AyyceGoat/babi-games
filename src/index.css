@@ -20,7 +20,21 @@
   
   --text-main: #F3F4F6;
   --text-muted: #9CA3AF;
-  --text-dim: #6B7280;
+  --text-dim: #8A93A3; /* remonte de #6B7280 : 4,17 -> 5,9 de contraste */
+
+  /* --text-secondary etait utilisee 33 fois sans jamais etre definie
+     (DIAGNOSTIC.md D.1). La declaration etait donc invalide et la couleur
+     heritee s'appliquait : tous les textes "secondaires" s'affichaient avec
+     l'intensite du texte principal, supprimant toute hierarchie. */
+  --text-secondary: #B6BECD;
+
+  /* Couleur de texte a poser sur les aplats vifs. Du blanc sur l'orange
+     #FF8C00 ne donnait que 2,33 de contraste (echec WCAG) sur le bouton
+     principal de toute l'application. */
+  --on-accent: #1A1005;
+
+  /* Zone tactile minimale (recommandation 44 px) */
+  --touch-min: 44px;
   
   /* Glassmorphism settings */
   --backdrop-blur: blur(12px);
@@ -94,11 +108,52 @@ body {
   border-color: rgba(0, 168, 107, 0.3);
 }
 
-.gradient-text-ci {
+.gradient-text-ci,
+.gradient-text {
   background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-gold) 50%, var(--color-green) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.glow-red {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+/* .card etait utilisee 27 fois sans aucune definition : chaque "carte" de
+   l'application etait un div nu (DIAGNOSTIC.md D.1). */
+.card {
+  background: var(--bg-card);
+  backdrop-filter: var(--backdrop-blur);
+  -webkit-backdrop-filter: var(--backdrop-blur);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 1.5rem;
+}
+
+/* .container etait utilisee 10 fois sans definition. */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/* Accessibilite : aucun indicateur de focus n'existait nulle part. */
+:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 2px;
 }
 
 /* Page Layout */
@@ -132,6 +187,7 @@ body {
   font-weight: 600;
   font-size: 0.95rem;
   padding: 0.75rem 1.5rem;
+  min-height: var(--touch-min); /* zone tactile : etait a ~40 px */
   border-radius: var(--radius-md);
   border: 1px solid transparent;
   cursor: pointer;
@@ -139,9 +195,11 @@ body {
   text-decoration: none;
 }
 
+/* Texte sombre sur l'orange : 2,33 -> 9,8 de contraste. */
 .btn-primary {
   background: linear-gradient(135deg, var(--color-orange), #ff6a00);
-  color: var(--color-white);
+  color: var(--on-accent);
+  font-weight: 700;
   box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
 }
 .btn-primary:hover {
@@ -165,7 +223,8 @@ body {
 
 .btn-success {
   background: linear-gradient(135deg, var(--color-green), #00c77f);
-  color: var(--color-white);
+  color: var(--on-accent);
+  font-weight: 700;
   box-shadow: 0 4px 15px rgba(0, 168, 107, 0.3);
 }
 .btn-success:hover {
@@ -175,7 +234,8 @@ body {
 
 .btn-danger {
   background: linear-gradient(135deg, var(--color-danger), #ff4d4d);
-  color: var(--color-white);
+  color: #2A0606;
+  font-weight: 700;
   box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
 }
 .btn-danger:hover {
@@ -469,8 +529,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.75);
-  font-size: 0.55rem;
+  background: rgba(0, 0, 0, 0.82);
+  font-size: 11px; /* etait 0.55rem = 8,8 px : illisible */
   color: #fff;
   text-align: center;
   padding: 2px;

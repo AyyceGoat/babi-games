@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ListStart, Save, RotateCcw, Share2, HelpCircle, CheckCircle } from 'lucide-react';
+import { ListStart, Save, RotateCcw, HelpCircle, CheckCircle } from 'lucide-react';
 
 const TIER_ROWS = [
   { id: 'S', name: 'S', color: '#ff7f7f' },
@@ -12,11 +12,11 @@ const TIER_ROWS = [
 
 export default function TierList({ artists, footballers, publicFigures, foods }) {
   const [category, setCategory] = useState('foods'); // 'foods' | 'artists' | 'footballers' | 'public'
-  const [items, setItems] = useState([]); // List of items to rank
+
   const [ranks, setRanks] = useState({ S: [], A: [], B: [], C: [], D: [], F: [] }); // Ranked items mapping
   const [pool, setPool] = useState([]); // Items left in the pool
   const [selectedItem, setSelectedItem] = useState(null); // Click fallback for mobile
-  const [savedLists, setSavedLists] = useState([]);
+
   const [showSuccess, setShowSuccess] = useState(false);
   const [imageErrors, setImageErrors] = useState({});
 
@@ -51,7 +51,6 @@ export default function TierList({ artists, footballers, publicFigures, foods })
         sourceData = [...foods];
     }
     
-    setItems(sourceData);
     setPool(sourceData);
     setRanks({ S: [], A: [], B: [], C: [], D: [], F: [] });
     setSelectedItem(null);
