@@ -974,9 +974,15 @@ img { max-width: 100%; display: block; }
   overflow-y: auto;
 }
 
-/* Sur les ecrans etroits, le badge Netlify mord sur le bas de page. */
+/* Sur les ecrans etroits, le badge Netlify mord sur le bas de page.
+   Une simple marge interne au conteneur defilant ne suffisait pas pour
+   la reserve : les tuiles restaient sous le badge a la position de
+   defilement par defaut, et l'utilisateur devait deviner qu'il fallait
+   faire defiler. On sort donc reellement la zone de jeu de la zone du
+   badge. */
 @media (max-width: 560px) {
   .ecran-prix { padding-bottom: var(--badge-netlify); }
+  .main-content:has(.ecran-tierlist) { padding-bottom: var(--badge-netlify); }
 }
 
 .ecran-versus .duel,
@@ -1174,11 +1180,6 @@ img { max-width: 100%; display: block; }
   min-height: calc(var(--vignette) + 12px);
   max-height: calc(var(--vignette) * 3 + 20px);
   overflow-y: auto;
-  /* Marge interne au conteneur defilant : aucune tuile ne reste
-     prisonniere sous le badge Netlify, et la mise en page ne perd
-     pas un pixel. */
-  padding-bottom: calc(4px + var(--badge-netlify));
-  scroll-padding-bottom: var(--badge-netlify);
   border: 2px dashed var(--encre);
   border-radius: var(--rayon);
   transition: background var(--transition);
@@ -1529,4 +1530,22 @@ img { max-width: 100%; display: block; }
 @keyframes deplie {
   from { opacity: 0; transform: translateY(-8px); }
   to   { opacity: 1; transform: none; }
+}
+
+
+/* --------------------------------------------------------------- */
+/* Surcharges finales : zone du badge Netlify sur ecran etroit       */
+/* --------------------------------------------------------------- */
+/* Placees ici a dessein : meme specificite que les regles de base,
+   c'est donc l'ordre qui tranche. */
+
+@media (max-width: 560px) {
+  /* La zone du badge est retranchee de la hauteur utile ; la vignette
+     se resserre juste ce qu'il faut pour que les six rangees tiennent. */
+  /* 40 px : valeur mesuree, la plus grande qui laisse tenir les six
+     rangees ET une rangee de reserve au-dessus de la zone du badge, sur
+     un ecran de 667 px comme de 664 px. 43 px a ete essaye et depasse
+     de 6 px. Si le badge Netlify est retire dans les reglages du site,
+     ramener --badge-netlify a 0px rend la vignette a 47 px. */
+  .ecran-tierlist { --vignette: clamp(40px, 10.6vw, 64px); }
 }
