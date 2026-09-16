@@ -432,6 +432,8 @@ img { max-width: 100%; display: block; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* Ancrage par defaut : centre, ce qui convient aux plats et objets. */
+  object-position: 50% 50%;
   /* Ceinture et bretelles avec draggable={false} : empeche le glisser
      natif du navigateur de detourner le glisser de la tier list. */
   -webkit-user-drag: none;
@@ -441,6 +443,15 @@ img { max-width: 100%; display: block; }
 
 /* Photo verifiee et attribuee : elle est montree telle quelle. */
 .item-visuel.is-photo img { filter: saturate(1.04) contrast(1.02); }
+
+/* Personnes : on ancre vers le haut. Meme esprit que la decision D-07
+   appliquee au traitement des fichiers - sur une photo de personne le
+   visage est presque toujours dans le haut du cadre, et un ancrage au
+   centre le coupe des que le conteneur n'est pas carre. */
+.item-visuel.est-personne img { object-position: 50% 18%; }
+
+/* Plats et produits : le sujet remplit le cadre, le centre convient. */
+.item-visuel.est-objet img { object-position: 50% 50%; }
 
 /* Photo incertaine : duotone dans la teinte du bloc. Le defaut de
    qualite devient un traitement graphique assume. */
@@ -683,13 +694,27 @@ img { max-width: 100%; display: block; }
   transition: width 320ms cubic-bezier(0.2, 0, 0.1, 1);
 }
 
+ /* Les deux adversaires cote a cote a toutes les tailles : c'est la
+    comparaison qui fait le jeu. Empilees, deux cartes ne pouvaient pas
+    rester carrees sur un ecran de 664 px : le cadre tombait a 362x142 et
+    il ne restait que 39 % de la photo. */
 .duel-scene {
   display: grid;
-  grid-template-rows: 1fr auto 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: var(--e2);
   align-items: stretch;
   position: relative;
   min-height: 0;
+}
+
+/* Le VS flotte au-dessus de l'intervalle : il ne consomme pas de largeur,
+   ce qui compte sur un telephone. */
+.duel-vs {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
 .carte-duel {
@@ -710,7 +735,12 @@ img { max-width: 100%; display: block; }
 
 /* Sur telephone, une carte Versus de 380 px ne tenait pas a deux dans
    l'ecran. Les visuels sont bornes pour que le duel soit vu d'un coup. */
-.carte-duel .item-visuel { aspect-ratio: auto; }
+.carte-duel .item-visuel {
+  aspect-ratio: 1;
+  flex: 0 1 auto;
+  min-height: 0;
+  max-height: 100%;
+}
 
 .carte-duel-info {
   display: flex;
@@ -720,13 +750,18 @@ img { max-width: 100%; display: block; }
   border-top: var(--trait);
 }
 .carte-duel-cat {
-  font-size: var(--t6);
+  font-size: clamp(0.62rem, 2.2vw, 0.8125rem);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--orange-texte);
 }
-.carte-duel-nom { font-family: var(--police-titre); font-size: var(--t3); line-height: 1.1; }
+.carte-duel-nom {
+  font-family: var(--police-titre);
+  font-size: clamp(0.85rem, 3.4vw, 1.5rem);
+  line-height: 1.12;
+  overflow-wrap: anywhere;
+}
 
 .carte-duel.is-sortant { animation: sortie 400ms forwards; pointer-events: none; }
 .carte-duel.is-gagnant { animation: victoire 400ms forwards; }
@@ -757,7 +792,20 @@ img { max-width: 100%; display: block; }
 }
 
 @media (min-width: 760px) {
-  .duel-scene { grid-template-columns: 1fr auto 1fr; gap: var(--e4); align-items: stretch; }
+  .duel-scene {
+    grid-template-columns: 1fr 1fr;
+    /* Indispensable : sans cette ligne les rangees du gabarit mobile
+       (1fr auto 1fr) subsistent, les cartes se retrouvent dans la seule
+       rangee 1 et n'obtiennent qu'une fraction de la hauteur. Le cadre
+       tombait a 519x195 pour une source carree, soit 63 % de l'image
+       perdue et un visage coupe en deux. */
+    grid-template-rows: minmax(0, 1fr);
+    gap: var(--e4);
+    align-items: stretch;
+  }
+  /* La carte ne s'etire pas au-dela d'un format portrait raisonnable :
+     au-dela, "cover" recadrerait a nouveau trop fort. */
+  .carte-duel { max-width: min(100%, 62dvh); justify-self: center; width: 100%; }
 }
 
 /* --------------------------------------------------------------- */
@@ -915,9 +963,15 @@ img { max-width: 100%; display: block; }
 .ecran-prix .bloc-choix { flex: 1 1 auto; min-height: 0; }
 
 .ecran-versus .duel { display: flex; flex-direction: column; gap: var(--e2); }
-.ecran-versus .duel-scene { flex: 1 1 auto; min-height: 0; }
-.carte-duel { min-height: 0; }
-.carte-duel .item-visuel { flex: 1 1 auto; min-height: 0; }
+ /* La scene epouse la hauteur des cartes et se centre dans la place
+    restante : sans cela les cartes s'etiraient et laissaient un grand
+    vide sous le nom, et le badge VS se retrouvait decale. */
+.ecran-versus .duel-scene {
+  flex: 0 1 auto;
+  min-height: 0;
+  margin-block: auto;
+}
+.carte-duel { min-height: 0; justify-content: flex-start; }
 
 .ecran-prix .prix-carte { overflow-y: auto; }
 .ecran-prix .prix-visuel { flex: 0 1 auto; min-height: 0; }
@@ -1120,13 +1174,17 @@ img { max-width: 100%; display: block; }
 .prix-entete { display: flex; align-items: center; justify-content: space-between; gap: var(--e3); }
 .prix-compte { font-family: var(--police-chiffre); font-size: var(--t6); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
 
+ /* Carre centre plutot qu'un 4/3 : sur une source carree, le 4/3 ne
+    laissait voir que 75 % du produit. Dans un jeu d'estimation de prix,
+    l'image est l'enonce, il faut voir l'objet en entier. */
 .prix-visuel {
+  width: min(100%, 34dvh);
+  margin-inline: auto;
   border: var(--trait);
   border-radius: var(--rayon);
   overflow: hidden;
-  max-height: 30dvh;
 }
-.prix-visuel .item-visuel { aspect-ratio: 4 / 3; }
+.prix-visuel .item-visuel { aspect-ratio: 1; }
 
 .prix-nom { font-family: var(--police-titre); font-size: var(--t3); line-height: 1.12; }
 

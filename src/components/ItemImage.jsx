@@ -16,6 +16,13 @@ import React, { useState } from 'react';
 
 const TEINTES = ['orange', 'vert', 'indigo', 'ocre'];
 
+/** Les identifiants portent la nature de l'element : art_, foot_ et pub_
+ *  designent des personnes, food_ et prod_ des plats ou des objets.
+ *  Cette distinction pilote l'ancrage du recadrage. */
+export function estUnePersonne(id = '') {
+  return /^(art|foot|pub)_/.test(id);
+}
+
 export function teinteDe(nom = '') {
   let hash = 0;
   for (let i = 0; i < nom.length; i++) hash = (nom.charCodeAt(i) + ((hash << 5) - hash)) | 0;
@@ -44,6 +51,7 @@ export default function ItemImage({ item, className = '', sizes, eager = false }
   const classes = [
     'item-visuel',
     `teinte-${teinte}`,
+    estUnePersonne(item?.id) ? 'est-personne' : 'est-objet',
     aUneImage ? (aVerifier ? 'is-duotone' : 'is-photo') : 'is-vide',
     className,
   ]
