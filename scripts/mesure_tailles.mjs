@@ -1,5 +1,5 @@
 /** Mesure le debordement vertical de chaque page, a plusieurs tailles d'ecran. */
-import { chromium, devices } from 'playwright';
+import { chromium } from 'playwright';
 
 const BASE = process.env.URL_TEST || 'http://localhost:5987';
 const PAGES = [

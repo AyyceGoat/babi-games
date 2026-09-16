@@ -28,3 +28,6 @@ logs
 *.njsproj
 *.sln
 *.sw?
+
+# Dossier de depot des photos fournies par l utilisateur
+photos/
