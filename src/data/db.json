@@ -1,6 +1,716 @@
 {
   "artists": [
     {
+      "id": "art_15",
+      "name": "Mix Premier",
+      "image": "/images/artistes/art_15.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:04:35.876Z",
+      "category": "Coupé-Décalé",
+      "importeLe": "2026-09-16T17:00:23.061Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_15.jpg"
+      }
+    },
+    {
+      "id": "art_16",
+      "name": "Espoir 2000",
+      "image": "/images/artistes/art_16.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:04:36.846Z",
+      "category": "Zouglou",
+      "importeLe": "2026-09-16T17:00:23.113Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_16.jpg"
+      }
+    },
+    {
+      "id": "art_18",
+      "name": "Petit Denis",
+      "image": "/images/artistes/art_18.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:04:39.989Z",
+      "category": "Zouglou",
+      "importeLe": "2026-09-16T17:00:23.182Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_18.jpg"
+      }
+    },
+    {
+      "id": "art_2",
+      "name": "Ariel Sheney",
+      "image": "/images/artistes/art_2.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:03:55.012Z",
+      "category": "Coupé-Décalé",
+      "importeLe": "2026-09-16T17:00:23.239Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_2.jpg"
+      }
+    },
+    {
+      "id": "art_23",
+      "name": "Elow'n",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:04:52.101Z",
+      "category": "Rap Ivoire",
+      "failureReason": "ecarte a la revue de l import : pochette d album (\"Le retour de la pierre\"), pas une photo de l artiste",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_25",
+      "name": "Vitale",
+      "image": "/images/artistes/art_25.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:04:56.688Z",
+      "category": "Coupé-Décalé",
+      "importeLe": "2026-09-16T17:00:23.345Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_25.jpg"
+      }
+    },
+    {
+      "id": "art_26",
+      "name": "Bamba Amy Sarah",
+      "image": "/images/artistes/art_26.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:04:58.569Z",
+      "category": "Coupé-Décalé",
+      "importeLe": "2026-09-16T17:00:23.411Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_26.jpg"
+      }
+    },
+    {
+      "id": "art_27",
+      "name": "Claire Bahi",
+      "image": "/images/artistes/art_27.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:04:58.849Z",
+      "category": "Coupé-Décalé",
+      "importeLe": "2026-09-16T17:00:23.472Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_27.jpg"
+      }
+    },
+    {
+      "id": "art_28",
+      "name": "MC One",
+      "image": "/images/artistes/art_28.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:00.072Z",
+      "category": "Rap / Pop",
+      "importeLe": "2026-09-16T17:00:23.515Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_28.jpg"
+      }
+    },
+    {
+      "id": "art_29",
+      "name": "Soum Bill",
+      "image": "/images/artistes/art_29.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:01.113Z",
+      "category": "Zouglou",
+      "importeLe": "2026-09-16T17:00:23.615Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_29.jpg"
+      }
+    },
+    {
+      "id": "art_30",
+      "name": "Les Patrons",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:02.103Z",
+      "category": "Zouglou",
+      "failureReason": "ecarte a la revue de l import : peinture contemporaine, et doublon exact partage par 7 artistes",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_31",
+      "name": "Fitini",
+      "image": "/images/artistes/art_31.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:03.233Z",
+      "category": "Zouglou",
+      "importeLe": "2026-09-16T17:00:23.821Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_31.jpg"
+      }
+    },
+    {
+      "id": "art_32",
+      "name": "Molière",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:04.227Z",
+      "category": "Zouglou",
+      "failureReason": "ecarte a la revue de l import : affiche du spectacle musical francais \"Moliere\", pas l artiste zouglou",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_33",
+      "name": "Bilé Didier",
+      "image": "/images/artistes/art_33.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:07.695Z",
+      "category": "Zouglou",
+      "importeLe": "2026-09-16T17:00:23.981Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_33.jpg"
+      }
+    },
+    {
+      "id": "art_34",
+      "name": "Les Garagistes",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:08.378Z",
+      "category": "Zouglou",
+      "failureReason": "ecarte a la revue de l import : pochette d album miniature sur fond noir",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_36",
+      "name": "Tour de Garde",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:11.545Z",
+      "category": "Afro-pop",
+      "failureReason": "ecarte a la revue de l import : peinture contemporaine, doublon du meme fichier que art_30",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_37",
+      "name": "Monique Séka",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:12.652Z",
+      "category": "Afro-Zouk",
+      "revueLe": "2026-09-16",
+      "failureReason": "ecarte a la revue de l import : pochette de vinyle \"Missounwa\" avec filigrane, pas une photo"
+    },
+    {
+      "id": "art_41",
+      "name": "Ernesto Djédjé",
+      "image": "/images/artistes/art_41.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:28.416Z",
+      "category": "Ziglibithy",
+      "revueLe": "2026-09-15",
+      "importeLe": "2026-09-16T17:00:24.289Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_41.jpg"
+      }
+    },
+    {
+      "id": "art_42",
+      "name": "François Lougah",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:33.573Z",
+      "category": "Variété / Rétro",
+      "failureReason": "ecarte a la revue de l import : hors sujet : affiche d alphabet graffiti",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_43",
+      "name": "Reine Pélagie",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:34.681Z",
+      "category": "Variété",
+      "failureReason": "ecarte a la revue de l import : affiche de concert avec dates et tarifs",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_44",
+      "name": "Joelle C",
+      "image": "/images/artistes/art_44.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:35.562Z",
+      "category": "Variété",
+      "importeLe": "2026-09-16T17:00:24.531Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_44.jpg"
+      }
+    },
+    {
+      "id": "art_46",
+      "name": "Guy Christ Israel",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:38.509Z",
+      "category": "Gospel",
+      "failureReason": "ecarte a la revue de l import : pochette d album",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_47",
+      "name": "Nestor David",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:39.449Z",
+      "category": "Gospel",
+      "failureReason": "ecarte a la revue de l import : pochette d album (\"Triomphe\")",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_48",
+      "name": "Richard Krémé",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:40.457Z",
+      "category": "Gospel",
+      "failureReason": "ecarte a la revue de l import : affiche d evenement avec date et numero de telephone",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_49",
+      "name": "Schekina",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:41.463Z",
+      "category": "Gospel",
+      "failureReason": "ecarte a la revue de l import : pochette d album (\"Brule en moi\")",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_50",
+      "name": "Eden",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:42.491Z",
+      "category": "Gospel",
+      "failureReason": "ecarte a la revue de l import : peinture contemporaine, doublon du meme fichier que art_30",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_51",
+      "name": "Onel Mala",
+      "image": "/images/artistes/art_51.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:44.520Z",
+      "category": "Gospel / Reggae",
+      "importeLe": "2026-09-16T17:00:24.946Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_51.jpg"
+      }
+    },
+    {
+      "id": "art_52",
+      "name": "Bebi Philip",
+      "image": "/images/artistes/art_52.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:45.430Z",
+      "category": "Coupé-Décalé / Afro-pop",
+      "importeLe": "2026-09-16T17:00:25.002Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_52.jpg"
+      }
+    },
+    {
+      "id": "art_53",
+      "name": "Shado Chris",
+      "image": "/images/artistes/art_53.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:46.353Z",
+      "category": "Rap / Afro-fusion",
+      "importeLe": "2026-09-16T17:00:25.070Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_53.jpg"
+      }
+    },
+    {
+      "id": "art_54",
+      "name": "Francky Dicaprio",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:47.216Z",
+      "category": "Coupé-Décalé",
+      "failureReason": "ecarte a la revue de l import : salle de conference avec videoprojecteur, sujet non identifiable",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_56",
+      "name": "DJ Jacob",
+      "image": "/images/artistes/art_56.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:49.991Z",
+      "category": "Coupé-Décalé",
+      "importeLe": "2026-09-16T17:00:25.185Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_56.jpg"
+      }
+    },
+    {
+      "id": "art_57",
+      "name": "Erickson le Zoulou",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:50.942Z",
+      "category": "Coupé-Décalé",
+      "failureReason": "ecarte a la revue de l import : affiche graphique avec texte en gros caracteres",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_58",
+      "name": "Révolution",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:51.969Z",
+      "category": "Zouglou",
+      "failureReason": "ecarte a la revue de l import : photo d une peinture accrochee en galerie",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_59",
+      "name": "VDA (Voix des Anges)",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:53.405Z",
+      "category": "Zouglou",
+      "failureReason": "ecarte a la revue de l import : portrait d un homme seul alors que VDA est un groupe",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_60",
+      "name": "Les Leaders",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:05:55.345Z",
+      "category": "Zouglou",
+      "failureReason": "ecarte a la revue de l import : peinture contemporaine, doublon du meme fichier que art_30",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_62",
+      "name": "Tripa Gninnin",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:06:03.322Z",
+      "category": "Rap Ivoire",
+      "failureReason": "ecarte a la revue de l import : hors sujet : photographie d architecture en noir et blanc",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_63",
+      "name": "Oprah",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:06:04.232Z",
+      "category": "Rap Ivoire",
+      "failureReason": "ecarte a la revue de l import : identite douteuse : jeune femme en maillot du Burkina Faso",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_64",
+      "name": "Douk Saga",
+      "image": "/images/artistes/art_64.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:06:06.230Z",
+      "category": "Coupé-Décalé (Créateur)",
+      "importeLe": "2026-09-16T17:00:25.777Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_64.jpg"
+      }
+    },
+    {
+      "id": "art_65",
+      "name": "Jovial",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:06:07.269Z",
+      "category": "Rap Ivoire",
+      "failureReason": "ecarte a la revue de l import : peinture contemporaine, doublon du meme fichier que art_30",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_66",
+      "name": "Black K",
+      "image": "/images/artistes/art_66.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:06:08.761Z",
+      "category": "Rap Ivoire",
+      "importeLe": "2026-09-16T17:00:25.907Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_66.jpg"
+      }
+    },
+    {
+      "id": "art_67",
+      "name": "Rocky Gold",
+      "image": "/images/artistes/art_67.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:06:10.433Z",
+      "category": "Afro-pop",
+      "importeLe": "2026-09-16T17:00:25.962Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_67.jpg"
+      }
+    },
+    {
+      "id": "art_68",
+      "name": "Teeyah",
+      "image": "/images/artistes/art_68.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:06:11.431Z",
+      "category": "Afro-Zouk / Pop",
+      "importeLe": "2026-09-16T17:00:26.021Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_68.jpg"
+      }
+    },
+    {
+      "id": "art_69",
+      "name": "Boni (Magic System)",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:06:12.312Z",
+      "category": "Zouglou",
+      "failureReason": "ecarte a la revue de l import : peinture contemporaine, doublon du meme fichier que art_30",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_7",
+      "name": "Debordo Leekunfa",
+      "image": "/images/artistes/art_7.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:04:16.067Z",
+      "category": "Coupé-Décalé",
+      "importeLe": "2026-09-16T17:00:26.149Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_7.jpg"
+      }
+    },
+    {
+      "id": "art_70",
+      "name": "Manadja (Magic System)",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:06:14.035Z",
+      "category": "Zouglou",
+      "failureReason": "ecarte a la revue de l import : visuel d hommage compose, pas une photo de l artiste",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_71",
+      "name": "Goudé (Magic System)",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:06:14.724Z",
+      "category": "Zouglou",
+      "failureReason": "ecarte a la revue de l import : peinture, pas une photographie",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "art_72",
+      "name": "Asalfo (Magic System)",
+      "image": "/images/artistes/art_72.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:06:16.604Z",
+      "category": "Zouglou",
+      "importeLe": "2026-09-16T17:00:26.370Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_72.jpg"
+      }
+    },
+    {
+      "id": "art_73",
+      "name": "Josey Priscille",
+      "image": "/images/artistes/art_73.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:06:17.242Z",
+      "category": "Variété / Soul",
+      "importeLe": "2026-09-16T17:00:26.445Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "art_73.jpg"
+      }
+    },
+    {
+      "id": "art_75",
+      "name": "Les Mercenaires",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:06:19.867Z",
+      "category": "Zouglou",
+      "failureReason": "ecarte a la revue de l import : peinture contemporaine, doublon du meme fichier que art_30",
+      "revueLe": "2026-09-16"
+    },
+    {
       "id": "art_1",
       "name": "Didi B",
       "image": "/images/artistes/art_1.jpg",
@@ -15,18 +725,6 @@
         "fichier": "Didi B 03.jpg",
         "page": "https://commons.wikimedia.org/wiki/File:Didi_B_03.jpg"
       }
-    },
-    {
-      "id": "art_2",
-      "name": "Ariel Sheney",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:03:55.012Z",
-      "category": "Coupé-Décalé",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
     },
     {
       "id": "art_3",
@@ -93,18 +791,6 @@
         "fichier": "Serge Beynaud 02.jpg",
         "page": "https://commons.wikimedia.org/wiki/File:Serge_Beynaud_02.jpg"
       }
-    },
-    {
-      "id": "art_7",
-      "name": "Debordo Leekunfa",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:04:16.067Z",
-      "category": "Coupé-Décalé",
-      "failureReason": "source trop petite (450x600)"
     },
     {
       "id": "art_8",
@@ -221,30 +907,6 @@
       }
     },
     {
-      "id": "art_15",
-      "name": "Mix Premier",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:04:35.876Z",
-      "category": "Coupé-Décalé",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "art_16",
-      "name": "Espoir 2000",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:04:36.846Z",
-      "category": "Zouglou",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
       "id": "art_17",
       "name": "Yodé & Siro",
       "image": "/images/artistes/art_17.jpg",
@@ -259,18 +921,6 @@
         "fichier": "Yodé & Siro.jpg",
         "page": "https://commons.wikimedia.org/wiki/File:Yod%C3%A9_%26_Siro.jpg"
       }
-    },
-    {
-      "id": "art_18",
-      "name": "Petit Denis",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:04:39.989Z",
-      "category": "Zouglou",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
     },
     {
       "id": "art_19",
@@ -337,18 +987,6 @@
       }
     },
     {
-      "id": "art_23",
-      "name": "Elow'n",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:04:52.101Z",
-      "category": "Rap Ivoire",
-      "failureReason": "source trop petite (700x400)"
-    },
-    {
       "id": "art_24",
       "name": "Safarel Obiang",
       "image": "/images/artistes/art_24.jpg",
@@ -365,126 +1003,6 @@
       }
     },
     {
-      "id": "art_25",
-      "name": "Vitale",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:04:56.688Z",
-      "category": "Coupé-Décalé",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 10 examines)"
-    },
-    {
-      "id": "art_26",
-      "name": "Bamba Amy Sarah",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:04:58.569Z",
-      "category": "Coupé-Décalé",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "art_27",
-      "name": "Claire Bahi",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:04:58.849Z",
-      "category": "Coupé-Décalé",
-      "failureReason": "source trop petite (453x457)"
-    },
-    {
-      "id": "art_28",
-      "name": "MC One",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:00.072Z",
-      "category": "Rap / Pop",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 4 examines)"
-    },
-    {
-      "id": "art_29",
-      "name": "Soum Bill",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:01.113Z",
-      "category": "Zouglou",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "art_30",
-      "name": "Les Patrons",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:02.103Z",
-      "category": "Zouglou",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 8 examines)"
-    },
-    {
-      "id": "art_31",
-      "name": "Fitini",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:03.233Z",
-      "category": "Zouglou",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 2 examines)"
-    },
-    {
-      "id": "art_32",
-      "name": "Molière",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:04.227Z",
-      "category": "Zouglou",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 10 examines)"
-    },
-    {
-      "id": "art_33",
-      "name": "Bilé Didier",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:07.695Z",
-      "category": "Zouglou",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "art_34",
-      "name": "Les Garagistes",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:08.378Z",
-      "category": "Zouglou",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
       "id": "art_35",
       "name": "Ismaël Isaac",
       "image": "/images/artistes/art_35.jpg",
@@ -499,31 +1017,6 @@
         "fichier": "Ismaël Isaac.jpg",
         "page": "https://commons.wikimedia.org/wiki/File:Isma%C3%ABl_Isaac.jpg"
       }
-    },
-    {
-      "id": "art_36",
-      "name": "Tour de Garde",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:11.545Z",
-      "category": "Afro-pop",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 6 examines)"
-    },
-    {
-      "id": "art_37",
-      "name": "Monique Séka",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:12.652Z",
-      "category": "Afro-Zouk",
-      "failureReason": "ecarte a la revue visuelle : illustration vectorielle, pas une photographie",
-      "revueLe": "2026-09-15"
     },
     {
       "id": "art_38",
@@ -574,55 +1067,6 @@
       }
     },
     {
-      "id": "art_41",
-      "name": "Ernesto Djédjé",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:28.416Z",
-      "category": "Ziglibithy",
-      "failureReason": "ecarte a la revue visuelle : illustration dessinee, pas une photographie",
-      "revueLe": "2026-09-15"
-    },
-    {
-      "id": "art_42",
-      "name": "François Lougah",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:33.573Z",
-      "category": "Variété / Rétro",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "art_43",
-      "name": "Reine Pélagie",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:34.681Z",
-      "category": "Variété",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "art_44",
-      "name": "Joelle C",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:35.562Z",
-      "category": "Variété",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 10 examines)"
-    },
-    {
       "id": "art_45",
       "name": "Affou Keïta",
       "image": "/images/artistes/art_45.jpg",
@@ -639,114 +1083,6 @@
       }
     },
     {
-      "id": "art_46",
-      "name": "Guy Christ Israel",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:38.509Z",
-      "category": "Gospel",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "art_47",
-      "name": "Nestor David",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:39.449Z",
-      "category": "Gospel",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 4 examines)"
-    },
-    {
-      "id": "art_48",
-      "name": "Richard Krémé",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:40.457Z",
-      "category": "Gospel",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 3 examines)"
-    },
-    {
-      "id": "art_49",
-      "name": "Schekina",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:41.463Z",
-      "category": "Gospel",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 2 examines)"
-    },
-    {
-      "id": "art_50",
-      "name": "Eden",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:42.491Z",
-      "category": "Gospel",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 10 examines)"
-    },
-    {
-      "id": "art_51",
-      "name": "Onel Mala",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:44.520Z",
-      "category": "Gospel / Reggae",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "art_52",
-      "name": "Bebi Philip",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:45.430Z",
-      "category": "Coupé-Décalé / Afro-pop",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "art_53",
-      "name": "Shado Chris",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:46.353Z",
-      "category": "Rap / Afro-fusion",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "art_54",
-      "name": "Francky Dicaprio",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:47.216Z",
-      "category": "Coupé-Décalé",
-      "failureReason": "source trop petite (199x232)"
-    },
-    {
       "id": "art_55",
       "name": "DJ Lewis",
       "image": "/images/artistes/art_55.jpg",
@@ -761,66 +1097,6 @@
         "fichier": "Dj Léwis.jpg",
         "page": "https://commons.wikimedia.org/wiki/File:Dj_L%C3%A9wis.jpg"
       }
-    },
-    {
-      "id": "art_56",
-      "name": "DJ Jacob",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:49.991Z",
-      "category": "Coupé-Décalé",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "art_57",
-      "name": "Erickson le Zoulou",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:50.942Z",
-      "category": "Coupé-Décalé",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "art_58",
-      "name": "Révolution",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:51.969Z",
-      "category": "Zouglou",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 10 examines)"
-    },
-    {
-      "id": "art_59",
-      "name": "VDA (Voix des Anges)",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:53.405Z",
-      "category": "Zouglou",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 11 examines)"
-    },
-    {
-      "id": "art_60",
-      "name": "Les Leaders",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:05:55.345Z",
-      "category": "Zouglou",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 3 examines)"
     },
     {
       "id": "art_61",
@@ -841,150 +1117,6 @@
       "revueLe": "2026-09-15"
     },
     {
-      "id": "art_62",
-      "name": "Tripa Gninnin",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:06:03.322Z",
-      "category": "Rap Ivoire",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "art_63",
-      "name": "Oprah",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:06:04.232Z",
-      "category": "Rap Ivoire",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 10 examines)"
-    },
-    {
-      "id": "art_64",
-      "name": "Douk Saga",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:06:06.230Z",
-      "category": "Coupé-Décalé (Créateur)",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 2 examines)"
-    },
-    {
-      "id": "art_65",
-      "name": "Jovial",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:06:07.269Z",
-      "category": "Rap Ivoire",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 10 examines)"
-    },
-    {
-      "id": "art_66",
-      "name": "Black K",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:06:08.761Z",
-      "category": "Rap Ivoire",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 10 examines)"
-    },
-    {
-      "id": "art_67",
-      "name": "Rocky Gold",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:06:10.433Z",
-      "category": "Afro-pop",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "art_68",
-      "name": "Teeyah",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:06:11.431Z",
-      "category": "Afro-Zouk / Pop",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "art_69",
-      "name": "Boni (Magic System)",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:06:12.312Z",
-      "category": "Zouglou",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 11 examines)"
-    },
-    {
-      "id": "art_70",
-      "name": "Manadja (Magic System)",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:06:14.035Z",
-      "category": "Zouglou",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 2 examines)"
-    },
-    {
-      "id": "art_71",
-      "name": "Goudé (Magic System)",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:06:14.724Z",
-      "category": "Zouglou",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 11 examines)"
-    },
-    {
-      "id": "art_72",
-      "name": "Asalfo (Magic System)",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:06:16.604Z",
-      "category": "Zouglou",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 2 examines)"
-    },
-    {
-      "id": "art_73",
-      "name": "Josey Priscille",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:06:17.242Z",
-      "category": "Variété / Soul",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
       "id": "art_74",
       "name": "Didier Bilé",
       "image": "/images/artistes/art_74.jpg",
@@ -999,21 +1131,359 @@
         "fichier": "Didier Bilé.jpg",
         "page": "https://commons.wikimedia.org/wiki/File:Didier_Bil%C3%A9.jpg"
       }
+    }
+  ],
+  "footballers": [
+    {
+      "id": "foot_22",
+      "name": "Christian Kouamé",
+      "image": "/images/footballeurs/foot_22.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:07:18.314Z",
+      "category": "Attaquant",
+      "importeLe": "2026-09-16T17:00:27.345Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "foot_22.jpg"
+      }
     },
     {
-      "id": "art_75",
-      "name": "Les Mercenaires",
-      "image": "/images/placeholders/artiste.svg",
+      "id": "foot_25",
+      "name": "Willy Boly",
+      "image": "/images/footballeurs/foot_25.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:07:24.017Z",
+      "category": "Défenseur Central",
+      "importeLe": "2026-09-16T17:00:27.395Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "foot_25.jpg"
+      }
+    },
+    {
+      "id": "foot_33",
+      "name": "David Datro Fofana",
+      "image": "/images/footballeurs/foot_33.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:07:41.920Z",
+      "category": "Attaquant",
+      "importeLe": "2026-09-16T17:00:27.466Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "foot_33.jpg"
+      }
+    },
+    {
+      "id": "foot_35",
+      "name": "Lacina Traoré",
+      "image": "/images/placeholders/footballeur.svg",
       "status": "a_verifier_manuellement",
       "source": "N/A",
       "license": "N/A",
       "author": "N/A",
-      "lastAttempt": "2026-09-15T11:06:19.867Z",
-      "category": "Zouglou",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 9 examines)"
-    }
-  ],
-  "footballers": [
+      "lastAttempt": "2026-09-15T11:07:44.953Z",
+      "category": "Attaquant / Pivot",
+      "failureReason": "ecarte a la revue de l import : filigrane \"alamy\" repete sur toute l image",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "foot_4",
+      "name": "Nicolas Pépé",
+      "image": "/images/footballeurs/foot_4.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:06:26.719Z",
+      "category": "Attaquant",
+      "importeLe": "2026-09-16T17:00:27.683Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "foot_4.jpg"
+      }
+    },
+    {
+      "id": "foot_40",
+      "name": "Siaka Tiéné (Chico)",
+      "image": "/images/placeholders/footballeur.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:07:54.554Z",
+      "category": "Défenseur Latéral",
+      "failureReason": "ecarte a la revue de l import : filigrane \"alamy\" repete sur toute l image",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "foot_41",
+      "name": "Bakari Koné (Baky)",
+      "image": "/images/placeholders/footballeur.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:07:56.195Z",
+      "category": "Attaquant / Pocket",
+      "failureReason": "ecarte a la revue de l import : filigrane \"alamy\" repete sur toute l image",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "foot_42",
+      "name": "Aruna Dindane",
+      "image": "/images/placeholders/footballeur.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:07:58.330Z",
+      "category": "Attaquant",
+      "failureReason": "ecarte a la revue de l import : filigrane \"alamy\" repete sur toute l image",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "foot_45",
+      "name": "Romaric N'Dri",
+      "image": "/images/footballeurs/foot_45.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:08:18.138Z",
+      "category": "Milieu de Terrain",
+      "importeLe": "2026-09-16T17:00:27.935Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "foot_45.jpg"
+      }
+    },
+    {
+      "id": "foot_48",
+      "name": "Bonaventure Kalou",
+      "image": "/images/footballeurs/foot_48.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:08:30.839Z",
+      "category": "Milieu Offensif / Attaquant",
+      "importeLe": "2026-09-16T17:00:27.984Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "foot_48.jpg"
+      }
+    },
+    {
+      "id": "foot_51",
+      "name": "Alain Gouaméné",
+      "image": "/images/footballeurs/foot_51.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:08:35.692Z",
+      "category": "Gardien de But (Légende 92)",
+      "importeLe": "2026-09-16T17:00:28.025Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "foot_51.jpg"
+      }
+    },
+    {
+      "id": "foot_52",
+      "name": "Youssouf Fofana",
+      "image": "/images/footballeurs/foot_52.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:08:36.745Z",
+      "category": "Attaquant (Le Diamant Noir)",
+      "importeLe": "2026-09-16T17:00:28.093Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "foot_52.jpg"
+      }
+    },
+    {
+      "id": "foot_55",
+      "name": "Donald-Olivier Sié",
+      "image": "/images/placeholders/footballeur.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:08:54.200Z",
+      "category": "Milieu de Terrain",
+      "failureReason": "ecarte a la revue de l import : hors sujet : une de journal sur la presidentielle",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "foot_56",
+      "name": "Serge Maguy",
+      "image": "/images/footballeurs/foot_56.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:08:55.220Z",
+      "category": "Milieu Offensif",
+      "importeLe": "2026-09-16T17:00:28.332Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "foot_56.jpg"
+      }
+    },
+    {
+      "id": "foot_58",
+      "name": "Lassina Diabaté",
+      "image": "/images/footballeurs/foot_58.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:08:59.299Z",
+      "category": "Milieu Défensif",
+      "importeLe": "2026-09-16T17:00:28.444Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "foot_58.jpg"
+      }
+    },
+    {
+      "id": "foot_59",
+      "name": "Olivier Tebily",
+      "image": "/images/footballeurs/foot_59.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:09:00.379Z",
+      "category": "Défenseur Central",
+      "importeLe": "2026-09-16T17:00:28.499Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "foot_59.jpg"
+      }
+    },
+    {
+      "id": "foot_60",
+      "name": "Ibrahim Bakayoko",
+      "image": "/images/footballeurs/foot_60.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:09:01.972Z",
+      "category": "Attaquant",
+      "importeLe": "2026-09-16T17:00:28.548Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "foot_60.jpg"
+      }
+    },
+    {
+      "id": "foot_61",
+      "name": "Gilles Yapi Yapo",
+      "image": "/images/placeholders/footballeur.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:09:03.020Z",
+      "category": "Milieu de Terrain",
+      "failureReason": "ecarte a la revue de l import : hors sujet : paysage de bord de mer mediterraneen",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "foot_64",
+      "name": "Marco Né",
+      "image": "/images/footballeurs/foot_64.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:09:11.223Z",
+      "category": "Milieu de Terrain",
+      "importeLe": "2026-09-16T17:00:28.663Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "foot_64.jpg"
+      }
+    },
+    {
+      "id": "foot_67",
+      "name": "Benjamin Angoua",
+      "image": "/images/footballeurs/foot_67.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:09:17.533Z",
+      "category": "Défenseur Central",
+      "importeLe": "2026-09-16T17:00:28.721Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "foot_67.jpg"
+      }
+    },
+    {
+      "id": "foot_7",
+      "name": "Sébastien Haller",
+      "image": "/images/footballeurs/foot_7.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:06:32.761Z",
+      "category": "Attaquant / Pivot",
+      "importeLe": "2026-09-16T17:00:28.842Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "foot_7.jpg"
+      }
+    },
+    {
+      "id": "foot_70",
+      "name": "Ismaël Diomandé",
+      "image": "/images/footballeurs/foot_70.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:09:22.827Z",
+      "category": "Milieu Défensif",
+      "importeLe": "2026-09-16T17:00:28.915Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "foot_70.jpg"
+      }
+    },
+    {
+      "id": "foot_75",
+      "name": "Lamine Camara (CI)",
+      "image": "/images/footballeurs/foot_75.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:09:38.204Z",
+      "category": "Milieu de Terrain",
+      "importeLe": "2026-09-16T17:00:29.007Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "foot_75.jpg"
+      }
+    },
     {
       "id": "foot_1",
       "name": "Didier Drogba",
@@ -1063,18 +1533,6 @@
       }
     },
     {
-      "id": "foot_4",
-      "name": "Nicolas Pépé",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:06:26.719Z",
-      "category": "Attaquant",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 2 examines)"
-    },
-    {
       "id": "foot_5",
       "name": "Franck Kessié",
       "image": "/images/footballeurs/foot_5.jpg",
@@ -1105,18 +1563,6 @@
         "fichier": "Simon Adingra Cote D'Ivoire v Ecuador 14 June 2026-60.jpg",
         "page": "https://commons.wikimedia.org/wiki/File:Simon_Adingra_Cote_D%27Ivoire_v_Ecuador_14_June_2026-60.jpg"
       }
-    },
-    {
-      "id": "foot_7",
-      "name": "Sébastien Haller",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:06:32.761Z",
-      "category": "Attaquant / Pivot",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
     },
     {
       "id": "foot_8",
@@ -1343,18 +1789,6 @@
       }
     },
     {
-      "id": "foot_22",
-      "name": "Christian Kouamé",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:07:18.314Z",
-      "category": "Attaquant",
-      "failureReason": "source trop petite (340x473)"
-    },
-    {
       "id": "foot_23",
       "name": "Wilfried Singo",
       "image": "/images/footballeurs/foot_23.jpg",
@@ -1385,18 +1819,6 @@
         "fichier": "FC Liefering gegen SK Vorwärts Steyr (2022-07-29) 18.jpg",
         "page": "https://commons.wikimedia.org/wiki/File:FC_Liefering_gegen_SK_Vorw%C3%A4rts_Steyr_(2022-07-29)_18.jpg"
       }
-    },
-    {
-      "id": "foot_25",
-      "name": "Willy Boly",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:07:24.017Z",
-      "category": "Défenseur Central",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
     },
     {
       "id": "foot_26",
@@ -1511,18 +1933,6 @@
       }
     },
     {
-      "id": "foot_33",
-      "name": "David Datro Fofana",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:07:41.920Z",
-      "category": "Attaquant",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
       "id": "foot_34",
       "name": "Seydou Doumbia",
       "image": "/images/footballeurs/foot_34.jpg",
@@ -1537,18 +1947,6 @@
         "fichier": "Seydou Doumbia 2013.jpg",
         "page": "https://commons.wikimedia.org/wiki/File:Seydou_Doumbia_2013.jpg"
       }
-    },
-    {
-      "id": "foot_35",
-      "name": "Lacina Traoré",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:07:44.953Z",
-      "category": "Attaquant / Pivot",
-      "failureReason": "source trop petite (276x431)"
     },
     {
       "id": "foot_36",
@@ -1615,42 +2013,6 @@
       }
     },
     {
-      "id": "foot_40",
-      "name": "Siaka Tiéné (Chico)",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:07:54.554Z",
-      "category": "Défenseur Latéral",
-      "failureReason": "source trop petite (200x430)"
-    },
-    {
-      "id": "foot_41",
-      "name": "Bakari Koné (Baky)",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:07:56.195Z",
-      "category": "Attaquant / Pocket",
-      "failureReason": "source trop petite (326x392)"
-    },
-    {
-      "id": "foot_42",
-      "name": "Aruna Dindane",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:07:58.330Z",
-      "category": "Attaquant",
-      "failureReason": "source trop petite (204x556)"
-    },
-    {
       "id": "foot_43",
       "name": "Kader Keïta (Popito)",
       "image": "/images/footballeurs/foot_43.jpg",
@@ -1681,18 +2043,6 @@
         "fichier": "Boubacar Barry 2012.jpg",
         "page": "https://commons.wikimedia.org/wiki/File:Boubacar_Barry_2012.jpg"
       }
-    },
-    {
-      "id": "foot_45",
-      "name": "Romaric N'Dri",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:08:18.138Z",
-      "category": "Milieu de Terrain",
-      "failureReason": "source trop petite (196x269)"
     },
     {
       "id": "foot_46",
@@ -1727,18 +2077,6 @@
       }
     },
     {
-      "id": "foot_48",
-      "name": "Bonaventure Kalou",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:08:30.839Z",
-      "category": "Milieu Offensif / Attaquant",
-      "failureReason": "source trop petite (210x304)"
-    },
-    {
       "id": "foot_49",
       "name": "Joel Tiéhi",
       "image": "/images/footballeurs/foot_49.jpg",
@@ -1769,30 +2107,6 @@
         "fichier": "Laurent Pokou2.jpg",
         "page": "https://commons.wikimedia.org/wiki/File:Laurent_Pokou2.jpg"
       }
-    },
-    {
-      "id": "foot_51",
-      "name": "Alain Gouaméné",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:08:35.692Z",
-      "category": "Gardien de But (Légende 92)",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "foot_52",
-      "name": "Youssouf Fofana",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:08:36.745Z",
-      "category": "Attaquant (Le Diamant Noir)",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 5 examines)"
     },
     {
       "id": "foot_53",
@@ -1827,30 +2141,6 @@
       }
     },
     {
-      "id": "foot_55",
-      "name": "Donald-Olivier Sié",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:08:54.200Z",
-      "category": "Milieu de Terrain",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "foot_56",
-      "name": "Serge Maguy",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:08:55.220Z",
-      "category": "Milieu Offensif",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
       "id": "foot_57",
       "name": "Didier Otokoré",
       "image": "/images/footballeurs/foot_57.jpg",
@@ -1865,54 +2155,6 @@
         "fichier": "Didier Otokoré.jpg",
         "page": "https://commons.wikimedia.org/wiki/File:Didier_Otokor%C3%A9.jpg"
       }
-    },
-    {
-      "id": "foot_58",
-      "name": "Lassina Diabaté",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:08:59.299Z",
-      "category": "Milieu Défensif",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "foot_59",
-      "name": "Olivier Tebily",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:09:00.379Z",
-      "category": "Défenseur Central",
-      "failureReason": "source trop petite (178x213)"
-    },
-    {
-      "id": "foot_60",
-      "name": "Ibrahim Bakayoko",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:09:01.972Z",
-      "category": "Attaquant",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "foot_61",
-      "name": "Gilles Yapi Yapo",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:09:03.020Z",
-      "category": "Milieu de Terrain",
-      "failureReason": "source trop petite (330x618)"
     },
     {
       "id": "foot_62",
@@ -1947,18 +2189,6 @@
       }
     },
     {
-      "id": "foot_64",
-      "name": "Marco Né",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:09:11.223Z",
-      "category": "Milieu de Terrain",
-      "failureReason": "source trop petite (451x487)"
-    },
-    {
       "id": "foot_65",
       "name": "Constant Djakpa",
       "image": "/images/footballeurs/foot_65.jpg",
@@ -1991,18 +2221,6 @@
       }
     },
     {
-      "id": "foot_67",
-      "name": "Benjamin Angoua",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:09:17.533Z",
-      "category": "Défenseur Central",
-      "failureReason": "source trop petite (251x373)"
-    },
-    {
       "id": "foot_68",
       "name": "Sayouba Mandé",
       "image": "/images/footballeurs/foot_68.jpg",
@@ -2033,18 +2251,6 @@
         "fichier": "Badra Ali Sangaré Equipe de la Cote d'Ivoire (cropped).jpg",
         "page": "https://commons.wikimedia.org/wiki/File:Badra_Ali_Sangar%C3%A9_Equipe_de_la_Cote_d%27Ivoire_(cropped).jpg"
       }
-    },
-    {
-      "id": "foot_70",
-      "name": "Ismaël Diomandé",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:09:22.827Z",
-      "category": "Milieu Défensif",
-      "failureReason": "source trop petite (343x477)"
     },
     {
       "id": "foot_71",
@@ -2109,56 +2315,316 @@
         "fichier": "Ousmane Diomandé Cote D'Ivoire v Ecuador 14 June 2026-58.jpg",
         "page": "https://commons.wikimedia.org/wiki/File:Ousmane_Diomand%C3%A9_Cote_D%27Ivoire_v_Ecuador_14_June_2026-58.jpg"
       }
-    },
-    {
-      "id": "foot_75",
-      "name": "Lamine Camara (CI)",
-      "image": "/images/placeholders/footballeur.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:09:38.204Z",
-      "category": "Milieu de Terrain",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 5 examines)"
     }
   ],
   "publicFigures": [
     {
       "id": "pub_1",
       "name": "Gohou Michel",
-      "image": "/images/placeholders/artiste.svg",
+      "image": "/images/publicfigures/pub_1.jpg",
       "status": "a_verifier_manuellement",
-      "source": "N/A",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
       "license": "N/A",
       "author": "N/A",
       "lastAttempt": "2026-09-15T11:09:39.666Z",
       "category": "Humoriste / Acteur",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
+      "importeLe": "2026-09-16T17:00:30.598Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "pub_1.jpg"
+      }
+    },
+    {
+      "id": "pub_10",
+      "name": "L'Excès",
+      "image": "/images/publicfigures/pub_10.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:09:57.161Z",
+      "category": "Créateur de contenu / Humoriste",
+      "importeLe": "2026-09-16T17:00:30.660Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "pub_10.jpg"
+      }
+    },
+    {
+      "id": "pub_12",
+      "name": "Carmen Sama",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:10:00.719Z",
+      "category": "Influenceuse / Mode",
+      "failureReason": "ecarte a la revue de l import : montage de deux images accolees",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "pub_13",
+      "name": "Eudoxie Yao",
+      "image": "/images/publicfigures/pub_13.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:10:01.771Z",
+      "category": "Personnalité Publique / Modèle",
+      "importeLe": "2026-09-16T17:00:30.823Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "pub_13.jpg"
+      }
+    },
+    {
+      "id": "pub_16",
+      "name": "Caroline Dasylva",
+      "image": "/images/publicfigures/pub_16.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:10:07.225Z",
+      "category": "Animatrice TV (C'Midi)",
+      "importeLe": "2026-09-16T17:00:30.960Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "pub_16.jpg"
+      }
+    },
+    {
+      "id": "pub_17",
+      "name": "Jean-Michel Onin",
+      "image": "/images/publicfigures/pub_17.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:10:08.114Z",
+      "category": "Journaliste / Animateur",
+      "importeLe": "2026-09-16T17:00:31.038Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "pub_17.jpg"
+      }
+    },
+    {
+      "id": "pub_18",
+      "name": "Didier Bléou",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:10:08.492Z",
+      "category": "Directeur TV / Animateur",
+      "failureReason": "ecarte a la revue de l import : photo de groupe officielle, sujet non identifiable, doublon de pub_8",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "pub_19",
+      "name": "Yves de M'Bella",
+      "image": "/images/publicfigures/pub_19.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:10:09.492Z",
+      "category": "Animateur Radio & TV",
+      "importeLe": "2026-09-16T17:00:31.161Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "pub_19.jpg"
+      }
     },
     {
       "id": "pub_2",
       "name": "Digbeu Cravate",
-      "image": "/images/placeholders/artiste.svg",
+      "image": "/images/publicfigures/pub_2.jpg",
       "status": "a_verifier_manuellement",
-      "source": "N/A",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
       "license": "N/A",
       "author": "N/A",
       "lastAttempt": "2026-09-15T11:09:40.034Z",
       "category": "Humoriste / Acteur",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
+      "importeLe": "2026-09-16T17:00:31.211Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "pub_2.jpg"
+      }
     },
     {
-      "id": "pub_3",
-      "name": "Yvidero",
+      "id": "pub_21",
+      "name": "Marie-Paule Adjé",
+      "image": "/images/publicfigures/pub_21.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:10:11.646Z",
+      "category": "Actrice / Modèle / Mode",
+      "importeLe": "2026-09-16T17:00:31.301Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "pub_21.jpg"
+      }
+    },
+    {
+      "id": "pub_22",
+      "name": "Stéphane Zabavy",
+      "image": "/images/publicfigures/pub_22.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:10:12.651Z",
+      "category": "Acteur / Chanteur",
+      "importeLe": "2026-09-16T17:00:31.344Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "pub_22.jpg"
+      }
+    },
+    {
+      "id": "pub_23",
+      "name": "Guy Kalou",
+      "image": "/images/publicfigures/pub_23.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:10:12.959Z",
+      "category": "Acteur / Producteur",
+      "importeLe": "2026-09-16T17:00:31.403Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "pub_23.jpg"
+      }
+    },
+    {
+      "id": "pub_27",
+      "name": "Gbazé Thérèse",
       "image": "/images/placeholders/artiste.svg",
       "status": "a_verifier_manuellement",
       "source": "N/A",
       "license": "N/A",
       "author": "N/A",
+      "lastAttempt": "2026-09-15T11:10:23.229Z",
+      "category": "Actrice (Ma Famille)",
+      "failureReason": "ecarte a la revue de l import : montage de plusieurs visages",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "pub_3",
+      "name": "Yvidero",
+      "image": "/images/publicfigures/pub_3.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
       "lastAttempt": "2026-09-15T11:09:40.958Z",
       "category": "Humoriste / Actrice",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
+      "importeLe": "2026-09-16T17:00:31.526Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "pub_3.jpg"
+      }
+    },
+    {
+      "id": "pub_30",
+      "name": "Emmanuelle Keïta",
+      "image": "/images/publicfigures/pub_30.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:10:29.031Z",
+      "category": "Influenceuse / Mode / Style",
+      "importeLe": "2026-09-16T17:00:31.588Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "pub_30.jpg"
+      }
+    },
+    {
+      "id": "pub_31",
+      "name": "Général Camille Makosso",
+      "image": "/images/publicfigures/pub_31.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:10:30.118Z",
+      "category": "Influenceur / Personnalité",
+      "importeLe": "2026-09-16T17:00:31.650Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "pub_31.jpg"
+      }
+    },
+    {
+      "id": "pub_32",
+      "name": "Lolo Beauté",
+      "image": "/images/publicfigures/pub_32.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:10:30.462Z",
+      "category": "Influenceuse",
+      "importeLe": "2026-09-16T17:00:31.732Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "pub_32.jpg"
+      }
+    },
+    {
+      "id": "pub_6",
+      "name": "Le Magnific",
+      "image": "/images/publicfigures/pub_6.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:09:52.616Z",
+      "category": "Humoriste",
+      "importeLe": "2026-09-16T17:00:31.781Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "pub_6.jpg"
+      }
+    },
+    {
+      "id": "pub_8",
+      "name": "Ramatoulaye",
+      "image": "/images/placeholders/artiste.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:09:55.579Z",
+      "category": "Humoriste",
+      "failureReason": "ecarte a la revue de l import : photo de groupe officielle, sujet non identifiable, et doublon de pub_18",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "pub_9",
+      "name": "Eunice Zunon",
+      "image": "/images/publicfigures/pub_9.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:09:56.851Z",
+      "category": "Humoriste / Influenceuse",
+      "importeLe": "2026-09-16T17:00:31.930Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "pub_9.jpg"
+      }
     },
     {
       "id": "pub_4",
@@ -2193,18 +2659,6 @@
       }
     },
     {
-      "id": "pub_6",
-      "name": "Le Magnific",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:09:52.616Z",
-      "category": "Humoriste",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 7 examines)"
-    },
-    {
       "id": "pub_7",
       "name": "Boukary",
       "image": "/images/publicfigures/pub_7.jpg",
@@ -2221,42 +2675,6 @@
       }
     },
     {
-      "id": "pub_8",
-      "name": "Ramatoulaye",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:09:55.579Z",
-      "category": "Humoriste",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 10 examines)"
-    },
-    {
-      "id": "pub_9",
-      "name": "Eunice Zunon",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:09:56.851Z",
-      "category": "Humoriste / Influenceuse",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "pub_10",
-      "name": "L'Excès",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:09:57.161Z",
-      "category": "Créateur de contenu / Humoriste",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 5 examines)"
-    },
-    {
       "id": "pub_11",
       "name": "Emma Lohoues",
       "image": "/images/publicfigures/pub_11.jpg",
@@ -2271,30 +2689,6 @@
         "fichier": "Emma lohoues.jpg",
         "page": "https://commons.wikimedia.org/wiki/File:Emma_lohoues.jpg"
       }
-    },
-    {
-      "id": "pub_12",
-      "name": "Carmen Sama",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:10:00.719Z",
-      "category": "Influenceuse / Mode",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 3 examines)"
-    },
-    {
-      "id": "pub_13",
-      "name": "Eudoxie Yao",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:10:01.771Z",
-      "category": "Personnalité Publique / Modèle",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
     },
     {
       "id": "pub_14",
@@ -2329,54 +2723,6 @@
       }
     },
     {
-      "id": "pub_16",
-      "name": "Caroline Dasylva",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:10:07.225Z",
-      "category": "Animatrice TV (C'Midi)",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "pub_17",
-      "name": "Jean-Michel Onin",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:10:08.114Z",
-      "category": "Journaliste / Animateur",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "pub_18",
-      "name": "Didier Bléou",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:10:08.492Z",
-      "category": "Directeur TV / Animateur",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "pub_19",
-      "name": "Yves de M'Bella",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:10:09.492Z",
-      "category": "Animateur Radio & TV",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
       "id": "pub_20",
       "name": "Kadhy Touré",
       "image": "/images/publicfigures/pub_20.jpg",
@@ -2391,42 +2737,6 @@
         "fichier": "Kadhy Touré 1.jpg",
         "page": "https://commons.wikimedia.org/wiki/File:Kadhy_Tour%C3%A9_1.jpg"
       }
-    },
-    {
-      "id": "pub_21",
-      "name": "Marie-Paule Adjé",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:10:11.646Z",
-      "category": "Actrice / Modèle / Mode",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "pub_22",
-      "name": "Stéphane Zabavy",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:10:12.651Z",
-      "category": "Acteur / Chanteur",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "pub_23",
-      "name": "Guy Kalou",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:10:12.959Z",
-      "category": "Acteur / Producteur",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
     },
     {
       "id": "pub_24",
@@ -2477,18 +2787,6 @@
       }
     },
     {
-      "id": "pub_27",
-      "name": "Gbazé Thérèse",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:10:23.229Z",
-      "category": "Actrice (Ma Famille)",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
       "id": "pub_28",
       "name": "Nastou Traoré",
       "image": "/images/publicfigures/pub_28.jpg",
@@ -2521,42 +2819,6 @@
       }
     },
     {
-      "id": "pub_30",
-      "name": "Emmanuelle Keïta",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:10:29.031Z",
-      "category": "Influenceuse / Mode / Style",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "pub_31",
-      "name": "Général Camille Makosso",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:10:30.118Z",
-      "category": "Influenceur / Personnalité",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 1 examines)"
-    },
-    {
-      "id": "pub_32",
-      "name": "Lolo Beauté",
-      "image": "/images/placeholders/artiste.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:10:30.462Z",
-      "category": "Influenceuse",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 2 examines)"
-    },
-    {
       "id": "pub_33",
       "name": "Cheick Yvhane",
       "image": "/images/publicfigures/pub_33.jpg",
@@ -2579,14 +2841,128 @@
     {
       "id": "food_1",
       "name": "Garba (Attiéké Thon)",
+      "image": "/images/nourriture/food_1.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:10:35.016Z",
+      "revueLe": "2026-09-15",
+      "importeLe": "2026-09-16T17:00:26.630Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "food_1.jpg"
+      }
+    },
+    {
+      "id": "food_11",
+      "name": "Sauce Djoumgblé (Gombo sec)",
+      "image": "/images/nourriture/food_11.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:11:19.174Z",
+      "importeLe": "2026-09-16T17:00:26.703Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "food_11.jpg"
+      }
+    },
+    {
+      "id": "food_15",
+      "name": "Baka (Bouillie de mil/riz)",
       "image": "/images/placeholders/nourriture.svg",
       "status": "a_verifier_manuellement",
       "source": "N/A",
       "license": "N/A",
       "author": "N/A",
-      "lastAttempt": "2026-09-15T11:10:35.016Z",
-      "failureReason": "ecarte a la revue visuelle : sujet faux : photo de la danse indienne Garba (Navratri, temple d Ambaji)",
-      "revueLe": "2026-09-15"
+      "lastAttempt": "2026-09-15T11:11:32.283Z",
+      "revueLe": "2026-09-16",
+      "failureReason": "ecarte a la revue de l import : mauvais plat : foutou en sauce au lieu d une bouillie de mil"
+    },
+    {
+      "id": "food_18",
+      "name": "Kabato (Pâte de maïs)",
+      "image": "/images/placeholders/nourriture.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:11:45.504Z",
+      "revueLe": "2026-09-16",
+      "failureReason": "ecarte a la revue de l import : mauvais plat : attieke garni au lieu d une pate de mais"
+    },
+    {
+      "id": "food_19",
+      "name": "Attiéké Huile de Palme (Rouge)",
+      "image": "/images/nourriture/food_19.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:11:49.672Z",
+      "revueLe": "2026-09-15",
+      "importeLe": "2026-09-16T17:00:26.915Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "food_19.jpg"
+      }
+    },
+    {
+      "id": "food_20",
+      "name": "Kedjenou de Lapin",
+      "image": "/images/placeholders/nourriture.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:11:51.606Z",
+      "revueLe": "2026-09-16",
+      "failureReason": "ecarte a la revue de l import : bandeau promotionnel sur un tiers de l image, et poulet au lieu de lapin"
+    },
+    {
+      "id": "food_4",
+      "name": "Placali Sauce Graine",
+      "image": "/images/nourriture/food_4.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:10:53.479Z",
+      "importeLe": "2026-09-16T17:00:27.091Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "food_4.jpg"
+      }
+    },
+    {
+      "id": "food_5",
+      "name": "Placali Sauce Kpala",
+      "image": "/images/placeholders/nourriture.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:10:54.731Z",
+      "failureReason": "ecarte a la revue de l import : doublon exact de food_4, alors que ce sont deux sauces differentes",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "food_6",
+      "name": "Foutou Banane Sauce Graine",
+      "image": "/images/nourriture/food_6.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:10:55.965Z",
+      "revueLe": "2026-09-15",
+      "importeLe": "2026-09-16T17:00:27.286Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "food_6.jpg"
+      }
     },
     {
       "id": "food_2",
@@ -2618,40 +2994,6 @@
         "page": "https://www.flickr.com/photos/123537566@N04/16687695575"
       },
       "reserveVisuelle": "photo de nuit tres sombre, sujet correct",
-      "revueLe": "2026-09-15"
-    },
-    {
-      "id": "food_4",
-      "name": "Placali Sauce Graine",
-      "image": "/images/placeholders/nourriture.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:10:53.479Z",
-      "failureReason": "source trop petite (480x600)"
-    },
-    {
-      "id": "food_5",
-      "name": "Placali Sauce Kpala",
-      "image": "/images/placeholders/nourriture.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:10:54.731Z",
-      "failureReason": "source trop petite (480x600)"
-    },
-    {
-      "id": "food_6",
-      "name": "Foutou Banane Sauce Graine",
-      "image": "/images/placeholders/nourriture.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:10:55.965Z",
-      "failureReason": "ecarte a la revue visuelle : illustration dessinee, pas une photographie",
       "revueLe": "2026-09-15"
     },
     {
@@ -2715,17 +3057,6 @@
       }
     },
     {
-      "id": "food_11",
-      "name": "Sauce Djoumgblé (Gombo sec)",
-      "image": "/images/placeholders/nourriture.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:11:19.174Z",
-      "failureReason": "aucune entite valide (aucun candidat valide sur 3 examines)"
-    },
-    {
       "id": "food_12",
       "name": "Sauce Kopè (Gombo frais)",
       "image": "/images/nourriture/food_12.jpg",
@@ -2773,18 +3104,6 @@
       "revueLe": "2026-09-15"
     },
     {
-      "id": "food_15",
-      "name": "Baka (Bouillie de mil/riz)",
-      "image": "/images/placeholders/nourriture.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:11:32.283Z",
-      "failureReason": "ecarte a la revue visuelle : sujet faux : photo de theatre avec Faye Dunaway, resultat du nom \"Baka\"",
-      "revueLe": "2026-09-15"
-    },
-    {
       "id": "food_16",
       "name": "Gbofloto (Beignets ivoiriens)",
       "image": "/images/nourriture/food_16.jpg",
@@ -2813,58 +3132,297 @@
         "fichier": "Brochette de viande aussi appelé 'pain chien' en Côte d'Ivoire",
         "page": "https://commons.wikimedia.org/w/index.php?curid=30892323"
       }
-    },
-    {
-      "id": "food_18",
-      "name": "Kabato (Pâte de maïs)",
-      "image": "/images/placeholders/nourriture.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:11:45.504Z",
-      "failureReason": "ecarte a la revue visuelle : sujet faux : carte du district de Kabato au Japon",
-      "revueLe": "2026-09-15"
-    },
-    {
-      "id": "food_19",
-      "name": "Attiéké Huile de Palme (Rouge)",
-      "image": "/images/placeholders/nourriture.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:11:49.672Z",
-      "failureReason": "ecarte a la revue visuelle : doublon de prod_2, et montre de l attieke blanc au lieu d attieke a l huile rouge",
-      "revueLe": "2026-09-15"
-    },
-    {
-      "id": "food_20",
-      "name": "Kedjenou de Lapin",
-      "image": "/images/placeholders/nourriture.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:11:51.606Z",
-      "failureReason": "ecarte a la revue visuelle : doublon exact de food_2 (meme fichier Kedjenou.JPG)",
-      "revueLe": "2026-09-15"
     }
   ],
   "products": [
     {
       "id": "prod_1",
       "name": "Garba (1 part de base thon + attiéké)",
-      "image": "/images/placeholders/produit.svg",
+      "image": "/images/produits/prod_1.jpg",
       "status": "a_verifier_manuellement",
-      "source": "N/A",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
       "license": "N/A",
       "author": "N/A",
       "lastAttempt": "2026-09-15T11:11:54.492Z",
       "category": "Nourriture",
       "price": 500,
-      "failureReason": "ecarte a la revue visuelle : sujet faux : photo de la danse indienne Garba",
-      "revueLe": "2026-09-15"
+      "revueLe": "2026-09-15",
+      "importeLe": "2026-09-16T17:00:29.077Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "prod_1.jpg"
+      }
+    },
+    {
+      "id": "prod_10",
+      "name": "Bière Beaufort Lager (Bouteille 65cl)",
+      "image": "/images/produits/prod_10.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:12:28.845Z",
+      "category": "Boisson",
+      "price": 800,
+      "importeLe": "2026-09-16T17:00:29.145Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "prod_10.jpg"
+      }
+    },
+    {
+      "id": "prod_11",
+      "name": "Sachet d'eau de table glacée (L'unité)",
+      "image": "/images/placeholders/produit.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:12:28.845Z",
+      "category": "Boisson",
+      "price": 50,
+      "revueLe": "2026-09-16",
+      "failureReason": "ecarte a la revue de l import : hors sujet : batonnets glaces sucres au lieu d un sachet d eau"
+    },
+    {
+      "id": "prod_13",
+      "name": "Boîte de Sardine Pénélope",
+      "image": "/images/placeholders/produit.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:12:31.731Z",
+      "category": "Nourriture",
+      "price": 450,
+      "failureReason": "ecarte a la revue de l import : trompeur : sardines crues a l etal au lieu d une boite de conserve",
+      "revueLe": "2026-09-16"
+    },
+    {
+      "id": "prod_14",
+      "name": "Paquet de Pâtes alimentaires (500g)",
+      "image": "/images/produits/prod_14.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:12:31.732Z",
+      "category": "Nourriture",
+      "price": 450,
+      "importeLe": "2026-09-16T17:00:29.408Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "prod_14.jpg"
+      }
+    },
+    {
+      "id": "prod_15",
+      "name": "Sucre Roux local (1 kg)",
+      "image": "/images/placeholders/produit.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:12:33.265Z",
+      "category": "Nourriture",
+      "price": 850,
+      "revueLe": "2026-09-16",
+      "failureReason": "ecarte a la revue de l import : prospectus promotionnel AFFICHANT LE PRIX (770 FCFA) : la reponse du jeu serait donnee"
+    },
+    {
+      "id": "prod_16",
+      "name": "Savon local Kabakrou (L'unité)",
+      "image": "/images/placeholders/produit.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:12:36.560Z",
+      "category": "Hygiène",
+      "price": 150,
+      "revueLe": "2026-09-16",
+      "failureReason": "ecarte a la revue de l import : couverture de rapport universitaire, le savon occupe un coin de l image"
+    },
+    {
+      "id": "prod_17",
+      "name": "Paquet de Café Ivoire (250g)",
+      "image": "/images/placeholders/produit.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:12:39.661Z",
+      "category": "Nourriture",
+      "price": 1200,
+      "revueLe": "2026-09-16",
+      "failureReason": "ecarte a la revue de l import : hors sujet : ceremonie officielle, aucun paquet de cafe visible"
+    },
+    {
+      "id": "prod_18",
+      "name": "Ticket de Bus Sotra standard",
+      "image": "/images/produits/prod_18.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:12:41.818Z",
+      "category": "Transport",
+      "price": 200,
+      "importeLe": "2026-09-16T17:00:29.759Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "prod_18.jpg"
+      }
+    },
+    {
+      "id": "prod_19",
+      "name": "Tablette de Chocolat de Côte d'Ivoire",
+      "image": "/images/produits/prod_19.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:12:41.818Z",
+      "category": "Nourriture",
+      "price": 1000,
+      "revueLe": "2026-09-15",
+      "importeLe": "2026-09-16T17:00:29.843Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "prod_19.jpg"
+      }
+    },
+    {
+      "id": "prod_22",
+      "name": "Casque audio bluetooth entrée de gamme",
+      "image": "/images/produits/prod_22.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:13:07.358Z",
+      "category": "Technologie",
+      "price": 15000,
+      "revueLe": "2026-09-15",
+      "importeLe": "2026-09-16T17:00:29.891Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "prod_22.jpg"
+      }
+    },
+    {
+      "id": "prod_24",
+      "name": "Téléphone intelligent Tecno Spark standard",
+      "image": "/images/produits/prod_24.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:13:13.294Z",
+      "category": "Technologie",
+      "price": 85000,
+      "importeLe": "2026-09-16T17:00:29.947Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "prod_24.jpg"
+      }
+    },
+    {
+      "id": "prod_3",
+      "name": "Baguette de Pain standard",
+      "image": "/images/placeholders/produit.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:11:58.536Z",
+      "category": "Nourriture",
+      "price": 150,
+      "revueLe": "2026-09-16",
+      "failureReason": "ecarte a la revue de l import : prospectus promotionnel AFFICHANT LE PRIX (600 FCFA) : la reponse du jeu serait donnee"
+    },
+    {
+      "id": "prod_4",
+      "name": "Cube Maggi (L'unité)",
+      "image": "/images/produits/prod_4.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:12:13.187Z",
+      "category": "Nourriture",
+      "price": 25,
+      "importeLe": "2026-09-16T17:00:30.151Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "prod_4.jpg"
+      }
+    },
+    {
+      "id": "prod_5",
+      "name": "Bouteille d'Huile Dinor (1 Litre)",
+      "image": "/images/produits/prod_5.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:12:13.187Z",
+      "category": "Nourriture",
+      "price": 1300,
+      "importeLe": "2026-09-16T17:00:30.208Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "prod_5.jpg"
+      }
+    },
+    {
+      "id": "prod_6",
+      "name": "Riz Local cassé (1 kg)",
+      "image": "/images/placeholders/produit.svg",
+      "status": "a_verifier_manuellement",
+      "source": "N/A",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:12:13.187Z",
+      "category": "Nourriture",
+      "price": 600,
+      "revueLe": "2026-09-16",
+      "failureReason": "ecarte a la revue de l import : trompeur : riz cambodgien \"Perle d Asie\" pour un item nomme riz local"
+    },
+    {
+      "id": "prod_7",
+      "name": "Recharge de Bouteille de Gaz (B6 - 6kg)",
+      "image": "/images/produits/prod_7.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:12:17.493Z",
+      "category": "Quotidien",
+      "price": 2000,
+      "revueLe": "2026-09-15",
+      "importeLe": "2026-09-16T17:00:30.505Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "prod_7.jpg"
+      }
+    },
+    {
+      "id": "prod_9",
+      "name": "Bouteille d'eau Kirène (1.5L)",
+      "image": "/images/produits/prod_9.jpg",
+      "status": "a_verifier_manuellement",
+      "source": "Recherche d'images web (DuckDuckGo), via Images_CI/download_images.py",
+      "license": "N/A",
+      "author": "N/A",
+      "lastAttempt": "2026-09-15T11:12:28.845Z",
+      "category": "Boisson",
+      "price": 400,
+      "importeLe": "2026-09-16T17:00:30.551Z",
+      "attribution": {
+        "origine": "import local",
+        "fichier": "prod_9.jpg"
+      }
     },
     {
       "id": "prod_2",
@@ -2886,74 +3444,6 @@
       "revueLe": "2026-09-15"
     },
     {
-      "id": "prod_3",
-      "name": "Baguette de Pain standard",
-      "image": "/images/placeholders/produit.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:11:58.536Z",
-      "category": "Nourriture",
-      "price": 150,
-      "failureReason": "ecarte a la revue visuelle : hors sujet : table de reveillon de Noel, pain noye dans la scene",
-      "revueLe": "2026-09-15"
-    },
-    {
-      "id": "prod_4",
-      "name": "Cube Maggi (L'unité)",
-      "image": "/images/placeholders/produit.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:12:13.187Z",
-      "category": "Nourriture",
-      "price": 25,
-      "failureReason": "marque deposee, exclue volontairement (BRANDS_TO_SKIP)"
-    },
-    {
-      "id": "prod_5",
-      "name": "Bouteille d'Huile Dinor (1 Litre)",
-      "image": "/images/placeholders/produit.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:12:13.187Z",
-      "category": "Nourriture",
-      "price": 1300,
-      "failureReason": "marque deposee, exclue volontairement (BRANDS_TO_SKIP)"
-    },
-    {
-      "id": "prod_6",
-      "name": "Riz Local cassé (1 kg)",
-      "image": "/images/placeholders/produit.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:12:13.187Z",
-      "category": "Nourriture",
-      "price": 600,
-      "failureReason": "ecarte a la revue visuelle : sujet faux : l acteur Riz Ahmed, resultat de la recherche \"riz\"",
-      "revueLe": "2026-09-15"
-    },
-    {
-      "id": "prod_7",
-      "name": "Recharge de Bouteille de Gaz (B6 - 6kg)",
-      "image": "/images/placeholders/produit.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:12:17.493Z",
-      "category": "Quotidien",
-      "price": 2000,
-      "failureReason": "ecarte a la revue visuelle : sujet faux : bouteille de gaz explosee sur un site en ruine, illisible",
-      "revueLe": "2026-09-15"
-    },
-    {
       "id": "prod_8",
       "name": "Ticket de Gbaka (Adjamé - Cocody)",
       "image": "/images/produits/prod_8.jpg",
@@ -2971,46 +3461,6 @@
       }
     },
     {
-      "id": "prod_9",
-      "name": "Bouteille d'eau Kirène (1.5L)",
-      "image": "/images/placeholders/produit.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:12:28.845Z",
-      "category": "Boisson",
-      "price": 400,
-      "failureReason": "marque deposee, exclue volontairement (BRANDS_TO_SKIP)"
-    },
-    {
-      "id": "prod_10",
-      "name": "Bière Beaufort Lager (Bouteille 65cl)",
-      "image": "/images/placeholders/produit.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:12:28.845Z",
-      "category": "Boisson",
-      "price": 800,
-      "failureReason": "marque deposee, exclue volontairement (BRANDS_TO_SKIP)"
-    },
-    {
-      "id": "prod_11",
-      "name": "Sachet d'eau de table glacée (L'unité)",
-      "image": "/images/placeholders/produit.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:12:28.845Z",
-      "category": "Boisson",
-      "price": 50,
-      "failureReason": "ecarte a la revue visuelle : sujet faux : installation artistique \"Reservoir\" de John Grade",
-      "revueLe": "2026-09-15"
-    },
-    {
       "id": "prod_12",
       "name": "Petite boîte de Lait concentré Peak",
       "image": "/images/placeholders/produit.svg",
@@ -3022,101 +3472,6 @@
       "category": "Nourriture",
       "price": 400,
       "failureReason": "marque deposee, exclue volontairement (BRANDS_TO_SKIP)"
-    },
-    {
-      "id": "prod_13",
-      "name": "Boîte de Sardine Pénélope",
-      "image": "/images/placeholders/produit.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:12:31.731Z",
-      "category": "Nourriture",
-      "price": 450,
-      "failureReason": "marque deposee, exclue volontairement (BRANDS_TO_SKIP)"
-    },
-    {
-      "id": "prod_14",
-      "name": "Paquet de Pâtes alimentaires (500g)",
-      "image": "/images/placeholders/produit.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:12:31.732Z",
-      "category": "Nourriture",
-      "price": 450,
-      "failureReason": "attribution incomplete : auteur"
-    },
-    {
-      "id": "prod_15",
-      "name": "Sucre Roux local (1 kg)",
-      "image": "/images/placeholders/produit.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:12:33.265Z",
-      "category": "Nourriture",
-      "price": 850,
-      "failureReason": "ecarte a la revue visuelle : trompeur : macro de sucre blanc en cristaux, l item est du sucre roux en paquet de 1 kg",
-      "revueLe": "2026-09-15"
-    },
-    {
-      "id": "prod_16",
-      "name": "Savon local Kabakrou (L'unité)",
-      "image": "/images/placeholders/produit.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:12:36.560Z",
-      "category": "Hygiène",
-      "price": 150,
-      "failureReason": "ecarte a la revue visuelle : trompeur : savons de Marseille et d Alep, l item est un savon local Kabakrou",
-      "revueLe": "2026-09-15"
-    },
-    {
-      "id": "prod_17",
-      "name": "Paquet de Café Ivoire (250g)",
-      "image": "/images/placeholders/produit.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:12:39.661Z",
-      "category": "Nourriture",
-      "price": 1200,
-      "failureReason": "ecarte a la revue visuelle : trompeur : une tasse de cafe servie, l item est un paquet de 250 g",
-      "revueLe": "2026-09-15"
-    },
-    {
-      "id": "prod_18",
-      "name": "Ticket de Bus Sotra standard",
-      "image": "/images/placeholders/produit.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:12:41.818Z",
-      "category": "Transport",
-      "price": 200,
-      "failureReason": "marque deposee, exclue volontairement (BRANDS_TO_SKIP)"
-    },
-    {
-      "id": "prod_19",
-      "name": "Tablette de Chocolat de Côte d'Ivoire",
-      "image": "/images/placeholders/produit.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:12:41.818Z",
-      "category": "Nourriture",
-      "price": 1000,
-      "failureReason": "ecarte a la revue visuelle : trompeur : poudre de cacao, l item est une tablette de chocolat",
-      "revueLe": "2026-09-15"
     },
     {
       "id": "prod_20",
@@ -3155,20 +3510,6 @@
       "revueLe": "2026-09-15"
     },
     {
-      "id": "prod_22",
-      "name": "Casque audio bluetooth entrée de gamme",
-      "image": "/images/placeholders/produit.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:13:07.358Z",
-      "category": "Technologie",
-      "price": 15000,
-      "failureReason": "ecarte a la revue visuelle : trompeur : ecouteurs sans fil, l item est un casque audio (gamme de prix differente)",
-      "revueLe": "2026-09-15"
-    },
-    {
       "id": "prod_23",
       "name": "Console de jeu PlayStation 5 Slim 825Go",
       "image": "/images/produits/prod_23.jpg",
@@ -3184,19 +3525,6 @@
         "fichier": "PlayStation 5 and DualSense with transparent background.png",
         "page": "https://commons.wikimedia.org/wiki/File:PlayStation_5_and_DualSense_with_transparent_background.png"
       }
-    },
-    {
-      "id": "prod_24",
-      "name": "Téléphone intelligent Tecno Spark standard",
-      "image": "/images/placeholders/produit.svg",
-      "status": "a_verifier_manuellement",
-      "source": "N/A",
-      "license": "N/A",
-      "author": "N/A",
-      "lastAttempt": "2026-09-15T11:13:13.294Z",
-      "category": "Technologie",
-      "price": 85000,
-      "failureReason": "marque deposee, exclue volontairement (BRANDS_TO_SKIP)"
     }
   ]
 }

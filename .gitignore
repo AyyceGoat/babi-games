@@ -34,3 +34,6 @@ photos/
 
 # Fichiers de diagnostic temporaires
 scratch_*
+
+# Dossier source des photos fournies (comme photos/)
+Images_CI/
