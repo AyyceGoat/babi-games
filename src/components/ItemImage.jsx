@@ -40,7 +40,17 @@ export function initiales(nom = '') {
     .toUpperCase();
 }
 
-export default function ItemImage({ item, className = '', sizes, eager = false }) {
+/** Abrege un nom pour qu'il tienne dans une vignette : on retire les
+ *  parentheses explicatives et on coupe proprement si besoin. */
+export function nomCourt(nom = '', max = 22) {
+  const net = nom.replace(/\s*\([^)]*\)/g, '').trim() || nom.trim();
+  if (net.length <= max) return net;
+  const coupe = net.slice(0, max);
+  const espace = coupe.lastIndexOf(' ');
+  return (espace > max * 0.55 ? coupe.slice(0, espace) : coupe).trim() + '…';
+}
+
+export default function ItemImage({ item, className = '', sizes, eager = false, libelle = false }) {
   const [erreur, setErreur] = useState(false);
 
   const teinte = teinteDe(item?.name || '');
@@ -81,6 +91,12 @@ export default function ItemImage({ item, className = '', sizes, eager = false }
           sizes={sizes}
           onError={() => setErreur(true)}
         />
+      ) : libelle ? (
+        /* Sans photo, deux lettres ne permettent d'identifier ni un plat
+           ni une personne. On affiche le nom lui-meme, ajuste au cadre. */
+        <span className="item-libelle" aria-hidden="true">
+          {nomCourt(item?.name, 16)}
+        </span>
       ) : (
         <span className="item-initiales" aria-hidden="true">
           {initiales(item?.name)}

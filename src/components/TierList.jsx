@@ -30,6 +30,7 @@ export default function TierList({ artists, footballers, publicFigures, foods })
   const [rangs, setRangs] = useState(rangsVides);
   const [reserve, setReserve] = useState([]);
   const [selection, setSelection] = useState(null);
+  const selectionRef = useRef(null);
   const [enregistre, setEnregistre] = useState(false);
 
   // Glisser-deposer par evenements pointeur : fonctionne au doigt comme
@@ -58,6 +59,12 @@ export default function TierList({ artists, footballers, publicFigures, foods })
 
   /* --- Deplacement d'un item ------------------------------------------ */
 
+  // Le gestionnaire de pointeur est attache une fois ; il lit la selection
+  // via cette reference plutot que via la valeur figee du rendu.
+  useEffect(() => {
+    selectionRef.current = selection;
+  }, [selection]);
+
   const deplacer = useCallback((item, source, cible) => {
     if (!item || source === cible) return;
     if (source === 'reserve') setReserve((p) => p.filter((i) => i.id !== item.id));
@@ -67,6 +74,7 @@ export default function TierList({ artists, footballers, publicFigures, foods })
     else setRangs((p) => ({ ...p, [cible]: [...p[cible], item] }));
 
     setSelection(null);
+    selectionRef.current = null;
   }, []);
 
   /* --- Pointeur -------------------------------------------------------- */
@@ -110,10 +118,19 @@ export default function TierList({ artists, footballers, publicFigures, foods })
         const cible = sous?.closest('[data-zone]')?.dataset.zone;
         if (cible) deplacer(d.item, d.source, cible);
       } else {
-        // Simple appui : selection / deselection.
-        setSelection((prev) =>
-          prev && prev.item.id === d.item.id ? null : { item: d.item, source: d.source }
-        );
+        // Simple appui, sans glisser.
+        const enCours = selectionRef.current;
+        if (enCours && enCours.item.id === d.item.id) {
+          setSelection(null); // on retape le meme element : on deselectionne
+        } else if (enCours) {
+          /* Un element etait deja selectionne et on tape une AUTRE tuile :
+             on depose dans la zone de cette tuile. Sans cela, taper un rang
+             deja rempli atteignait une tuile au lieu de la zone, et le depot
+             echouait silencieusement des que le rang n'etait plus vide. */
+          deplacer(enCours.item, enCours.source, d.source);
+        } else {
+          setSelection({ item: d.item, source: d.source });
+        }
       }
     };
 
@@ -265,7 +282,7 @@ export default function TierList({ artists, footballers, publicFigures, foods })
       {/* Fantome qui suit le doigt ou le curseur pendant le glisser */}
       {drag?.actif && (
         <div className="drag-fantome" style={{ left: drag.x, top: drag.y }} aria-hidden="true">
-          <ItemImage item={drag.item} />
+          <ItemImage item={drag.item} libelle />
         </div>
       )}
     </div>
@@ -286,7 +303,7 @@ function Vignette({ item, selectionne, enDeplacement, onPointerDown }) {
       aria-label={item.name}
       title={item.name}
     >
-      <ItemImage item={item} />
+      <ItemImage item={item} libelle />
       <span className="tier-vignette-nom">{item.name}</span>
     </div>
   );

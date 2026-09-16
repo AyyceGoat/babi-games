@@ -920,10 +920,19 @@ img { max-width: 100%; display: block; }
 .app-container:has(.ecran-versus) .site-footer,
 .app-container:has(.ecran-prix) .site-footer { display: none; }
 
+.app-container:has(.ecran-tierlist),
+.app-container:has(.ecran-versus),
+.app-container:has(.ecran-prix) { display: flex; flex-direction: column; }
+
+/* La hauteur restante est deduite du flux, et non d'une constante :
+   --nav-h valait 60 px pour une barre qui en mesure 70, et il manquait
+   donc 10 px a chaque calcul. */
 .main-content:has(.ecran-tierlist),
 .main-content:has(.ecran-versus),
 .main-content:has(.ecran-prix) {
-  height: calc(100dvh - var(--nav-h) - var(--sure-haut) - var(--sure-bas));
+  flex: 1 1 auto;
+  min-height: 0;
+  height: auto;
   padding: var(--e3);
   padding-left: max(var(--e3), var(--sure-gauche));
   padding-right: max(var(--e3), var(--sure-droite));
@@ -978,8 +987,8 @@ img { max-width: 100%; display: block; }
 
 .ecran-tierlist {
   /* Taille des vignettes, seule variable a regler pour tout ajuster. */
-  --vignette: clamp(38px, 9.5vw, 62px);
-  --etiquette: clamp(34px, 8vw, 56px);
+  --vignette: clamp(46px, 12vw, 64px);
+  --etiquette: clamp(30px, 7vw, 52px);
 
   flex: 1;
   width: 100%;
@@ -991,15 +1000,32 @@ img { max-width: 100%; display: block; }
 
 .ecran-tierlist .ecran-entete { flex: 0 0 auto; gap: 0; }
 .ecran-tierlist .titre-ecran { font-size: var(--t3); }
-.ecran-tierlist .pastilles { flex: 0 0 auto; }
+.ecran-tierlist .pastilles {
+  flex: 0 0 auto;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  justify-content: flex-start;
+  padding-bottom: 2px;
+}
+.ecran-tierlist .pastilles::-webkit-scrollbar { display: none; }
+.ecran-tierlist .pastille { flex: 0 0 auto; white-space: nowrap; }
 
 @media (max-height: 820px) {
   .ecran-tierlist .aide-jeu { display: none; }
 }
 
+@media (max-height: 740px) {
+  .ecran-tierlist .titre-ecran { display: none; }
+}
+
+ /* Le plateau est prioritaire : il occupe exactement la hauteur de ses
+    six rangees et ne se comprime jamais. Auparavant il n'obtenait que
+    224 px pour 341 necessaires, et les rangs C, D et F disparaissaient
+    derriere overflow: hidden. */
 .tier-plateau {
-  flex: 1 1 auto;
-  min-height: 0;
+  flex: 0 0 auto;
+  min-height: calc((var(--vignette) + 10px) * 6);
   display: flex;
   flex-direction: column;
   border: var(--trait);
@@ -1009,9 +1035,12 @@ img { max-width: 100%; display: block; }
   background: var(--ivoire);
 }
 
+ /* Une rangee ne descend jamais sous la hauteur d'une vignette, sinon
+    l'element classe est tronque : la zone de depot se mettait a defiler
+    et on ne voyait que le haut de la tuile. */
 .tier-ligne {
-  flex: 1 1 0;
-  min-height: 0;
+  flex: 1 1 auto;
+  min-height: calc(var(--vignette) + 10px);
   display: flex;
   border-bottom: var(--trait);
 }
@@ -1074,25 +1103,46 @@ img { max-width: 100%; display: block; }
   position: absolute;
   inset: auto 0 0 0;
   padding: 1px 2px;
-  font-size: clamp(8px, 2vw, 11px);
-  font-weight: 600;
-  line-height: 1.2;
+  font-size: clamp(10px, 2.7vw, 12px);
+  font-weight: 700;
+  line-height: 1.25;
   text-align: center;
-  background: rgba(23, 18, 12, 0.85);
+  background: rgba(23, 18, 12, 0.9);
   color: var(--ivoire);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  letter-spacing: -0.01em;
 }
 
-/* Sur les toutes petites vignettes le nom devient illisible : on le
-   retire de l'affichage, il reste porte par aria-label et title. */
-@media (max-width: 420px) {
-  .tier-vignette-nom { display: none; }
+/* Vignette sans photo : le nom occupe toute la tuile. Deux initiales ne
+   permettaient d'identifier ni un plat ni une personne. */
+.item-libelle {
+  display: block;
+  padding: 3px;
+  font-family: var(--police-texte);
+  /* Mieux vaut moins de texte plus gros que le nom entier illisible :
+     a 8 px on ne lisait rien. Le nom complet reste porte par aria-label
+     et par l'infobulle. */
+  font-size: clamp(10px, 23cqw, 14px);
+  font-weight: 700;
+  line-height: 1.08;
+  text-align: center;
+  color: var(--sur-teinte, #fff);
+  overflow-wrap: anywhere;
+  hyphens: auto;
+  max-height: 100%;
+  overflow: hidden;
 }
+
+/* Quand le nom remplit deja la tuile, la bande du bas ferait doublon. */
+.tier-vignette:has(.item-libelle) .tier-vignette-nom { display: none; }
+
+/* Le nom reste affiche a toutes les tailles : sans lui on ne peut
+   identifier ni un plat ni une personne sur un telephone. */
 
 .tier-reserve-bloc {
-  flex: 0 0 auto;
+  flex: 1 1 auto;
   min-height: 0;
   display: flex;
   flex-direction: column;
@@ -1106,7 +1156,9 @@ img { max-width: 100%; display: block; }
   align-content: flex-start;
   gap: 4px;
   padding: 4px;
-  max-height: clamp(72px, 22dvh, 170px);
+  flex: 1 1 auto;
+  min-height: calc(var(--vignette) + 12px);
+  max-height: calc(var(--vignette) * 3 + 20px);
   overflow-y: auto;
   border: 2px dashed var(--encre);
   border-radius: var(--rayon);
@@ -1445,8 +1497,8 @@ img { max-width: 100%; display: block; }
 .brand-name { letter-spacing: -0.01em; }
 
 .ecran-accueil { gap: var(--e5); }
-.ecran-versus,
-.ecran-tierlist,
+/* Les ecrans de jeu gardent leur espacement serre, defini plus haut :
+   cette regle ne vaut que pour les ecrans de lecture. */
 .ecran-admin,
 .ecran-credits { gap: var(--e5); }
 
