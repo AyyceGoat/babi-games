@@ -90,6 +90,15 @@
   --sure-gauche: env(safe-area-inset-left, 0px);
   --sure-droite: env(safe-area-inset-right, 0px);
 
+  /* Le badge "Powered by Netlify" est un iframe fixe de 197 x 64 px pose
+     en bas a droite, avec un z-index de 2147483645 et pointer-events
+     actif. Sur un iPhone SE il recouvrait le bouton Valider du Juste
+     Prix et six tuiles de la reserve de la Tier List : les commandes
+     situees dessous ne recevaient plus aucun clic. On lui reserve sa
+     place. Si le badge est retire dans les reglages Netlify, il suffit
+     de ramener cette valeur a 0px pour recuperer la hauteur. */
+  --badge-netlify: 68px;
+
   --transition: 160ms cubic-bezier(0.2, 0, 0.1, 1);
 
   /* Motif de pagne, en SVG inline : losanges et chevrons. */
@@ -965,6 +974,11 @@ img { max-width: 100%; display: block; }
   overflow-y: auto;
 }
 
+/* Sur les ecrans etroits, le badge Netlify mord sur le bas de page. */
+@media (max-width: 560px) {
+  .ecran-prix { padding-bottom: var(--badge-netlify); }
+}
+
 .ecran-versus .duel,
 .ecran-versus .celebration,
 .ecran-versus .bloc-choix,
@@ -1160,6 +1174,11 @@ img { max-width: 100%; display: block; }
   min-height: calc(var(--vignette) + 12px);
   max-height: calc(var(--vignette) * 3 + 20px);
   overflow-y: auto;
+  /* Marge interne au conteneur defilant : aucune tuile ne reste
+     prisonniere sous le badge Netlify, et la mise en page ne perd
+     pas un pixel. */
+  padding-bottom: calc(4px + var(--badge-netlify));
+  scroll-padding-bottom: var(--badge-netlify);
   border: 2px dashed var(--encre);
   border-radius: var(--rayon);
   transition: background var(--transition);
