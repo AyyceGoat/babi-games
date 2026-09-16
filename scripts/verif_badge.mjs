@@ -24,10 +24,41 @@ for (const [nom, url, prep] of [
   await p.goto(BASE + url, { waitUntil: 'networkidle' });
   if (prep) await prep(p);
   await p.waitForTimeout(700);
-  const bloques = await p.evaluate((Z) => [...document.querySelectorAll('button, input, [role="button"]')]
-    .filter((el) => { const r = el.getBoundingClientRect(); if (!r.width || !r.height) return false;
-      return !(r.right < Z.x1 || r.left > Z.x2 || r.bottom < Z.y1 || r.top > Z.y2); })
-    .map((el) => (el.textContent || '').trim().slice(0, 20) || el.tagName), zone);
+  /* On teste l'atteignabilite REELLE, pas le chevauchement de
+     rectangles : une tuile sortie d'un conteneur defilant garde des
+     coordonnees hors de ce conteneur et donnait un faux positif.
+     Un controle n'est bloque que si, a son centre, elementFromPoint
+     renvoie autre chose que lui-meme ou un de ses descendants. */
+  const bloques = await p.evaluate(() =>
+    [...document.querySelectorAll('button, input, [role="button"]')]
+      .filter((el) => {
+        const r = el.getBoundingClientRect();
+        if (!r.width || !r.height) return false;
+        const cx = r.left + r.width / 2;
+        const cy = r.top + r.height / 2;
+        if (cx < 0 || cy < 0 || cx > innerWidth || cy > innerHeight) return false; // hors ecran
+
+        /* Un element sorti d'un conteneur defilant est simplement
+           invisible, pas bloque : on l'ecarte avant de conclure. */
+        for (let a = el.parentElement; a && a !== document.body; a = a.parentElement) {
+          const cs = getComputedStyle(a);
+          if (!/auto|scroll|hidden/.test(cs.overflowY + cs.overflowX)) continue;
+          const ar = a.getBoundingClientRect();
+          if (cy < ar.top - 1 || cy > ar.bottom + 1 || cx < ar.left - 1 || cx > ar.right + 1) return false;
+        }
+
+        const dessus = document.elementFromPoint(cx, cy);
+        if (!dessus) return false;
+        return !(el === dessus || el.contains(dessus) || dessus.contains(el));
+      })
+      .map((el) => ({
+        quoi: (el.textContent || '').trim().slice(0, 20) || el.tagName,
+        recouvertPar: (() => {
+          const r = el.getBoundingClientRect();
+          const d = document.elementFromPoint(r.left + r.width / 2, r.top + r.height / 2);
+          return d ? d.tagName.toLowerCase() + (d.id ? '#' + d.id : '') : '?';
+        })(),
+      })));
   console.log(`  ${nom.padEnd(11)} : ${bloques.length} commande(s) sous le badge ${bloques.length ? JSON.stringify(bloques) : ''}`);
   await p.close();
 }
