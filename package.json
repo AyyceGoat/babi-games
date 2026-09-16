@@ -8,7 +8,9 @@
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "seed:images": "node scripts/seed_images.js"
+    "seed:images": "node scripts/seed_images.js",
+    "inventaire": "node scripts/generer_inventaire.js",
+    "importer-photos": "node scripts/importer_photos.js"
   },
   "dependencies": {
     "lucide-react": "^0.454.0",
