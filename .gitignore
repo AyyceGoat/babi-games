@@ -31,3 +31,6 @@ logs
 
 # Dossier de depot des photos fournies par l utilisateur
 photos/
+
+# Fichiers de diagnostic temporaires
+scratch_*
