@@ -38,5 +38,3 @@ scratch_*
 # Dossier source des photos fournies (comme photos/)
 Images_CI/
 
-# Instructions locales pour Claude Code : non versionnees
-CLAUDE.md
